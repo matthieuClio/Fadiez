@@ -1,0 +1,41 @@
+// Exemple SELECT
+/*
+public function selectExemple($connexion)
+{
+	$requete = $connexion->prepare('SELECT * FROM billet ORDER BY id ASC LIMIT 0, 3');
+	$requete->execute();
+
+	return $requete;
+}
+*/
+
+// Exemple INSERT
+/*
+public function insertExemple($nom, $userId, $texte, $connexion)
+{
+	$dateTime = date("Y-m-d H:i:s");
+
+	$requete = $connexion->prepare('INSERT INTO billet(nom, nom_redacteur, texte, date_time) VALUES(?, ?, ?, ?)');
+	$requete->execute(array($nom, $userId, $texte, $dateTime));
+}
+*/
+
+// Exemple UPDATE
+/*
+public function updateExemple($id, $nom, $texte, $connexion)
+{
+	$requete = $connexion->prepare('UPDATE billet SET texte = :texte, nom = :nom WHERE id = :id');
+	$requete->execute(array('texte' => $texte, 'nom' => $nom, 'id' => $id));
+	$modifyTickets = $requete->fetch();
+}
+*/
+
+// Exemple DELETE
+/*
+public function deleteExemple($nom, $connexion)
+{
+	$requete = $connexion->prepare('DELETE FROM billet WHERE nom = :nom');
+	$requete->execute(array('nom' => $nom));
+	$deleteTickets = $requete->fetch();
+}
+*/

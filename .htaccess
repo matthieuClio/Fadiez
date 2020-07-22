@@ -1,0 +1,65 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ public/index.php?url=$1 [NC,L]
+RewriteRule ^$ public/index.php
+
+
+#Deny view
+
+<files accueil_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files menu_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files header_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files backoffice_connexion_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files backoffice_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files header_backoffice_view.php>
+Order allow,deny
+Deny from all
+</files>
+
+
+#Deny controller
+
+<files accueil.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files backoffice.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files backoffice_connexion.php>
+Order allow,deny
+Deny from all
+</files>
+
+#Deny model
+
+<files Data_base.php>
+Order allow,deny
+Deny from all
+</files>

@@ -7,8 +7,15 @@
 	padding: 0;
 }
 
+@font-face {
+	font-family: 'Raleway-Regular';
+    src: url('fonts/Raleway-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-	font-family: Roboto;
+	font-family: Raleway-Regular;
 	font-size: 62.5%; /* Base 10px */
 }
 
@@ -17,9 +24,28 @@ body {
 /* MOBILE VERSION - Mobile first */
 /* ............................. */
 /* ............................. */
-.menu {
-	height: 50px;
-	background-color: red;
+.menu-container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #373737;
+	color: #ffda2a;
+}
+
+.menu-options {
+	border: 2px solid red;
+}
+
+.menu-text {
+	display: inline-block;
+}
+
+.connexion-options {
+	border: 2px solid red;
+	text-align: end;
 }
 
 /* State (state elements) */
@@ -31,8 +57,25 @@ body {
 /* ........ */
 /* ........ */
 
-.font-size-base {
+.font-size-default {
 	font-size: 1.8em;
+}
+
+.default-button {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border: none;
+	background-color: #ffda2a;
+	color: #171717;
+	border-radius: 40px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.menu-icon {
+	color: #bfbcbc;	
 }
 
 /* ........................................ */

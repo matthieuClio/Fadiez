@@ -10,15 +10,26 @@
 			<?php include'menu/menu_view.php'; ?>
 		</header>
 
-		<section>
-			<h1>Home page</h1>
+		<section class="hero">
+			<div class="hero-container">
+				<h1 class="hero-text">
+					Get unlimited music & SFX for your videos
+				</h1>
+				<a class="default-button hero-button-primary">
+					Start free now
+				</a>
+				<a class="light-button hero-button-secondary">
+					Pricing
+				</a>
+			</div>
+			<img src="public/images/home_page/casque.jpg" alt="casque"/>
 		</section>
 
 		<main>
 			<article>
-				<h2>Welcome to the home page</h2>
+				<h2>Liste de lecture</h2>
 				<p>
-					On this home page you can define what you want.
+					Test
 				</p>
 			</article>
 		</main>

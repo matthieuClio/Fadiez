@@ -15,10 +15,10 @@
 				<h1 class="hero-text">
 					Get unlimited music & SFX for your videos
 				</h1>
-				<a class="default-button hero-button-primary">
+				<a class="light-button hero-button-primary">
 					Start free now
 				</a>
-				<a class="light-button hero-button-secondary">
+				<a class="default-button hero-button-secondary">
 					Pricing
 				</a>
 			</div>

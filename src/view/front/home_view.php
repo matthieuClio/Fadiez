@@ -15,10 +15,10 @@
 				<h1 class="hero-text">
 					Get unlimited music & SFX for your videos
 				</h1>
-				<a class="light-button hero-button-primary">
+				<a class="light-button-fact hero-button-primary">
 					Start free now
 				</a>
-				<a class="default-button hero-button-secondary">
+				<a class="default-button-fact hero-button-secondary">
 					Pricing
 				</a>
 			</div>
@@ -26,12 +26,28 @@
 		</section>
 
 		<main>
-			<article>
-				<h2>Liste de lecture</h2>
-				<p>
-					Test
-				</p>
-			</article>
+			<section class="playlist-container">
+				<div class="playlist">
+					<h2>Liste de lecture</h2>
+					<p>
+						(A venir)
+					</p>
+				</div>
+
+				<div class="playlist">
+					<h2>Liste de lecture</h2>
+					<p>
+						(A venir)
+					</p>
+				</div>
+
+				<div class="playlist">
+					<h2>Liste de lecture</h2>
+					<p>
+						(A venir)
+					</p>
+				</div>
+			</section>
 		</main>
 
 		<!-- Footer -->

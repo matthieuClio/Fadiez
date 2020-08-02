@@ -28,7 +28,8 @@ img {
 /* ............................. */
 /* ............................. */
 
-/* Menu */
+/* MENU */
+/* .... */
 .menu-container {
 	display: flex;
 	justify-content: space-between;
@@ -62,7 +63,11 @@ img {
 	font-size: 15px;
 }
 
-/* Home page */
+
+/* HOME PAGE */
+/* ......... */
+
+/* Hero */
 .hero {
 	position: relative;
 	border: 2px solid red;
@@ -91,24 +96,58 @@ img {
 	margin-left: 10px;
 }
 
+/* Playlist */
+.playlist-container {
+	border: 1px solid green;
+}
+
+.playlist {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #373737;
+	color: white;
+	text-align: center;
+	border-bottom: 1px solid #bfbcbc;
+}
+
+
+/* Footer */
+.main-footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #373737;
+	color: white;
+	text-align: center;
+}
+
+
 /* State (state elements) */
 /* ...................... */
 /* ...................... */
 
+.light-button-fact:hover {
+	background-color: #d8d8d8;
+	color: #373737;
+}
+
+.default-button-fact:hover {
+	background-color: #ffda2a;
+	color: #373737;
+}  
 
 /* Factored */
 /* ........ */
 /* ........ */
 
-.font-size-default {
+.font-size-default-fact {
 	font-size: 1.8em;
 }
 
-.menu-icon {
-	color: #bfbcbc;	
+.color-tertiary-fact {
+	color: #bfbcbc;
 }
 
-.default-button {
+.default-button-fact {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 7px;
@@ -118,9 +157,11 @@ img {
 	color: white;
 	border-radius: 40px;
 	font-size: 15px;
+	cursor: pointer;
+	transition: 0.2s;
 }  
 
-.light-button {
+.light-button-fact {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 7px;
@@ -130,7 +171,13 @@ img {
 	color: #373737;
 	border-radius: 40px;
 	font-size: 15px;
-}  
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.margin-bottom-fact {
+	margin-bottom: 5px;
+}
 
 /* ........................................ */
 /* TABLET VERSION */

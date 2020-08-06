@@ -41,13 +41,8 @@ img {
 	color: #ffda2a;
 }
 
-.menu-options {
-	border: 2px solid red;
-}
-
-.connexion-options {
-	border: 2px solid red;
-	text-align: end;
+.menu-icon {
+	margin-right: 10px;
 }
 
 .menu-button {
@@ -70,7 +65,6 @@ img {
 /* Hero */
 .hero {
 	position: relative;
-	border: 2px solid red;
 }
 
 .hero-container {

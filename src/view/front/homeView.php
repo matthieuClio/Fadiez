@@ -7,7 +7,7 @@
 	<body>
 		<header>
 			<!-- Menu -->
-			<?php include'menu/menu_view.php'; ?>
+			<?php include'menu/menuView.php'; ?>
 		</header>
 
 		<section class="hero">
@@ -22,36 +22,19 @@
 					Pricing
 				</a>
 			</div>
-			<img src="public/images/home_page/casque.jpg" alt="casque"/>
+			<img src="public/images/homePage/slider/casque.jpg" alt="casque"/>
 		</section>
 
 		<main>
 			<section class="playlist-container">
-				<div class="playlist">
-					<h2>Liste de lecture</h2>
-					<p>
-						(A venir)
-					</p>
-				</div>
 
-				<div class="playlist">
-					<h2>Liste de lecture</h2>
-					<p>
-						(A venir)
-					</p>
-				</div>
-
-				<div class="playlist">
-					<h2>Liste de lecture</h2>
-					<p>
-						(A venir)
-					</p>
-				</div>
 			</section>
 		</main>
 
 		<!-- Footer -->
 		<?php include'footer/footer_view.php'; ?>
-	</body>
 
+		<!-- Js load -->
+		<?php include'js/homePage/jsLoadHomePage.php'; ?>
+	</body>
 </html>

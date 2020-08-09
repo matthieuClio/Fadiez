@@ -31,18 +31,26 @@ img {
 /* MENU */
 /* .... */
 .menu-container {
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
+	position: fixed;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-left: 15px;
 	padding-right: 15px;
+	width: 100%;
 	background-color: #373737;
 	color: #ffda2a;
 }
 
 .menu-icon {
 	margin-right: 10px;
+	cursor: pointer;
+}
+
+.menu-text {
+	font-style: italic;
 }
 
 .menu-button {
@@ -56,8 +64,25 @@ img {
 	border-radius: 40px;
 	font-weight: 700;
 	font-size: 15px;
+	cursor: pointer;
 }
 
+.caret-icon {
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.menu-window {
+	z-index: 2;
+	position: fixed;
+	top: 36px;
+	width: 0%;
+	height: 100%;
+	background-color: #373737;
+	border-top: 1px solid #bfbcbc;
+	transition: 0.5s;
+	overflow: hidden;
+}
 
 /* HOME PAGE */
 /* ......... */
@@ -90,20 +115,124 @@ img {
 	margin-left: 10px;
 }
 
-/* Playlist */
+/* - Playlist - */
 .playlist-container {
-	border: 1px solid green;
+	/* padding-top: 50px;
+	padding-bottom: 50px;;
+	background-color:green; */
 }
 
-.playlist {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #373737;
+/* Player */
+.player {
+	display: flex;
+	align-items: center;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	height: 70px;
+	background-color: #2d2d2d;
+}
+
+.player-image {
+	margin-left: 22px;
+	width: auto;
+	height: 70px;
+}
+
+.player-container-play {
+	height: 100%;
+	background-color: orange;
+}
+
+#control-containeur {
+	float: left;
+	height: 100%;
+	background-color: orange;
+}
+
+.player-play-icon {
+	margin-left: 22px;
 	color: white;
-	text-align: center;
-	border-bottom: 1px solid #bfbcbc;
+	cursor: pointer;
 }
 
+.player-pause-icon {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+}
+
+.player-song-name {
+	margin-left: 22px;
+	color: white;
+	font-style: italic;
+}
+
+.player-mute-icon {
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+}
+
+.player-unmute-icon {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+}
+
+.player-timer {
+	margin-left: 22px;
+	color: white;
+}
+
+/* Seek bar */
+.player-seek-bar {
+	margin-left: 10px;
+	-webkit-appearance: none;
+	height: 3px;
+	outline: none;
+	border-radius: 5px;
+	background-color: #ffda2a;
+	cursor: pointer;
+}
+
+/* Seek bar circle */
+.player-seek-bar::-webkit-slider-thumb { /* For chrome */
+	-webkit-appearance: none;
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.player-seek-bar:active::-webkit-slider-thumb {
+	box-shadow: 0 0 0 3px #2d2d2d,
+				0 0 0 6px #ffda2a;
+}
+
+.player-seek-bar::-moz-range-thumb {	/* For mozila */
+	width: 12px;
+	height: 12px;
+	background-color: white;
+}
+
+.player-seek-bar:active::-moz-range-thumb {
+	box-shadow: 0 0 0 3px #2d2d2d,
+				0 0 0 6px #ffda2a;
+}
+
+.player-favorite {
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+}
+
+.player-shopping {
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+}
 
 /* Footer */
 .main-footer {
@@ -119,6 +248,21 @@ img {
 /* ...................... */
 /* ...................... */
 
+/* Menu */
+.menu-icon:hover {
+	color: #ffda2a;
+}
+
+.menu-button:hover {
+	background-color: #bfbcbc;
+	color: #171717;
+}
+
+.caret-icon:hover {
+	color: #ffda2a;
+}
+
+/* Factored */
 .light-button-fact:hover {
 	background-color: #d8d8d8;
 	color: #373737;
@@ -127,7 +271,7 @@ img {
 .default-button-fact:hover {
 	background-color: #ffda2a;
 	color: #373737;
-}  
+}
 
 /* Factored */
 /* ........ */

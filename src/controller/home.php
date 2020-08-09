@@ -22,7 +22,7 @@
 	    public function display()
 	    {
 	    	// Load the view
-	    	require('../src/view/front/home_view.php');
+	    	require('../src/view/front/homeView.php');
 	    }
 
 	} // End class Home

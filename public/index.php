@@ -1,4 +1,4 @@
 <?php
-	require('../core/session_start.php');
+	require('../core/sessionStart.php');
 	require('../core/router.php');
 ?>

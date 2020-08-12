@@ -1,14 +1,16 @@
 <nav class="menu-container font-size-default-fact">
-    <span>
+    <div>
         <i class="fa fa-bars menu-icon color-tertiary-fact" aria-hidden="true" id="menu-icon-id"></i>
         <span class="menu-text">Fa-diez</span>
-    </span>
+    </div>
 
-    <span>
-        <input type="button" value="Start free trial" class="menu-button">
+    <div>
+        <div class="menu-button">
+            Compte gratuit
+        </div>
         <i class="fa fa-caret-down caret-icon color-tertiary-fact" aria-hidden="true"></i>
-    </span>
+    </div>
 </nav>
 
-<section class="menu-window" id="menu-window-id">
-</section>
+<nav class="menu-window" id="menu-window-id">
+</nav>

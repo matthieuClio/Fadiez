@@ -58,16 +58,16 @@ h2 {
 }
 
 .menu-button {
+	display: inline-block;
 	padding-left: 8px;
 	padding-right: 8px;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	border: none;
 	background-color: #ffda2a;
 	color: #171717;
 	border-radius: 40px;
 	font-weight: 700;
-	font-size: 15px;
+	font-size: 0.8em;
 	cursor: pointer;
 }
 
@@ -88,6 +88,7 @@ h2 {
 	overflow: hidden;
 }
 
+
 /* HOME PAGE */
 /* ......... */
 
@@ -101,7 +102,7 @@ h2 {
 .hero-container {
 	position: absolute;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	background-color: rgba(56, 66, 73, 0.5);
 }
 
@@ -240,7 +241,78 @@ h2 {
 	cursor: pointer;
 }
 
-/* Footer */
+
+/* PRICING PAGE */
+/* ............ */
+
+.pricing-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #ffda2a;
+}
+
+.pricing-main-title {
+	padding-top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+.pricing {
+	margin: 20px;
+	width: 200px;
+	height: 300px;
+	background-color: #373737;
+	border-radius: 9px;
+	color: white;
+	text-align: center;
+}
+
+.pricing-title {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #2d2d2d;
+	border-top-right-radius: 9px;
+	border-top-left-radius: 9px;
+	font-size: 1.8em;
+}
+
+.pricing-icon {
+	margin-top: 40px;
+	font-size: 3em;
+}
+
+.pricing-description {
+	margin-top: 40px;
+	font-size: 1.4em;
+}
+
+.pricing-price {
+	margin-top: 10px;
+	font-size: 2.5em;
+}
+
+.pricing-button {
+	display: inline-block;
+	margin-top: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	background-color: #ffda2a;
+	color: #373737;
+	border-radius: 40px;
+	font-size: 1.5em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
+/* FOOTER */
+/* ...... */
+
 .main-footer {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -327,6 +399,11 @@ h2 {
 	color: #ffda2a;
 }
 
+/* Pricing */
+.pricing-button:hover {
+	background-color: #ddbe25;
+}
+
 /* Factored */
 .light-button-fact:hover {
 	background-color: #d8d8d8;
@@ -350,6 +427,14 @@ h2 {
 	font-size: 1.4em;
 }
 
+.color-primary-fact {
+	color: white;
+}
+
+.color-secondary-fact {
+	color: #ffda2a;
+}
+
 .color-tertiary-fact {
 	color: #bfbcbc;
 }
@@ -363,7 +448,7 @@ h2 {
 	background-color: #373737;
 	color: white;
 	border-radius: 40px;
-	font-size: 15px;
+	font-size: 1.5em;
 	cursor: pointer;
 	transition: 0.2s;
 }  

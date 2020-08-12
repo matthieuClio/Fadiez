@@ -1,5 +1,5 @@
 <?php
-	class Bdd_connexion
+	class BddConnexion
 	{
 
 		// Set the connection parameters

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<?php include'header/header_view.php'; ?>
+		<?php include'header/headerView.php'; ?>
 	</head>
 
 	<body>
@@ -13,13 +13,13 @@
 		<section class="hero">
 			<div class="hero-container">
 				<h1 class="hero-text">
-					Get unlimited music & SFX for your videos
+					Obtenez de la musique en ilimitée
 				</h1>
 				<a class="light-button-fact hero-button-primary">
-					Start free now
+					Gratuit
 				</a>
-				<a class="default-button-fact hero-button-secondary">
-					Pricing
+				<a href="pricing" class="default-button-fact hero-button-secondary">
+					Tarification
 				</a>
 			</div>
 			<img src="public/images/homePage/slider/casque.jpg" alt="casque"/>
@@ -27,12 +27,11 @@
 
 		<main>
 			<section class="playlist-container">
-
 			</section>
 		</main>
 
 		<!-- Footer -->
-		<?php include'footer/footer_view.php'; ?>
+		<?php include'footer/footerView.php'; ?>
 
 		<!-- Js load -->
 		<?php include'js/homePage/jsLoadHomePage.php'; ?>

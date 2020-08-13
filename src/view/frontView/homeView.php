@@ -27,6 +27,9 @@
 
 		<main>
 			<section class="playlist-container">
+				<p class="playlist-text">
+					Lecteur de musique en cours de développement
+				</p>
 			</section>
 		</main>
 

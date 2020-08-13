@@ -26,12 +26,11 @@
 		public function connexion()
 	    {
 	    	// Create the connexion
-	    	if(!empty($_POST['passwordMaintenance']) && $_POST['passwordMaintenance'] == $this->psw){
+	    	if(!empty($_POST['passwordMaintenance']) && $_POST['passwordMaintenance'] === $this->psw) {
 				if(empty($_SESSION['admin'])){
 					$_SESSION['admin'] = 'connected';
-					header('location: home');
+					header('location: accueil');
 				}
-				
 			}
 			else if(!empty($_POST['passwordMaintenance']) && $_POST['passwordMaintenance'] != $this->psw) {
 				?> <script type="text/javascript"> alert('Mot de passe incorrecte')</script>  <?php
@@ -48,7 +47,6 @@
 				session_destroy();
 			}
 		}
-
 	} // End class Home
 
 

@@ -22,17 +22,17 @@
 	// Connexion maintenance page
 	else if ($url[0] === 'admin')
 	{
-		require('../src/controller/front/connexionMaintenance.php');
+		require('../src/controller/front/ConnexionMaintenance.php');
 	}
 
 	// Home page
-	else if ($url[0] === 'home')
+	else if ($url[0] === 'accueil')
 	{
 		require('../src/controller/front/Home.php');
 	}
 
 	// Pricing page
-	else if($url[0] === 'pricing') {
+	else if($url[0] === 'tarification') {
 		require('../src/controller/front/Pricing.php');
 	}	
 

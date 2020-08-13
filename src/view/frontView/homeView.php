@@ -18,7 +18,7 @@
 				<a class="light-button-fact hero-button-primary">
 					Gratuit
 				</a>
-				<a href="pricing" class="default-button-fact hero-button-secondary">
+				<a href="tarification" class="default-button-fact hero-button-secondary">
 					Tarification
 				</a>
 			</div>

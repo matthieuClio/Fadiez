@@ -27,6 +27,14 @@ h2 {
 	font-size: 1.8em;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
 /* ........................................ */
 /* MOBILE VERSION - Mobile first */
 /* ............................. */
@@ -55,6 +63,7 @@ h2 {
 
 .menu-text {
 	font-style: italic;
+	color: #ffda2a;
 }
 
 .menu-button {
@@ -80,6 +89,7 @@ h2 {
 	z-index: 2;
 	position: fixed;
 	top: 36px;
+	opacity: 0;
 	width: 0%;
 	height: 100%;
 	background-color: #373737;
@@ -245,12 +255,104 @@ h2 {
 /* PRICING PAGE */
 /* ............ */
 
+.pricing-info-free-container {
+	position: fixed;
+	opacity: 0;
+	width: 100%;
+	height: 0;
+	background-color: #171717;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.pricing-info-free-button {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.pricing-info-free-button-icon {
+	margin-right: 20px;
+	font-size: 2em;
+}
+
+.pricing-info-free-title {
+	margin-top: 30px;
+	font-size: 2em;
+}
+
+.pricing-info-free-icon {
+	margin-top: 10px;
+	font-size: 3em;
+}
+
+.pricing-info-free-text {
+	margin-top: 30px;
+	margin-right: 20px;
+	margin-left: 20px;
+	font-size: 1.8em;
+	text-align: left;
+}
+
+.pricing-info-free-paypal {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.pricing-info-premium-container {
+	position: fixed;
+	opacity: 0;
+	width: 100%;
+	height: 0;
+	background-color: #171717;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.pricing-info-premium-button {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.pricing-info-premium-button-icon {
+	margin-right: 20px;
+	font-size: 2em;
+}
+
+.pricing-info-premium-title {
+	margin-top: 30px;
+	font-size: 2em;
+}
+
+.pricing-info-premium-icon {
+	margin-top: 10px;
+	font-size: 3em;
+}
+
+.pricing-info-premium-text {
+	margin-top: 30px;
+	margin-right: 20px;
+	margin-left: 20px;
+	font-size: 1.8em;
+	text-align: left;
+}
+
+.pricing-info-premium-paypal {
+	display: inline-block;
+	margin-top: 30px;
+}
+
 .pricing-container{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	min-height: 100vh;
-	background-color: #ffda2a;
+	background-color: #171717;
 }
 
 .pricing-main-title {
@@ -279,7 +381,7 @@ h2 {
 }
 
 .pricing-icon {
-	margin-top: 40px;
+	margin-top: 30px;
 	font-size: 3em;
 }
 

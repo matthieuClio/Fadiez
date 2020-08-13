@@ -15,10 +15,12 @@ class Menu {
             if(!this.menuIsOpen){
 
                 this.menuWindowElt.style.width = "100%";
+                this.menuWindowElt.style.opacity = "1";
                 this.menuIsOpen = true;
             } else {
 
-                this.menuWindowElt.style.width = "0%";
+                this.menuWindowElt.style.width = "0";
+                this.menuWindowElt.style.opacity = "0";
                 this.menuIsOpen = false;
             }
         });
@@ -27,5 +29,5 @@ class Menu {
 
 var menuObject = new Menu();
 
-// Open the menu
+// Open/close menu
 menuObject.openMenu();

@@ -1,6 +1,6 @@
 <?php
 
-	class Maintenance {
+	class BackofficeConnexion {
 
 		// Property
 		// ...
@@ -12,15 +12,14 @@
 		// ...
 	    public function display()
 	    {
-	    	// Load the view
-	    	require('../src/view/frontView/maintenanceView.php');
+			require('../src/view/backView/backofficeConnexionView.php');
 	    }
 
 	} // End class Home
 
 
 	// Object
-	$objectMaintenance = new Maintenance();
+	$objectBackofficeConnexion= new BackofficeConnexion();
 
 	// Display the homeView page
-	$objectMaintenance->display();
+	$objectBackofficeConnexion->display();

@@ -1,6 +1,4 @@
 <?php
-	//require('../core/BddConnexion.php');
-	//require('../src/model/HomeModel.php');
 
 	class ConnexionMaintenance {
 

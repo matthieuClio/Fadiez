@@ -25,6 +25,18 @@
 		require('../src/controller/front/ConnexionMaintenance.php');
 	}
 
+	// Backoffice page
+	else if ($url[0] === 'backoffice' && !empty($_SESSION['pseudoUser']) || $url[0] === 'backoffice' && !empty($_POST['submitConnexion']))
+	{
+		require('../src/controller/back/Backoffice.php');
+	}
+
+	// Backoffice connexion page
+	else if ($url[0] === 'backoffice' && empty($_SESSION['pseudoUser']))
+	{
+		require('../src/controller/back/BackofficeConnexion.php');
+	}
+
 	// Home page
 	else if ($url[0] === 'accueil')
 	{

@@ -5,9 +5,9 @@
 		// Set the connection parameters
 		// ...
 
-		private $host = '';
-		private $dbname = '';
-		private $login = '';
+		private $host = 'localhost';
+		private $dbname = 'fadiez';
+		private $login = 'root';
 		private $password = '';
 
 
@@ -24,7 +24,7 @@
 			
 			try
 			{
-				$base = new PDO('mysql:host='.$host.';dbname='.$dbname,'root',$password);
+				$base = new PDO('mysql:host='.$host.';dbname='.$dbname, $login, $password);
 			}
 			catch (Exception $e)
 			{

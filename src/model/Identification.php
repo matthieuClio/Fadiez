@@ -62,7 +62,5 @@
 			$insert = $connexion->prepare('UPDATE compte SET password = ?, salt = ? WHERE email = ? ');
 			$insert->execute(array($newPassword, $salt, $email));
 		}
-
-
 	} // End class Identification
 ?>

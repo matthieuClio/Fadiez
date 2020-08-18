@@ -10,6 +10,7 @@
 		private $connexion;
 		private $pseudo;
 		private $password;
+		private $statut;
 
 		// Constructor
 		function __construct() {
@@ -17,6 +18,7 @@
 		 	$this->bddObj = new BddConnexion();
 		 	$this->login = new Identification();
 		 	$this->connexion = $this->bddObj->Start();
+			$this->statut = 'admin';
 
 		 	if(!empty($_POST['pseudo'])) {
 		 		$this->pseudo = $_POST['pseudo'];
@@ -41,10 +43,11 @@
 
 	    function alreadylogIn() {
 			if(!empty($_SESSION['pseudoUser'])) {
+				
 				// Load the view
 				require('../src/view/backView/backofficeView.php');
 			}
-	    }
+		}
 
 	    function logInConnexion() {
 	    	// The user accesses the page from the form
@@ -61,17 +64,26 @@
 
 				// Login information is correct
 				if($verification[0] == 1) {	
-					// Check statut then stock in a $_SESSION
+					// Put the statut user in a $_SESSION
 					$_SESSION['statut' ] = $this->login->UserStatut($this->pseudo, $this->connexion);
 
-					// Stock the user in a variable $_SESSION
-					$_SESSION['pseudoUser'] = $this->pseudo;
+					// Check statut
+					if($_SESSION['statut'] === $this->statut) {
+						// Stock the user in a variable $_SESSION
+						$_SESSION['pseudoUser'] = $this->pseudo;
 
-					// Update the user ip
-					$this->login->IpAddressStorage($this->pseudo, $this->connexion);
+						// Update the user ip
+						$this->login->IpAddressStorage($this->pseudo, $this->connexion);
 
-					// Load the view
-					require('../src/view/backView/backofficeView.php');
+						// Load the view
+						require('../src/view/backView/backofficeView.php');
+					}
+					else {
+						$_SESSION['error'] = "Vous n'êtes pas un admin";
+
+						// Redirect the user to the connexion page
+						header('location:backoffice');
+					}
 
 				} // End verification
 
@@ -91,7 +103,7 @@
 	} // End class Backoffice
 
 
-	// Object BackofficeBillet
+	// Object Backoffice
 	$objectBackoffice = new Backoffice();
 
 	// Disconnection

@@ -62,7 +62,6 @@ a:visited {
 }
 
 .menu-text {
-	font-style: italic;
 	color: #ffda2a;
 }
 
@@ -98,6 +97,16 @@ a:visited {
 	overflow: hidden;
 }
 
+.button-icon-container {
+	width: 100%;
+}
+
+.button-icon {
+	margin-top: 20px;
+	font-size: 3em;
+	color: white;
+	cursor: pointer;
+}
 
 /* HOME PAGE */
 /* ......... */
@@ -555,6 +564,39 @@ a:visited {
 	color: #d50a0a;
 }
 
+/* BACKOFFICE */
+/* .......... */
+
+.backoffice-menu-name {
+	margin-right: 20px;
+}
+
+.backoffice-button-icon-container {
+	width: 100%;
+}
+
+.backoffice-button-icon {
+	margin-top: 20px;
+	font-size: 3em;
+	color: white;
+	cursor: pointer;
+}
+
+.backoffice-menu-tab-container {
+	margin-top: 20px;
+}
+
+.backoffice-menu-tab {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	min-width: 300px;
+	list-style: none;
+	border-top: 1px solid #72777c;
+	color: white;
+	font-size: 2em;
+	overflow: hidden;
+}
+
 
 /* State (state elements) */
 /* ...................... */
@@ -642,6 +684,14 @@ a:visited {
 	transition: 0.2s;
 }
 
+.margin-left-fact {
+	margin-left: 20px;
+}
+
+.margin-right-fact {
+	margin-right: 20px;
+}
+
 .margin-bottom-fact {
 	margin-bottom: 5px;
 }
@@ -649,7 +699,10 @@ a:visited {
 .font-weight-bold-fact {
 	font-weight: bold;
 }
-
+ 
+.text-align-right-fact {
+	text-align: right;
+}
 /* ........................................ */
 /* TABLET VERSION */
 /* .................... */

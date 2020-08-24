@@ -6,7 +6,7 @@
 	class Backoffice {
 
 		private $bddObj;
-		private $login;
+		private $loginObj;
 		private $connexion;
 		private $pseudo;
 		private $password;
@@ -16,12 +16,12 @@
 		function __construct() {
 			// Object
 		 	$this->bddObj = new BddConnexion();
-		 	$this->login = new Identification();
+		 	$this->loginObj = new Identification();
 		 	$this->connexion = $this->bddObj->Start();
 			$this->statut = 'admin';
 
-		 	if(!empty($_POST['pseudo'])) {
-		 		$this->pseudo = $_POST['pseudo'];
+		 	if(!empty($_POST['email'])) {
+		 		$this->email = $_POST['email'];
 		 	}
 		 	if(!empty($_POST['password'])) {
 		 		$this->password = $_POST['password'];
@@ -54,26 +54,26 @@
 	    	if(!empty($_POST['submitConnexion']) && empty($_SESSION['pseudoUser'])) {
 
 	    		// We get the unique salt per user
-				$salt = $this->login->SaltUser($this->pseudo, $this->connexion);
+				$salt = $this->loginObj->SaltUser($this->email, $this->connexion);
 
 				// We encrypt the password
 				$passwordCrypte = crypt($this->password, $salt);
 
-				// Check the nickname and password entered
-				$verification = $this->login->UserInformation($this->pseudo, $passwordCrypte, $this->connexion);
+				// Check the email and password entered
+				$verification = $this->loginObj->UserInformation($this->email, $passwordCrypte, $this->connexion);
 
 				// Login information is correct
 				if($verification[0] == 1) {	
 					// Put the statut user in a $_SESSION
-					$_SESSION['statut' ] = $this->login->UserStatut($this->pseudo, $this->connexion);
+					$_SESSION['statut' ] = $this->loginObj->UserStatut($this->email, $this->connexion);
 
 					// Check statut
 					if($_SESSION['statut'] === $this->statut) {
 						// Stock the user in a variable $_SESSION
-						$_SESSION['pseudoUser'] = $this->pseudo;
+						$_SESSION['pseudoUser'] = $this->email;
 
 						// Update the user ip
-						$this->login->IpAddressStorage($this->pseudo, $this->connexion);
+						$this->loginObj->IpAddressStorage($this->email, $this->connexion);
 
 						// Load the view
 						require('../src/view/backView/backofficeView.php');
@@ -89,7 +89,7 @@
 
 				// Login information is false
 				else if($verification[0] != 1) {
-					$_SESSION['error'] = "Erreur d'identification";
+					$_POST['error'] = "Erreur d'identification";
 
 					// Redirect the user to the connexion page
 					header('location:backoffice');

@@ -26,6 +26,12 @@
 	}
 
 	// Backoffice page
+	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'compte' && !empty($_SESSION['pseudoUser']))
+	{
+		require('../src/controller/back/BackofficeCompte.php');
+	}
+
+	// Backoffice page
 	else if ($url[0] === 'backoffice' && !empty($_SESSION['pseudoUser']) || $url[0] === 'backoffice' && !empty($_POST['submitConnexion']))
 	{
 		require('../src/controller/back/Backoffice.php');
@@ -46,6 +52,11 @@
 	// Pricing page
 	else if($url[0] === 'tarification') {
 		require('../src/controller/front/Pricing.php');
+	}	
+
+	// Create compte page
+	else if($url[0] === 'inscription') {
+		require('../src/controller/front/CreateAccount.php');
 	}	
 
 	// Error page

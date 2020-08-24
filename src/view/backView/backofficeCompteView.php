@@ -11,7 +11,7 @@
 		</header>
 
 		<main style="display: flex; justify-content: center; align-items: center; height:100vh; color: white; background-color: black;">
-            <h1>Home page Backoffice : )</h1>
+            <h1>Gestion page Backoffice : )</h1>
 		</main>
 
 		<!-- Js load -->

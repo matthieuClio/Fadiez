@@ -15,7 +15,7 @@
 				<h1 class="hero-text">
 					Obtenez de la musique en ilimitée
 				</h1>
-				<a class="light-button-fact hero-button-primary">
+				<a href="inscription" class="light-button-fact hero-button-primary">
 					Gratuit
 				</a>
 				<a href="tarification" class="default-button-fact hero-button-secondary">

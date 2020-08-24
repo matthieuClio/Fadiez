@@ -8,9 +8,9 @@
     </div>
 
     <div>
-        <div class="menu-button">
+        <a href="inscription" class="menu-button">
             Compte gratuit
-        </div>
+        </a>
         <i class="fa fa-caret-down caret-icon color-tertiary-fact" aria-hidden="true"></i>
     </div>
 </nav>

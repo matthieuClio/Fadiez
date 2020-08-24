@@ -1,6 +1,6 @@
 <?php
 
-	class BackofficeConnexion {
+	class BackofficeCompte {
 
 		// Property
 		// ...
@@ -12,15 +12,16 @@
 		// ...
 	    public function display()
 	    {
-			require('../src/view/backView/backofficeConnexionView.php');
+			require('../src/view/backView/backofficeCompteView.php');
 	    }
 
 	} // End class Home
 
 
 	// Object
-	$objectBackofficeConnexion= new BackofficeConnexion();
+	$objectBackofficeCompte = new BackofficeCompte();
 
 	// Display the homeView page
-	$objectBackofficeConnexion->display();
+    $objectBackofficeCompte->display();
+    
 ?>

@@ -364,20 +364,6 @@ a:visited {
 	margin-top: 30px;
 }
 
-.pricing-container{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	min-height: 100vh;
-	background-color: #171717;
-}
-
-.pricing-main-title {
-	padding-top: 50px;
-	width: 100%;
-	text-align: center;
-}
-
 .pricing {
 	margin: 20px;
 	width: 200px;
@@ -429,12 +415,108 @@ a:visited {
 }
 
 
+/* REGISTRATION */
+/* ............ */
+
+.registration-details {
+	margin: 20px;
+	color: white;
+}
+
+.registration-details-icon {
+	font-size: 3em;
+}
+
+.registration-details-title {
+	display: inline-block;
+	margin: 20px;
+	padding-top: 20px;
+	border-top: 1px solid white;
+}
+
+.registration-details-text {
+	margin: 20px;
+	font-size: 1.4em;
+}
+
+.registration-account-message {
+	margin: 20px;
+	margin-bottom: 0;
+	width: 100%;
+	color: red;
+	font-size: 1.4em;
+}
+
+.registration-container {
+	margin: 20px;
+	margin-bottom: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	background-color: #373737;
+	border-radius: 9px;
+	color: white;
+	font-size: 1.8em;
+}
+
+.registration-info {
+	margin: 20px;
+	padding-bottom: 10px;
+	font-size: 0.8em;
+}
+
+.registration-text-mandatory {
+	color: red;
+}
+
+.registration-text {
+	display: block;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	height: 20px;
+	font-weight: bold;
+}
+
+.registration-text-modification {
+	height: 60px;
+}
+
+.registration-text-detail {
+	display: block;
+	margin-top: 3px;
+	font-size: 0.7em;
+}
+
+.registration-input {
+	margin-left: 20px;
+	padding: 5px;
+	width: 70%;
+	border-radius: 5px;
+}
+
+.registration-input-button {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.eye-icon {
+	cursor: pointer;
+}
+
+.eye-icon-crossed {
+	display: none;
+	cursor: pointer;
+}
+
+
 /* FOOTER */
 /* ...... */
 
 .main-footer {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	background-color: #373737;
 	color: white;
 }
@@ -587,8 +669,6 @@ a:visited {
 }
 
 .backoffice-menu-tab {
-	padding-top: 15px;
-	padding-bottom: 15px;
 	min-width: 300px;
 	list-style: none;
 	border-top: 1px solid #72777c;
@@ -597,6 +677,16 @@ a:visited {
 	overflow: hidden;
 }
 
+.backoffice-menu-disconnection {
+	margin-top: 20px;
+}
+
+.backoffice-menu-link {
+	display: inline-block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+}
 
 /* State (state elements) */
 /* ...................... */
@@ -684,6 +774,10 @@ a:visited {
 	transition: 0.2s;
 }
 
+.margin-top-fact {
+	margin-top: 20px;
+}
+
 .margin-left-fact {
 	margin-left: 20px;
 }
@@ -703,6 +797,26 @@ a:visited {
 .text-align-right-fact {
 	text-align: right;
 }
+
+.text-align-center-fact {
+	text-align: center;
+}
+
+.page-container-fact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #171717;
+}
+
+.page-main-title-fact {
+	padding-top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+
 /* ........................................ */
 /* TABLET VERSION */
 /* .................... */

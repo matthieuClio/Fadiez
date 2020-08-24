@@ -1,32 +1,22 @@
 <?php
 	class Identification
 	{
-		public function SaltUser($pseudo, $connexion)
+		public function SaltUser($email, $connexion)
 		{
-			$requete = $connexion->prepare('SELECT salt FROM compte WHERE pseudo = :pseudo');
-			$requete->execute(array('pseudo' => $pseudo));
+			$requete = $connexion->prepare('SELECT salt FROM compte WHERE email = :email');
+			$requete->execute(array('email' => $email));
 			$salt = $requete->fetch();
 
 			return $salt['salt'];
 		}
 
-		public function EmailExist($email, $connexion)
+		public function UserInformation($email, $passwordCrypte, $connexion)
 		{
-			// Select Email of account
-			$requete = $connexion->prepare('SELECT email FROM compte WHERE email = :email');
-			$requete->execute(array('email' => $email));
-			$email = $requete->fetch();
-
-			return $email['email'];
-		}
-
-		public function UserInformation($identifiant, $passwordCrypte, $connexion)
-		{
-			// Selection of corresponding pseudo and password
-			$identification = $connexion->prepare('SELECT COUNT(*) FROM compte WHERE pseudo = :identifiant AND password = :password_crypte');
+			// Selection of corresponding email and password
+			$identification = $connexion->prepare('SELECT COUNT(*) FROM compte WHERE email = :email AND password = :password_crypte');
 
 			// Execute the request
-			$identification->execute(array('identifiant' => $identifiant, 'password_crypte' => $passwordCrypte));
+			$identification->execute(array('email' => $email, 'password_crypte' => $passwordCrypte));
 
 			// Store the array in a variable
 			$verification = $identification->fetch();
@@ -36,24 +26,24 @@
 		}
 
 
-		public function UserStatut($user, $connexion)
+		public function UserStatut($email, $connexion)
 		{
-			$requete = $connexion->prepare('SELECT statut FROM compte WHERE pseudo = :user');
-			$requete->execute(array('user' => $user));
+			$requete = $connexion->prepare('SELECT statut FROM compte WHERE email = :email');
+			$requete->execute(array('email' => $email));
 			$statut = $requete->fetch();
 
 			return $statut['statut'];
 		}
 
 
-		public function IpAddressStorage($identifiant, $connexion)
+		public function IpAddressStorage($email, $connexion)
 		{
 			// Ip address of the client
 			$adresseIpClient = $_SERVER['REMOTE_ADDR'];
 
 			// Request
-			$insert = $connexion->prepare('UPDATE compte SET ip_adress = ? WHERE pseudo = ? ');
-			$insert->execute(array($adresseIpClient, $identifiant));
+			$insert = $connexion->prepare('UPDATE compte SET ip_adress = ? WHERE email = ? ');
+			$insert->execute(array($adresseIpClient, $email));
 		}
 
 		public function ChangePassword($newPassword, $salt, $email, $connexion)

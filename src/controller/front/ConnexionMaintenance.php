@@ -10,6 +10,8 @@
 		// ...
 		function __construct() {
 			// Object
+
+			// Variable
 		 	$this->psw = 'fadiezcomingsoon';
 	    }
 

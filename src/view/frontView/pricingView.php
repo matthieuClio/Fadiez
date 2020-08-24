@@ -60,8 +60,8 @@
                 </div>
             </section>
 
-            <section class="pricing-container">
-                <h1 class="pricing-main-title color-primary-fact">
+            <section class="page-container-fact">
+                <h1 class="page-main-title-fact color-primary-fact">
                     Choisis ton plan
                 </h1>
 

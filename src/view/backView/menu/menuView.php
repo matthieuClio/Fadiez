@@ -1,7 +1,7 @@
 <nav class="menu-container font-size-default-fact">
     <div>
         <i class="fa fa-bars menu-icon color-tertiary-fact" aria-hidden="true" id="menu-icon-id"></i>
-        <a href="accueil" class="menu-text">
+        <a href="backoffice" class="menu-text">
             Backoffice
             <i class="fa fa-music" aria-hidden="true"></i>
         </a>
@@ -20,17 +20,23 @@
 
     <ul class="backoffice-menu-tab-container">
         <li class="backoffice-menu-tab">
-            <a>
+            <a href="backoffice" class="backoffice-menu-link color-primary-fact">
                 <i class="fa fa-home margin-left-fact margin-right-fact" aria-hidden="true"></i>
                 Accueil
             </a>
         </li>
 
         <li class="backoffice-menu-tab">
-            <a>
+            <a href="backoffice/compte" class="backoffice-menu-link color-primary-fact">
                 <i class="fa fa-user margin-left-fact margin-right-fact" aria-hidden="true"></i>
                 Gestion des comptes
             </a>
+        </li>
+
+        <li class="backoffice-menu-tab">
+            <form method="post" action="backoffice" class="backoffice-menu-disconnection text-align-center-fact">
+                <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
+            </form>
         </li>
     </ul>
 </nav>

@@ -10,12 +10,18 @@
 				<figure class="backoffice-connexion-image">
 					<img src="public/images/homePage/slider/casque.jpg" alt="casque"/>
 				</figure>
+
+				<div class="backoffice-connexion-error">
+					<h3>
+						<?php if(!empty($_SESSION['error']) && !empty($_POST['submitConnexion'])){ echo $_SESSION['error'];} ?>
+					</h3>
+				</div>
 				
 				<form method="post" action="backoffice" class="backoffice-connexion-form">
 					<p class="backoffice-connexion-paragraph">
-						Identifiant :
+						Email :
 					</p>
-					<input type="text" name="pseudo" class="backoffice-connexion-input" required>
+					<input type="text" name="email" class="backoffice-connexion-input" required>
 
 					<p class="backoffice-connexion-paragraph">
 						Mot de passe :
@@ -26,12 +32,6 @@
 						<input type="submit" name="submitConnexion" value="Connexion" class="default-button-fact">
 					</div>
 				</form>
-
-				<div class="backoffice-connexion-error">
-					<h3>
-						<?php if(!empty($_SESSION['error'])){ echo $_SESSION['error'];} ?>
-					</h3>
-				</div>
 			</section>
 		</main>
 

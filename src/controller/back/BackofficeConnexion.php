@@ -19,7 +19,7 @@
 
 
 	// Object
-	$objectBackofficeConnexion= new BackofficeConnexion();
+	$objectBackofficeConnexion = new BackofficeConnexion();
 
 	// Display the homeView page
 	$objectBackofficeConnexion->display();

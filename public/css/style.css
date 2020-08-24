@@ -649,10 +649,6 @@ a:visited {
 /* BACKOFFICE */
 /* .......... */
 
-.backoffice-menu-name {
-	margin-right: 20px;
-}
-
 .backoffice-button-icon-container {
 	width: 100%;
 }
@@ -675,6 +671,12 @@ a:visited {
 	color: white;
 	font-size: 2em;
 	overflow: hidden;
+}
+
+.backoffice-menu-user {
+	margin: 20px;
+	color: #ffda2a;
+	border: none;
 }
 
 .backoffice-menu-disconnection {

@@ -75,6 +75,8 @@
 						// Update the user ip
 						$this->loginObj->IpAddressStorage($this->email, $this->connexion);
 
+						$_SESSION['error'] = "";
+
 						// Load the view
 						require('../src/view/backView/backofficeView.php');
 					}
@@ -89,7 +91,8 @@
 
 				// Login information is false
 				else if($verification[0] != 1) {
-					$_POST['error'] = "Erreur d'identification";
+
+					$_SESSION['error'] = "Erreur d'identification";
 
 					// Redirect the user to the connexion page
 					header('location:backoffice');

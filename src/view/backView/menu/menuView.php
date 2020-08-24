@@ -6,11 +6,6 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </a>
     </div>
-
-    <div class="backoffice-menu-name">
-        <!-- Display the user name -->
-        <?php if(!empty($_SESSION['pseudoUser'])){ echo $_SESSION['pseudoUser']; } ?>
-    </div>
 </nav>
 
 <nav class="menu-window" id="menu-window-id">
@@ -19,6 +14,11 @@
     </div>
 
     <ul class="backoffice-menu-tab-container">
+        <li class="backoffice-menu-user backoffice-menu-tab text-align-center-fact">
+            <!-- Display the user name -->
+            <?php if(!empty($_SESSION['pseudoUser'])){ echo $_SESSION['pseudoUser'];} ?>
+        </li>
+
         <li class="backoffice-menu-tab">
             <a href="backoffice" class="backoffice-menu-link color-primary-fact">
                 <i class="fa fa-home margin-left-fact margin-right-fact" aria-hidden="true"></i>

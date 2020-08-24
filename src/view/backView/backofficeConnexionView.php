@@ -12,8 +12,8 @@
 				</figure>
 
 				<div class="backoffice-connexion-error">
-					<h3>
-						<?php if(!empty($_SESSION['error']) && !empty($_POST['submitConnexion'])){ echo $_SESSION['error'];} ?>
+					<h3 style="font-size: 0.4em">
+						<?php if(!empty($_SESSION['error'])){ echo $_SESSION['error'];} ?>
 					</h3>
 				</div>
 				

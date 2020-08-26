@@ -14,7 +14,7 @@
 	    {
 			if(!empty($_SESSION['admin'])) {
 				// Load the view
-			require('../src/view/frontView/pricingView.php');
+				require('../src/view/frontView/pricingView.php');
 			}
 	    	else {
 				header('location: maintenance');

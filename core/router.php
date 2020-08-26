@@ -25,7 +25,13 @@
 		require('../src/controller/front/ConnexionMaintenance.php');
 	}
 
-	// Backoffice page
+	// Backoffice info account page
+	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'info' && !empty($_SESSION['pseudoUser']))
+	{
+		require('../src/controller/back/BackofficeCompteInfo.php');
+	}
+
+	// Backoffice account page
 	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'compte' && !empty($_SESSION['pseudoUser']))
 	{
 		require('../src/controller/back/BackofficeCompte.php');

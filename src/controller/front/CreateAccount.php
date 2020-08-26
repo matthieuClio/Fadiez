@@ -45,8 +45,13 @@
 		// ...
 	    public function display()
 	    {
-	    	// Load the view
-	    	require('../src/view/frontView/createAccountView.php');
+            if(!empty($_SESSION['admin'])) {
+				// Load the view
+                require('../src/view/frontView/createAccountView.php');
+			}
+	    	else {
+				header('location: maintenance');
+			}
         }
         
         public function createAccount()

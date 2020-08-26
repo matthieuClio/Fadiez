@@ -2,7 +2,7 @@
 	require('../core/BddConnexion.php');
 	require('../src/model/Identification.php');
 
-	
+
 	class Backoffice {
 
 		private $bddObj;

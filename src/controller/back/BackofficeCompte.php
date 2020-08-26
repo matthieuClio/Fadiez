@@ -1,27 +1,42 @@
 <?php
+	require('../core/BddConnexion.php');
+	require('../src/model/Account.php');
 
 	class BackofficeCompte {
 
 		// Property
 		// ...
-
+		private $bddObj;
+		private $connexion;
+		private $accountObj;
+		
 		// Constructor
 		// ...
+		function __construct() {
+			// Object
+			$this->bddObj = new BddConnexion();
+			$this->accountObj = new Account();
+			$this->connexion = $this->bddObj->Start();
+		}
 
 	    // Function
 		// ...
-	    public function display()
+		public function data()
 	    {
-			require('../src/view/backView/backofficeCompteView.php');
-	    }
+			$data = $this->accountObj->InfoAccount($this->connexion);
 
+			return $data;
+		}
 	} // End class Home
 
 
 	// Object
 	$objectBackofficeCompte = new BackofficeCompte();
 
-	// Display the homeView page
-    $objectBackofficeCompte->display();
+	// InfoUser
+	$dataUser = $objectBackofficeCompte->data();
+	
+	// Load the view
+	require('../src/view/backView/backofficeCompteView.php');
     
 ?>

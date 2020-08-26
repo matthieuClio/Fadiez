@@ -680,7 +680,7 @@ a:visited {
 }
 
 .backoffice-menu-disconnection {
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
 .backoffice-menu-link {
@@ -689,6 +689,112 @@ a:visited {
 	padding-bottom: 15px;
 	width: 100%;
 }
+
+
+/* BACKOFFICE COMPTE */
+/* ................. */
+
+.backoffice-compte-container {
+	padding-top: 50px;
+	min-height: 100vh;
+	color: white;
+	background-color: black;
+}
+
+.backoffice-compte-icon-compte {
+	margin-bottom: 40px;
+	width: 100%;
+	font-size: 3em;
+}
+
+.backoffice-compte-icon-arrow {
+	margin-bottom: 20px;
+	font-size: 2em;
+}
+
+.backoffice-compte-bar-title {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ffda2a;
+	border-bottom: 1px solid white;
+	color: #373737;
+}
+
+.backoffice-compte-bar-data {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #373737;
+	border-top: 1px solid white;
+	font-size: 0.8em;
+}
+
+.backoffice-compte-button {
+	padding-right: 7px;
+	padding-left: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	border-radius: 5px;
+	background-color: white;
+	color: #373737;
+}
+
+
+/* BACKOFFICE INFO*/
+/* .............. */
+
+.backoffice-compte-container-info {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	min-height: 100vh;
+	color: white;
+	background-color: black;
+}
+
+.backoffice-compte-icon-compte-info {
+	margin-bottom: 40px;
+	width: 100%;
+	font-size: 3em;
+}
+
+.backoffice-compte-icon-arrow-info {
+	margin-bottom: 20px;
+	font-size: 2em;
+}
+
+.backoffice-compte-bar-data-info {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #373737;
+	font-size: 1.3em;
+}
+
+.backoffice-compte-user-info {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	border-top: 1px solid #72777c;
+}
+
+.backoffice-compte-user-info-custom {
+	border-bottom: 1px solid #72777c;
+}
+
+.backoffice-compte-info-container-button {
+	margin-top: 20px;
+}
+
+.backoffice-compte-info-button {
+	margin-bottom: 20px;
+}
+
 
 /* State (state elements) */
 /* ...................... */

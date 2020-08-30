@@ -60,9 +60,14 @@
 		require('../src/controller/front/Pricing.php');
 	}	
 
-	// Create compte page
+	// Inscription compte page
 	else if($url[0] === 'inscription') {
 		require('../src/controller/front/CreateAccount.php');
+	}
+
+	// Login page
+	else if($url[0] === 'login') {
+		require('../src/controller/front/login.php');
 	}	
 
 	// Error page

@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <figure class="footer-logo-container">
         <img src="public/images/homePage/musiqueLector/test.jpg" alt="Logo" class="footer-logo"/>
-        <-LOGO A REMPLACER
+        LOGO A REMPLACER
     </figure>
 
     <section class="footer-about-container">

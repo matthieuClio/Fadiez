@@ -1,6 +1,8 @@
 "use strict";
 
+
 class Menu {
+
     constructor() {
         // Dom elements
         // ............

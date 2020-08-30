@@ -42,26 +42,29 @@ class IconPassword {
     }
 
     iconPasswordConfirmation() {
-        // Eye icon event
-        this.visibleIconConfirmationElt.addEventListener("click", () => {
-            if(!this.passwordConfirmationIsVisible){
+        // Cheked existance
+        if(this.visibleIconConfirmationElt) {
+            // Eye icon event
+            this.visibleIconConfirmationElt.addEventListener("click", () => {
+                if(!this.passwordConfirmationIsVisible){
 
-                this.visibleIconConfirmationElt.style.display = "none";
-                this.invisibleIconConfirmationElt.style.display = "inline-block";
-                this.passwordConfirmationElt.setAttribute("type", "text");
-                this.passwordConfirmationIsVisible = true;
-            }
-        });
+                    this.visibleIconConfirmationElt.style.display = "none";
+                    this.invisibleIconConfirmationElt.style.display = "inline-block";
+                    this.passwordConfirmationElt.setAttribute("type", "text");
+                    this.passwordConfirmationIsVisible = true;
+                }
+            });
 
-        this.invisibleIconConfirmationElt.addEventListener("click", () => {
-            if(this.passwordConfirmationIsVisible) {
+            this.invisibleIconConfirmationElt.addEventListener("click", () => {
+                if(this.passwordConfirmationIsVisible) {
 
-                this.visibleIconConfirmationElt.style.display = "inline-block";
-                this.invisibleIconConfirmationElt.style.display = "none";
-                this.passwordConfirmationElt.setAttribute("type", "password");
-                this.passwordConfirmationIsVisible = false;
-            }
-        });
+                    this.visibleIconConfirmationElt.style.display = "inline-block";
+                    this.invisibleIconConfirmationElt.style.display = "none";
+                    this.passwordConfirmationElt.setAttribute("type", "password");
+                    this.passwordConfirmationIsVisible = false;
+                }
+            });
+        }
     }
 }
 

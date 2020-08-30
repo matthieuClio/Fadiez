@@ -46,66 +46,74 @@
                
                 <!-- Registration -->
                 <form action="inscription" method="post" class="registration-container">
-                    <div class="registration-info">
-                        <span class="registration-text-mandatory">*</span>
-                        Champs obligatoires
+                    <div class="registration-center-container">
+                        <div class="registration-info margin-top-fact">
+                            <span class="registration-text-mandatory">*</span>
+                            Champs obligatoires
+                        </div>
+
+                        <label class="registration-text">
+                            Nom <span class="registration-text-mandatory">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            class="registration-input" 
+                            placeholder="Nom"
+                            value="<?php if(!empty($_POST['name'])){echo $_POST['name'];}?>" 
+                            required/>
+
+                        <label class="registration-text">
+                            Prénom <span class="registration-text-mandatory">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="firstName" 
+                            class="registration-input" 
+                            placeholder="Prénom" 
+                            value="<?php if(!empty($_POST['firstName'])){echo $_POST['firstName'];}?>"
+                            required/>
+
+                        <label class="registration-text">
+                            Email <span class="registration-text-mandatory">*</span>
+                        </label>
+                        
+                        <input 
+                            type="email" 
+                            name="email" 
+                            class="registration-input" 
+                            placeholder="Email" 
+                            value="<?php if(!empty($_POST['email'])){echo $_POST['email'];}?>"
+                            required
+                        />
+
+                        <label class="registration-text registration-text-modification">
+                            Mot de passe <span class="registration-text-mandatory">*</span>
+                            <span class="registration-text-detail">
+                                (Le mot de passe doit comprendre : 12 caractères,
+                                une majuscule, au moins un chiffre et un caractère spécial)
+                            <span>
+                        </label>
+                        <input type="password" name="password" class="registration-input" placeholder="Mot de passe" id="password" required/>
+                        <div class="registration-eye-icon-container text-align-right-fact"> 
+                            <i class="fa fa-eye eye-icon-fact" aria-hidden="true" id="eye-icon-visible" ></i>
+                            <i class="fa fa-eye-slash eye-icon-crossed-fact" aria-hidden="true" id="eye-icon-invisible"></i>
+                        </div>
+
+                        <label class="registration-text">
+                            Confirmation <span class="registration-text-mandatory">*</span>
+                        </label>
+                        <input type="password" name="passwordConfirmation" class="registration-input" placeholder="Confirmer le mot de..." id="password-confirmation" required/>
+                        <div class="registration-eye-icon-container text-align-right-fact">     
+                            <i class="fa fa-eye eye-icon-fact" aria-hidden="true" id="eye-icon-visible-confirmation" ></i>
+                            <i class="fa fa-eye-slash eye-icon-crossed-fact" aria-hidden="true" id="eye-icon-invisible-confirmation"></i>
+                        </div>
+                        
+                        <div class="registration-input-button">
+                            <input type="submit" name="registrationValidation" class="light-button-fact" value="Valider"/>
+                        </div>
                     </div>
-
-                    <label class="registration-text">
-                        Nom <span class="registration-text-mandatory">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        class="registration-input" 
-                        placeholder="Nom"
-                        value="<?php if(!empty($_POST['name'])){echo $_POST['name'];}?>" 
-                        required/>
-
-                    <label class="registration-text">
-                        Prénom <span class="registration-text-mandatory">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        name="firstName" 
-                        class="registration-input" 
-                        placeholder="Prénom" 
-                        value="<?php if(!empty($_POST['firstName'])){echo $_POST['firstName'];}?>"
-                        required/>
-
-                    <label class="registration-text">
-                        Email <span class="registration-text-mandatory">*</span>
-                    </label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        class="registration-input" 
-                        placeholder="Email" 
-                        value="<?php if(!empty($_POST['email'])){echo $_POST['email'];}?>"
-                        required/>
-
-                    <label class="registration-text registration-text-modification">
-                        Mot de passe <span class="registration-text-mandatory">*</span>
-                        <span class="registration-text-detail">
-                            (Le mot de passe doit comprendre : 12 caractères,
-                            une majuscule, au moins un chiffre et un caractère spécial)
-                        <span>
-                    </label>
-                    <input type="password" name="password" class="registration-input" placeholder="Mot de passe" id="password" required/>
-                    <i class="fa fa-eye eye-icon" aria-hidden="true" id="eye-icon-visible" ></i>
-                    <i class="fa fa-eye-slash eye-icon-crossed" aria-hidden="true" id="eye-icon-invisible"></i>
-
-                    <label class="registration-text">
-                        Confirmation <span class="registration-text-mandatory">*</span>
-                    </label>
-                    <input type="password" name="passwordConfirmation" class="registration-input" placeholder="Confirmer le mot de..." id="password-confirmation" required/>
-                    <i class="fa fa-eye eye-icon" aria-hidden="true" id="eye-icon-visible-confirmation" ></i>
-                    <i class="fa fa-eye-slash eye-icon-crossed" aria-hidden="true" id="eye-icon-invisible-confirmation"></i>
-
-                    <div class="registration-input-button">
-                        <input type="submit" name="registrationValidation" class="light-button-fact" value="Valider"/>
-                    </div>
-                </form>
+                 </form>
             </section>
 		</main>
 

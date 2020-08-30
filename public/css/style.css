@@ -97,6 +97,30 @@ a:visited {
 	overflow: hidden;
 }
 
+.menu-window-tab {
+	z-index: 2;
+	position: fixed;
+	top: 36px;
+	right: 0;
+	opacity: 0;
+	width: 0;
+	background-color: #373737;
+	border-top: 1px solid #bfbcbc;
+	transition: 0.5s;
+	overflow: hidden;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.menu-window-tab-link {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
 .button-icon-container {
 	width: 100%;
 }
@@ -450,16 +474,21 @@ a:visited {
 .registration-container {
 	margin: 20px;
 	margin-bottom: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 	padding-bottom: 20px;
-	width: 100%;
+	width: 80%;
 	background-color: #373737;
 	border-radius: 9px;
 	color: white;
 	font-size: 1.8em;
 }
 
+.registration-center-container {
+	width: 100%;
+}
+
 .registration-info {
-	margin: 20px;
 	padding-bottom: 10px;
 	font-size: 0.8em;
 }
@@ -471,8 +500,6 @@ a:visited {
 .registration-text {
 	display: block;
 	margin-top: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
 	margin-bottom: 10px;
 	height: 20px;
 	font-weight: bold;
@@ -488,10 +515,15 @@ a:visited {
 	font-size: 0.7em;
 }
 
+.registration-eye-icon-container {
+	width: 100%;
+}
+
 .registration-input {
-	margin-left: 20px;
-	padding: 5px;
-	width: 70%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	width: 100%;
 	border-radius: 5px;
 }
 
@@ -501,13 +533,54 @@ a:visited {
 	text-align: center;
 }
 
-.eye-icon {
-	cursor: pointer;
+
+/* LOGIN */
+/* ...... */
+
+.login-container {
+	min-height: 100vh;
+	background-color: black;
 }
 
-.eye-icon-crossed {
-	display: none;
-	cursor: pointer;
+.login-center-container {
+	width: 100%;
+}
+
+.login-form {
+	margin: auto;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 80%;
+	background-color: #373737;
+	border-radius: 9px;
+	color: white;
+	font-size: 1.8em;
+}
+
+.login-text {
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.login-input {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.login-eye-icon-container {
+	width: 100%;
+}
+
+.login-input-button {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
 }
 
 
@@ -814,6 +887,11 @@ a:visited {
 	color: #ffda2a;
 }
 
+.menu-window-tab-link:hover {
+	background-color: #ffda2a;
+	color: #373737;
+}
+
 /* Pricing */
 .pricing-button:hover {
 	background-color: #ddbe25;
@@ -830,9 +908,14 @@ a:visited {
 	color: #373737;
 }
 
+
 /* Factored */
 /* ........ */
 /* ........ */
+
+.padding-top-fact {
+	padding-top: 40px;
+}
 
 .font-size-default-fact {
 	font-size: 1.8em;
@@ -922,6 +1005,15 @@ a:visited {
 	padding-top: 50px;
 	width: 100%;
 	text-align: center;
+}
+
+.eye-icon-fact {
+	cursor: pointer;
+}
+
+.eye-icon-crossed-fact {
+	display: none;
+	cursor: pointer;
 }
 
 

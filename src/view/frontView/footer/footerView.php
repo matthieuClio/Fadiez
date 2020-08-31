@@ -33,7 +33,7 @@
     </section>
 
     <section class="footer-information-container">
-        <h2 class="footer-information">Informations supplémentaire</h2>
+        <h2 class="footer-information">Informations supplémentaires</h2>
         <p class="font-size-secondary-fact">
             Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit. 

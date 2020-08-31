@@ -25,7 +25,22 @@
 
 <!-- Menu tab -->
 <nav class="menu-window-tab" id="menu-window-tab-id">
-    <a href="login" class="menu-window-tab-link color-primary-fact text-align-center-fact">
-        Connexion
-    </a>
+    <?php
+        // Display connexion link
+        if(empty($_SESSION['pseudoUser'])) { 
+    ?>
+            <a href="connexion" class="menu-window-tab-link color-primary-fact text-align-center-fact">
+                Connexion
+            </a>
+    <?php    
+        }
+        // Display compte link
+        else if(!empty($_SESSION['pseudoUser'])) {
+    ?>
+            <a href="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
+                Compte
+            </a>
+    <?php
+        }
+    ?>
 </nav>

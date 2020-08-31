@@ -84,7 +84,7 @@
                     </div>
                 </article>
 
-                <article class="pricing">
+                <article class="pricing pricing-bottom-space">
                     <h2 class="pricing-title color-secondary-fact   ">
                         Premium
                     </h2>
@@ -105,7 +105,7 @@
 		</main>
 
 		<!-- Footer -->
-		<?php //include'footer/footerView.php'; ?>
+		<?php include'footer/footerView.php'; ?>
 
 		<!-- Js load -->
 		<?php include'js/pricingPage/jsLoadPricingPage.php'; ?>

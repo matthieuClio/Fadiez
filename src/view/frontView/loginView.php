@@ -13,8 +13,17 @@
 		<main class="login-container padding-top-fact color-primary-fact">
 			<h1 class="text-align-center-fact margin-top-fact">Login</h1>
 			<!-- Login form -->
-			<form action="login" method="post" class="login-form margin-top-fact">
+			<form action="connexion" method="post" class="login-form margin-top-fact">
 				<div class="login-center-container">	
+					
+					<div class="login-error-message margin-bottom-fact">
+						<?php 
+							if(!empty($_SESSION['error'])) {
+								echo $_SESSION['error'];
+							}
+						?>
+					</div>
+
 					<label class="login-text">
 						Email :
 					</label>
@@ -38,7 +47,7 @@
 					</div>
 
 					<div class="login-input-button">
-						<input type="submit" name="registrationValidation" class="light-button-fact" value="Valider"/>
+						<input type="submit" name="submitConnexion" class="light-button-fact" value="Valider"/>
 					</div>
 				</div>
 			</form>

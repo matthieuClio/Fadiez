@@ -6,8 +6,13 @@
 			$requete = $connexion->prepare('SELECT salt FROM compte WHERE email = :email');
 			$requete->execute(array('email' => $email));
 			$salt = $requete->fetch();
+			
+			// Condition for don't have error if the result is false 
+			if(!empty($salt)){
+				$salt = $salt['salt'];
+			}
 
-			return $salt['salt'];
+			return $salt;
 		}
 
 		public function UserInformation($email, $passwordCrypte, $connexion)

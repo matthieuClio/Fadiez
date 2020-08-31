@@ -66,13 +66,18 @@
 	}
 
 	// Login page
-	else if($url[0] === 'login') {
-		require('../src/controller/front/login.php');
-	}	
+	else if($url[0] === 'connexion') {
+		require('../src/controller/front/Login.php');
+	}
+
+	// Account page
+	else if($url[0] === 'compte') {
+		require('../src/controller/front/Account.php');
+	}
 
 	// Error page
 	else 
 	{
-		//require('../src/controller/');
+		require('../src/controller/front/errorPage.php');
 	}
 ?>

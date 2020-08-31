@@ -103,6 +103,9 @@
                                 $_SESSION['erreurCreateAccount'] = "";
                             }
 
+                            // Redirect on the account page
+                            header('location:compte');
+
                         // Email is already taked
                         } else if($checkEmail != 0) {
                             $_SESSION['erreurCreateAccount'] = "L'email est déjà utilisé";

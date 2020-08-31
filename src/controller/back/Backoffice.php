@@ -8,9 +8,9 @@
 		private $bddObj;
 		private $loginObj;
 		private $connexion;
-		private $pseudo;
 		private $password;
 		private $statut;
+		private $email;
 
 		// Constructor
 		function __construct() {
@@ -86,7 +86,6 @@
 						// Redirect the user to the connexion page
 						header('location:backoffice');
 					}
-
 				} // End verification
 
 				// Login information is false
@@ -102,7 +101,7 @@
 				// Already connected
 			}
 
-	    } // End function
+	    } // End function logInConnexion
 	} // End class Backoffice
 
 

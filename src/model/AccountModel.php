@@ -46,6 +46,22 @@
 
       return $requete;
     }
+
+    public function InfoAccountUserByName($mailAccount, $connexion)
+		{
+			// Select all of account
+			$requete = $connexion->prepare('SELECT * FROM compte WHERE email = :mailAccount');
+			$requete->execute(array('mailAccount' => $mailAccount));
+
+      return $requete;
+    }
+
+    public function ModificationAccountUser($idAccount, $name, $firstName, $email, $connexion)
+		{
+      // Update account
+      $requete = $connexion->prepare('UPDATE compte SET name = :name, first_name = :firstName, email = :email WHERE id = :idAccount');
+      $requete->execute(array('name' => $name, 'firstName' => $firstName, 'email' => $email, 'idAccount' => $idAccount));
+		}
     
     public function BlockUser($idAccount, $connexion)
 		{

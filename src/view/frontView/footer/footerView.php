@@ -58,8 +58,9 @@
 
     <section class="footer-payement-container">
         <h2 class="footer-payement">Payement</h2>
-        <p class="font-size-secondary-fact">
-            LOGO PAYPAL
-        </p>
+
+        <figure class="font-size-secondary-fact">
+            <img src="public/images/homePage/footer/paypal.png" class="footer-paypal-img">
+        </figure>
     </section>
 </footer>

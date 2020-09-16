@@ -1,6 +1,6 @@
 <?php
 	require('../core/BddConnexion.php');
-	require('../src/model/Account.php');
+	require('../src/model/AccountModel.php');
 
 	class BackofficeCompte {
 
@@ -39,7 +39,6 @@
 	    {
             if(!empty($_POST['blockAccount'])) {
                 $data = $this->accountObj->BlockUser($this->idAccount, $this->connexion);
-                return $data;
             }
         }
 
@@ -47,7 +46,6 @@
 	    {
             if(!empty($_POST['unblockAccount'])) {
                 $data = $this->accountObj->unblockUser($this->idAccount, $this->connexion);
-                return $data;
             }
         }
 

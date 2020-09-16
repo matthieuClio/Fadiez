@@ -1,6 +1,6 @@
 <?php
 	require('../core/BddConnexion.php');
-	require('../src/model/Identification.php');
+	require('../src/model/IdentificationModel.php');
 
 
 	class Login {

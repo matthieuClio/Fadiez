@@ -7,13 +7,13 @@
 		$url = explode('/', $_GET['url']);
 	}
 
-	// Maintenance page
+	// Maintenance page url 1
 	if ($url === '')
 	{
 		require('../src/controller/front/Maintenance.php');
 	}
 
-	// Maintenance page
+	// Maintenance page url 2
 	else if ($url[0] === 'maintenance')
 	{
 		require('../src/controller/front/Maintenance.php');
@@ -70,7 +70,7 @@
 		require('../src/controller/front/Login.php');
 	}
 
-	// Account page
+	// Account user page
 	else if($url[0] === 'compte') {
 		require('../src/controller/front/Account.php');
 	}
@@ -78,6 +78,6 @@
 	// Error page
 	else 
 	{
-		require('../src/controller/front/errorPage.php');
+		require('../src/controller/front/ErrorPage.php');
 	}
 ?>

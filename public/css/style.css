@@ -517,7 +517,7 @@ a:visited {
 .registration-text-detail {
 	display: block;
 	margin-top: 3px;
-	font-size: 0.7em;
+	font-size: 0.63em;
 }
 
 .registration-eye-icon-container {
@@ -593,8 +593,10 @@ a:visited {
 	text-align: center;
 }
 
+
 /* ACCOUNT */
 /* ....... */
+
 .account-container {
 	min-height: 100vh;
 	background-color: black;
@@ -607,8 +609,47 @@ a:visited {
 
 .account-design-element{
 	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
 	width: 70px;
     border-top: 1px solid white;
+}
+
+.account-information-name {
+	display: inline-block;
+	min-width: 70px;
+}
+
+.account-information-firstname {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 70px;
+}
+
+.account-information-email {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 70px;
+}
+
+.account-information-input {
+	padding: 3px;
+	width: 150px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.account-password-container {
+	margin-top: 40px;
+}
+
+.account-password-label {
+	display: inline-block;
+	min-width: 70px;
+}
+
+.account-disconnection-container {
+	margin-top: 40px;
 }
 
 
@@ -696,6 +737,10 @@ a:visited {
 
 .footer-payement {
 	margin-bottom: 10px;
+}
+
+.footer-paypal-img {
+	max-width: 200px;
 }
 
 
@@ -961,6 +1006,10 @@ a:visited {
 	padding-top: 40px;
 }
 
+.padding-bottom-fact {
+	padding-bottom: 40px;
+}
+
 .font-size-default-fact {
 	font-size: 1.8em;
 }
@@ -1031,6 +1080,10 @@ a:visited {
  
 .text-align-right-fact {
 	text-align: right;
+}
+
+.text-align-left-fact {
+	text-align: left;
 }
 
 .text-align-center-fact {

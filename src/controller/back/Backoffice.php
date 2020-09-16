@@ -1,6 +1,6 @@
 <?php
 	require('../core/BddConnexion.php');
-	require('../src/model/Identification.php');
+	require('../src/model/IdentificationModel.php');
 
 
 	class Backoffice {
@@ -42,8 +42,9 @@
 	    }
 
 	    function alreadylogIn() {
-			if(!empty($_SESSION['pseudoUser'])) {
+			if(!empty($_SESSION['pseudoUser']) && !empty($_SESSION['statut'])) {
 				
+				if($_SESSION['statut'] == $this->statut)
 				// Load the view
 				require('../src/view/backView/backofficeView.php');
 			}

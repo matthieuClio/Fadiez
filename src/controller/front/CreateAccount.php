@@ -1,6 +1,6 @@
 <?php
     require('../core/BddConnexion.php');
-	require('../src/model/Account.php');
+	require('../src/model/AccountModel.php');
 
 	class CreateAccount {
 

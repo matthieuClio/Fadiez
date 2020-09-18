@@ -69,7 +69,6 @@
 
                     // Verification complexity password (Maj, 12 caracteres, special caracteres)
                     if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{12,}$#', $this->password)) {
-                        ?> <script type="text/javascript">console.log('Mot de passe conforme');</script> <?php
 
                         // We define the unique salt per user
                         $text = substr(str_shuffle('0123456789abcdefghjkmnpqrstuvwxyz'), 0, 20);

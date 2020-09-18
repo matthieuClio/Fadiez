@@ -61,6 +61,13 @@
       // Update account
       $requete = $connexion->prepare('UPDATE compte SET name = :name, first_name = :firstName, email = :email WHERE id = :idAccount');
       $requete->execute(array('name' => $name, 'firstName' => $firstName, 'email' => $email, 'idAccount' => $idAccount));
+    }
+    
+    public function ModificationAccountUserPassword($idAccount, $newPassword, $salt, $connexion)
+		{
+      // Update account
+      $requete = $connexion->prepare('UPDATE compte SET password = :newPassword, salt = :salt WHERE id = :idAccount');
+      $requete->execute(array('newPassword' => $newPassword, 'salt' => $salt,'idAccount' => $idAccount));
 		}
     
     public function BlockUser($idAccount, $connexion)

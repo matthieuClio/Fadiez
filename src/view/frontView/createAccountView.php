@@ -91,7 +91,7 @@
                             Mot de passe <span class="registration-text-mandatory">*</span>
                             <span class="registration-text-detail">
                                 (Le mot de passe doit comprendre : 12 caractères,
-                                une majuscule, au moins un chiffre et un caractère spécial, exemple : !, ?, ‹)
+                                une majuscule, au moins un chiffre et un caractère spécial, exemple : !, ?)
                             <span>
                         </label>
                         <input type="password" name="password" class="registration-input" placeholder="Mot de passe" id="password" required/>

@@ -615,6 +615,34 @@ a:visited {
     border-top: 1px solid white;
 }
 
+.account-information-errorMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: red;
+}
+
+.account-information-button {
+	display: inline-block;
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	background-color: greenyellow;
+	color: black;
+	border-radius: 40px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.account-information-successMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: greenyellow;
+}
+
 .account-information-name {
 	display: inline-block;
 	min-width: 70px;
@@ -643,9 +671,33 @@ a:visited {
 	margin-top: 40px;
 }
 
-.account-password-label {
+.account-password-errorMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: red;
+}
+
+.account-password-successMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: greenyellow;
+}
+
+.account-password-old {
 	display: inline-block;
 	min-width: 70px;
+}
+
+.account-password-new {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 70px;
+}
+
+.account-password-text {
+	margin: auto;
+	margin-top: 5px;
+	width: 230px;
 }
 
 .account-disconnection-container {

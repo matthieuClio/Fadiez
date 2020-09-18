@@ -28,6 +28,33 @@
             <form action="compte" method="post" class="margin-top-fact text-align-center-fact padding-bottom-fact">
                 <section>
                     <h2 class="margin-bottom-fact">Informations personnelles</h2>
+
+                    <!-- Error message -->
+                    <?php 
+                    if(!empty($infoMessageDataUser[0])) { ?>
+                        <div class="account-information-errorMessage">
+                            <?php
+                            echo $infoMessageDataUser[0];
+                            ?>
+                        </div>
+                    <?php 
+                    } ?>
+
+                    <!-- Success message -->
+                    <?php 
+                    if(!empty($infoMessageDataUser[1])) { ?>
+                        <div class="account-information-successMessage">
+                            <?php
+                            echo $infoMessageDataUser[1];
+                            ?>
+
+                            <a href="compte" class="account-information-button">
+                                Voir les nouvelles informations
+                            </a>
+                        </div>
+                    <?php 
+                    } ?>
+
                     <div class="margin-top-fact font-size-secondary-fact">
                         <!-- Label -->
                         <label class="account-information-name font-weight-bold-fact text-align-left-fact">
@@ -74,14 +101,36 @@
                     </div>
 
                     <input type="hidden" name="idUser" value="<?php if(!empty($info)) { echo $info['id']; }?>"/>
-                    <input type="submit" name="modification" value="Modification" class="light-button-fact margin-top-fact"/>
+                    <input type="submit" name="modification" value="Modifier" class="light-button-fact margin-top-fact"/>
                 </section>
 
                 <section class="account-password-container">
                     <h2>Changer votre mot de passe</h2>
 
-                    <div class="margin-top-fact font-size-secondary-fact">
-                        <label class="account-password-label font-weight-bold-fact text-align-left-fact">
+                    <!-- Error message -->
+                    <?php 
+                    if(!empty($infoMessage[0])) { ?>
+                        <div class="account-password-errorMessage">
+                            <?php
+                            echo $infoMessage[0];
+                            ?>
+                        </div>
+                    <?php 
+                    } ?>
+
+                    <!-- Success message -->
+                    <?php 
+                    if(!empty($infoMessage[1])) { ?>
+                        <div class="account-password-successMessage">
+                            <?php
+                            echo $infoMessage[1];
+                            ?>
+                        </div>
+                    <?php 
+                    } ?>
+
+                    <div class=" font-size-secondary-fact margin-top-fact">
+                        <label class="account-password-old font-weight-bold-fact text-align-left-fact">
                             Ancien :
                         </label>
 
@@ -89,12 +138,18 @@
                     </div>
 
                     <div class="font-size-secondary-fact">
-                        <label class="account-password-label font-weight-bold-fact text-align-left-fact">
+                        <label class="account-password-new font-weight-bold-fact text-align-left-fact">
                             Nouveau :
                         </label>
 
                         <input type="password" name="newPassword" class="account-information-input">
+                        <p class="account-password-text text-align-left-fact">
+                            (Le mot de passe doit comprendre : 12 caractères,
+                            une majuscule, au moins un chiffre et un caractère spécial, exemple : !, ?)
+                        </p>
                     </div>
+
+                    <input type="submit" name="modificationPassword" value="Modifier" class="light-button-fact margin-top-fact"/>
                 </section>
 
                 <section class="account-disconnection-container">

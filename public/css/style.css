@@ -860,6 +860,7 @@ a:visited {
 	color: #d50a0a;
 }
 
+
 /* BACKOFFICE */
 /* .......... */
 
@@ -981,6 +982,16 @@ a:visited {
 	font-size: 2em;
 }
 
+.backoffice-compte-errorMessage {
+	font-size: 1.2em;
+	color: red;
+}
+
+.backoffice-compte-successMessage {
+	font-size: 1.2em;
+	color: greenyellow;
+}
+
 .backoffice-compte-bar-data-info {
 	display: flex;
 	align-items: center;
@@ -1007,6 +1018,18 @@ a:visited {
 
 .backoffice-compte-info-button {
 	margin-bottom: 20px;
+}
+
+.backoffice-compte-info-label {
+	display: inline-block;
+	min-width: 70px;
+}
+
+.backoffice-compte-info-input {
+	padding: 3px;
+	width: 150px;
+	background-color: white;
+	border-radius: 5px;
 }
 
 

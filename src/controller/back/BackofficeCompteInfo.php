@@ -61,21 +61,26 @@
         public function modificationUserData()
 	    {
 			if(!empty($_POST['modification'])) {
-                // Current email user
-                $requete = $this->accountObj->InfoAccountUser($this->idAccount, $this->connexion);
-                $oldEmail = $requete->fetch();
 
-                // Same email result
-				$verification = $this->accountObj->EmailExist($this->email, $this->connexion);
-                
-				// Email is not already taken or email is the same than email in database
-				if($verification == 0 || $oldEmail['email'] == $this->email) {
-					$this->accountObj->ModificationAccountUser($this->idAccount, $this->name, $this->firstName, $this->email, $this->connexion);
-                    $this->infoMessageDataUser[1] = "Les modifications ont bien été effectués";
+                if(!empty($_POST['email'])) {
+                    // Current email user
+                    $requete = $this->accountObj->InfoAccountUser($this->idAccount, $this->connexion);
+                    $oldEmail = $requete->fetch();
+
+                    // Same email result
+                    $verification = $this->accountObj->EmailExist($this->email, $this->connexion);
                     
-				} else {
-					$this->infoMessageDataUser[0] = "L'email rentré est déjà pris";
-				}
+                    // Email is not already taken or email is the same than email in database
+                    if($verification == 0 || $oldEmail['email'] == $this->email) {
+                        $this->accountObj->ModificationAccountUser($this->idAccount, $this->name, $this->firstName, $this->email, $this->connexion);
+                        $this->infoMessageDataUser[1] = "Les modifications ont bien été effectués";
+                        
+                    } else {
+                        $this->infoMessageDataUser[0] = "L'email rentré est déjà pris";
+                    }
+                } else if(empty($_POST['email'])) {
+                    $this->infoMessageDataUser[0] = "Le champ Email est vide";
+                }
 			}
 			return $this->infoMessageDataUser;
 		} // End function modificationUserData

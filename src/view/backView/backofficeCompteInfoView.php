@@ -89,6 +89,7 @@
                                     name="email" 
                                     value="<?php echo $info['email']; ?>" 
                                     class="backoffice-compte-info-input"
+                                    required
                                 />
                             </span>
                         </div>

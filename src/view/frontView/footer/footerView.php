@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <figure class="footer-logo-container">
-        <img src="public/images/homePage/musiqueLector/test.jpg" alt="Logo" class="footer-logo"/>
+        <img src="public/images/homePage/slider/casque.jpg" alt="Logo" class="footer-logo"/>
         LOGO A REMPLACER
     </figure>
 

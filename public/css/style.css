@@ -170,31 +170,58 @@ a:visited {
 	margin-left: 10px;
 }
 
-/* - Playlist - */
-.playlist-container {
-	padding-top: 50px;
-	padding-bottom: 50px;;
+/* Home information */
+.home-information {
 	background-color: #171717;
 	text-align: center;
 	color: white;
 	font-size: 1.5em;
-	border: 1px solid #2d2d2d;
+}
+
+.home-information-text {
+	margin: 20px;
+}
+
+/* - Playlist - */
+.playlist-container {
+	padding-bottom: 50px;
+	background-color: #171717;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+}
+
+/* Secondary player  */
+.music-title {
+	display:flex;
+	justify-content: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #ffda2a;
+	color: #2d2d2d; 
+	font-weight: bold;
+}
+
+.music-title-text {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 /* Player */
 .player {
+	margin-bottom: 20px;/* Enlever */
 	display: flex;
 	align-items: center;
 	padding-top: 22px;
 	padding-bottom: 22px;
-	height: 70px;
+	width: auto;
+	height: 60px;
 	background-color: #2d2d2d;
 }
 
 .player-image {
 	margin-left: 22px;
-	width: auto;
-	height: 70px;
+	max-width: 70px;
 }
 
 .player-container-play {
@@ -209,9 +236,11 @@ a:visited {
 }
 
 .player-play-icon {
+	max-width: 100%;
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.3em;
 }
 
 .player-pause-icon {
@@ -219,6 +248,7 @@ a:visited {
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.3em;
 }
 
 .player-song-name {
@@ -228,9 +258,11 @@ a:visited {
 }
 
 .player-mute-icon {
+	display: none;
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.3em;
 }
 
 .player-unmute-icon {
@@ -238,15 +270,18 @@ a:visited {
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.3em;
 }
 
 .player-timer {
+	display: none;
 	margin-left: 22px;
 	color: white;
 }
 
 /* Seek bar */
 .player-seek-bar {
+	display: none;
 	margin-left: 10px;
 	-webkit-appearance: none;
 	height: 3px;
@@ -282,15 +317,18 @@ a:visited {
 }
 
 .player-favorite {
+	display: none;
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.3em;
 }
 
-.player-shopping {
+.player-download {
 	margin-left: 22px;
 	color: white;
 	cursor: pointer;
+	font-size: 1.em;
 }
 
 

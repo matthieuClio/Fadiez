@@ -89,7 +89,7 @@
 					<i class="fas fa-download player-download"></i>
 
 					<!-- File musique name -->
-					<input type="hidden" value="musique.mp3" id="musicFileName">
+					<input type="hidden" value="public/music/moonlight.mp3" id="musicFileName">
 				</div>
 				<p class="playlist-text">
 					Player (Alpha)

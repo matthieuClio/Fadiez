@@ -94,6 +94,18 @@
                             </span>
                         </div>
 
+                        <div class="backoffice-compte-user-info text-align-center-fact">
+                            <label class="backoffice-compte-info-label font-weight-bold-fact text-align-left-fact">
+                                Premium :
+                            </label>
+
+                            <span class="color-secondary-fact">
+                                <?php
+                                    echo $info['premium'];
+                                ?> 
+                            </span>
+                        </div>
+
                         <div class="backoffice-compte-user-info-custom backoffice-compte-user-info text-align-center-fact">
                             <label class="font-weight-bold-fact">
                                 Compte bloqué :

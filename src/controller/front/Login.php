@@ -2,7 +2,7 @@
 	require('../core/BddConnexion.php');
 	require('../src/model/IdentificationModel.php');
 
-
+	
 	class Login {
 
 		private $bddObj;

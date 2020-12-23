@@ -182,7 +182,7 @@ a:visited {
 	margin: 20px;
 }
 
-/* - Playlist - */
+/* Playlist */
 .playlist-container {
 	padding-bottom: 50px;
 	background-color: #171717;
@@ -191,7 +191,133 @@ a:visited {
 	font-size: 1.5em;
 }
 
-/* Secondary player */
+/* - Main player-  */
+.main-player {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	width: 100%;
+	height: 60px;
+	background-color: #2d2d2d;
+	/* box-shadow: 0px -35px 10px #2d2d2d; */
+}
+
+.main-player-image {
+	margin-left: 22px;
+	max-width: 70px;
+}
+
+.main-player-play-icon {
+	max-width: 100%;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.main-player-pause-icon {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.main-player-song-name {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	font-style: italic;
+	font-size: 1.15em;
+}
+
+.main-player-mute-container {
+	display: none;
+}
+
+.main-player-mute-icon {
+	margin-left: 22px;
+	min-width: 15px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.main-player-unmute-icon {
+	display: none;
+	margin-left: 22px;
+	min-width: 15px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.main-player-timer {
+	display: none;
+	min-width: 50px;
+	margin-left: 22px;
+	color: white;
+}
+
+/* Seek bar */
+.main-player-seek-bar {
+	margin-left: 10px;
+	-webkit-appearance: none;
+	height: 3px;
+	outline: none;
+	border-radius: 5px;
+	background-color: #ffda2a;
+	cursor: pointer;
+}
+
+/* Seek bar circle */
+.main-player-seek-bar::-webkit-slider-thumb { /* For chrome */
+	-webkit-appearance: none;
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.main-player-seek-bar:active::-webkit-slider-thumb {
+	box-shadow: 0 0 0 3px #2d2d2d,
+				0 0 0 6px #ffda2a;
+}
+
+.main-player-seek-bar::-moz-range-thumb {	/* For mozila */
+	width: 12px;
+	height: 12px;
+	background-color: white;
+}
+
+.main-player-seek-bar:active::-moz-range-thumb {
+	box-shadow: 0 0 0 3px #2d2d2d,
+				0 0 0 6px #ffda2a;
+}
+
+.main-player-favorite {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.main-player-download {
+	display: none;
+	margin-left: 22px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+
+/* - Secondary player - */
 .music-title {
 	display:flex;
 	justify-content: center;
@@ -209,7 +335,6 @@ a:visited {
 
 /* Player */
 .player {
-	margin-bottom: 20px;/* Enlever */
 	display: flex;
 	align-items: center;
 	padding-top: 22px;
@@ -217,6 +342,7 @@ a:visited {
 	width: auto;
 	height: 60px;
 	background-color: #2d2d2d;
+	border-bottom: 1px solid #4C4C4C;
 }
 
 .player-image {
@@ -253,13 +379,16 @@ a:visited {
 
 .player-song-name {
 	margin-left: 22px;
+	min-width: 100px;
 	color: white;
 	font-style: italic;
+	font-size: 1.15em;
 }
 
 .player-mute-icon {
 	display: none;
 	margin-left: 22px;
+	min-width: 15px;
 	color: white;
 	cursor: pointer;
 	font-size: 1.3em;
@@ -268,6 +397,7 @@ a:visited {
 .player-unmute-icon {
 	display: none;
 	margin-left: 22px;
+	min-width: 15px;
 	color: white;
 	cursor: pointer;
 	font-size: 1.3em;
@@ -275,6 +405,7 @@ a:visited {
 
 .player-timer {
 	display: none;
+	min-width: 50px;
 	margin-left: 22px;
 	color: white;
 }
@@ -325,7 +456,8 @@ a:visited {
 }
 
 .player-download {
-	margin-left: 22px;
+	margin-left: auto;
+	margin-right: 22px;
 	color: white;
 	cursor: pointer;
 	font-size: 1.em;
@@ -1094,12 +1226,53 @@ a:visited {
 	color: #373737;
 }
 
+/* Home */
+.play:hover {
+	background-color: #2d2d2d;
+}
+
+.pause:hover {
+	background-color: #2d2d2d;
+}
+
+.player-mute-icon:hover {
+	color: #ffda2a;
+}
+
+.player-unmute-icon:hover {
+	color: #ffda2a;
+}
+
+.player-play-icon:hover {
+	color: #ffda2a;
+}
+
+.player-pause-icon:hover {
+	color: #ffda2a;
+}
+
+.player-favorite:hover {
+	color: #ffda2a;
+}
+
+.player-download:hover {
+	color: #ffda2a;
+}
+
+.main-player-play-icon:hover {
+	color: #ffda2a;
+}
+
+.main-player-pause-icon:hover {
+	color: #ffda2a;
+}
+
 /* Pricing */
 .pricing-button:hover {
 	background-color: #ddbe25;
 }
 
-/* Factored */
+/* Factored elements */
 .light-button-fact:hover {
 	background-color: #d8d8d8;
 	color: #373737;
@@ -1233,16 +1406,52 @@ a:visited {
 /* .................... */
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+	/* Main player */
+	.main-player-song-name {
+		display: inline-block;
+	}
+
+	.main-player-mute-container {
+		display: inline-block;
+	}
+
+	.main-player-timer {
+		display: inline-block;
+	}
+	
+	/* Secondary player */
+	.player-song-name {
+		min-width: 200px;
+	}
+	.player-mute-icon {
+		display: inline-block;
+	}
+
+	.player-unmute-icon {
+		display: none;
+		margin-left: 22px;
+		min-width: 15px;
+		color: white;
+		cursor: pointer;
+		font-size: 1.3em;
+	}
+
+	.player-timer {
+		display: inline-block;
+	}
+
+	.player-seek-bar {
+		display: inline-block;
+	}
+	/* State (state elements) */
+	/* ...................... */
+	/* ...................... */
+
+
+	/* Factored */
+	/* ........ */
+	/* ........ */
 }
-
-/* State (state elements) */
-/* ...................... */
-/* ...................... */
-
-
-/* Factored */
-/* ........ */
-/* ........ */
 
 
 /* ........................................ */
@@ -1251,13 +1460,47 @@ a:visited {
 /* ............... */
 
 @media screen and (min-width: 1280px) {
+	/* Main player */
+	.main-player-song-name {
+		display: inline-block;
+	}
+
+	.main-player-mute-container {
+		display: inline-block;
+	}
+
+	.main-player-timer {
+		display: inline-block;
+	}
+
+	/* Secondary player */
+	.player-mute-icon {
+		display: inline-block;
+	}
+
+	.player-unmute-icon {
+		display: none;
+		margin-left: 22px;
+		min-width: 15px;
+		color: white;
+		cursor: pointer;
+		font-size: 1.3em;
+	}
+
+	.player-timer {
+		display: inline-block;
+	}
+
+	.player-seek-bar {
+		display: inline-block;
+	}
+
+	/* State (state elements) */
+	/* ...................... */
+	/* ...................... */
+
+
+	/* Factored */
+	/* ........ */
+	/* ........ */
 }
-
-/* State (state elements) */
-/* ...................... */
-/* ...................... */
-
-
-/* Factored */
-/* ........ */
-/* ........ */

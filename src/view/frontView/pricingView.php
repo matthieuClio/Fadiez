@@ -92,7 +92,7 @@
                         <i class="fas fa-gem"></i>
                     </header>
                     <div class="pricing-description color-secondary-fact">
-                        Ecoute + Téléchargement
+                        Ecoute et <span class="font-weight-bold-fact ">Téléchargement</span>
                     </div>
                     <p class="pricing-price color-secondary-fact">
                         10€

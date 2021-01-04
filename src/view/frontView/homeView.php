@@ -102,51 +102,78 @@
 				} // End while
 				?>
 
-				<!-- Main players -->
-				<div class="main-player">
-					<!-- Image -->
-					<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="main-player-image"/>
-
-					<!-- Player icon -->
-					<i class="fas fa-play main-player-play-icon" title="Jouer"></i>
-
-					<!-- Pause icon -->
-					<i class="fas fa-pause main-player-pause-icon" title="Pause"></i>
-
-					<!-- Song name -->
-					<p class="main-player-song-name" maxlength="10">---</p>
-
-					<!-- Mute icon -->
-					<span class="main-player-mute-container">
-						<i class="fas fa-volume-up main-player-mute-icon" title="Mettre en sourdine"></i>
-					</span>
-
-					<!-- Unmute icon -->
-					<i class="fas fa-volume-mute main-player-unmute-icon" title="Réactiver le son"></i>
-
-					<!-- Timer -->
-					<div class="main-player-timer">
-						<span class="main-player-timer-minute">
-							00
+				<!-- Sliding block -->
+				<div class="main-player-container">
+					<div class="sliding-block">
+						<span class="display-player">
+							Afficher le lecteur
+							<i class="fa fa-arrow-up" aria-hidden="true"></i>
 						</span>
-							:
-						<span class="main-player-timer-second">
-							00
+
+						<span class="hide-player">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<!-- Range bar -->
-					<input type="range" class="main-player-seek-bar" id="range" value="0" min="0">
+					<!-- Main players -->
+					<div class="main-player">
+						<!-- Image -->
+						<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="main-player-image"/>
 
-					<!-- Favorite icon -->
-					<i class="far fa-star main-player-favorite"></i>
+						<!-- Step-backward container -->
+						<div class="player-backward-container">
+							<!-- Step-backward icon -->
+							<i class="fa fa-step-backward player-backward-icon" aria-hidden="true" title="Musique précédante"></i>
+						</div>
 
-					<!-- Download icon -->
-					<i class="fas fa-download main-player-download"></i>
+						<!-- Player icon -->
+						<i class="fas fa-play main-player-play-icon font-size-secondary-fact" title="Jouer"></i>
 
-					<!-- File musique name -->
-					<!-- <input type="hidden" value="musique.mp3" id="musicFileName"> -->
-				</div>
+						<!-- Pause icon -->
+						<i class="fas fa-pause main-player-pause-icon font-size-secondary-fact" title="Pause"></i>
+
+						<!-- Step-forward container -->
+						<div class="player-forward-container">
+							<!-- Step-forward icon -->
+							<i class="fa fa-step-forward player-forward-icon" aria-hidden="true" title="Musique suivante"></i>
+						</div>
+
+						<!-- Song name -->
+						<span class="main-player-song-name">---</span>
+
+						<!-- Mute/unmute containter -->
+						<div class="main-player-mute-container">
+							<!-- Mute icon -->
+							<i class="fas fa-volume-up main-player-mute-icon" title="Mettre en sourdine"></i>
+						
+							<!-- Unmute icon -->
+							<i class="fas fa-volume-mute main-player-unmute-icon" title="Réactiver le son"></i>
+						</div>
+
+						<!-- Timer -->
+						<div class="main-player-timer">
+							<span class="main-player-timer-minute">
+								00
+							</span>
+								:
+							<span class="main-player-timer-second">
+								00
+							</span>
+						</div>
+
+						<!-- Range bar -->
+						<input type="range" class="main-player-seek-bar" id="range" value="0" min="0">
+
+						<!-- Favorite icon -->
+						<i class="far fa-star main-player-favorite"></i>
+
+						<!-- Download icon -->
+						<i class="fas fa-download main-player-download"></i>
+
+						<!-- File musique name -->
+						<!-- <input type="hidden" value="musique.mp3" id="musicFileName"> -->
+					</div> <!-- End main player -->
+				</div> <!-- End main player container -->
 			</section>
 		</main>
 

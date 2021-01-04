@@ -13,14 +13,18 @@ class SecLector {
 			    fileNameElt,
 			    idElt,
 
+			 	mainBackwardButtonElt,
 			    mainPlayButtonElt,
 			    mainPauseButtonElt,
+			    mainForwardButtonElt,
 			    mainMuteButtonElt,
 			    mainUnmuteButtonElt,
 			    mainRangeElt,
 			    mainTimerMinElt,
 				mainTimerSecElt,
-			    mainSongElt) {
+			    mainSongElt,
+			    NbPlayer,
+			    song) {
 
 		// HTML secondary player elements 
 		this.playButtonElt = playButtonElt;
@@ -35,8 +39,10 @@ class SecLector {
 		this.idElt = idElt;
 
 		// HTML main player elements 
+		this.mainBackwardButtonElt = mainBackwardButtonElt;
 		this.mainPlayButtonElt = mainPlayButtonElt;
 		this.mainPauseButtonElt = mainPauseButtonElt;
+		this.mainForwardButtonElt = mainForwardButtonElt;
 		this.mainMuteButtonElt = mainMuteButtonElt;
 		this.mainUnmuteButtonElt = mainUnmuteButtonElt;
 		this.mainRangeElt = mainRangeElt;
@@ -54,8 +60,11 @@ class SecLector {
 		this.sec;
 		this.min;
 
+		// Number players
+		this.NbPlayer = NbPlayer;
+
 		// Audio object
-		this.Song = new Audio();
+		this.Song = song;
 		this.Song.src = this.fileNameElt.value;
 	}
 
@@ -114,6 +123,24 @@ class SecLector {
 		else if(!this.Song.muted) {
 			this.mainMuteButtonElt.style.display = "inline-block";
 			this.mainUnmuteButtonElt.style.display = "none";
+		}
+
+		// Show Forward button
+		if(this.mainForwardButtonElt.style.display = "inline-block" && localStorage.musicPlayedId < this.NbPlayer-1) {
+			this.mainForwardButtonElt.style.display = "inline-block";
+		}
+		// Hide Forward button
+		else if(localStorage.musicPlayedId == secNbPlayer-1) {
+			mainForwardButtonElt.style.display = "none";
+		}
+
+		// Show backward Forward button
+		if(mainBackwardButtonElt.style.display = "inline-block" && localStorage.musicPlayedId > 0) {
+			mainBackwardButtonElt.style.display = "inline-block";
+		}
+		// Hide backward Forward button
+		else if(this.mainBackwardButtonElt.style.display = "inline-block" && localStorage.musicPlayedId == 0) {
+			this.mainBackwardButtonElt.style.display = "none";
 		}
 	}
 
@@ -252,7 +279,7 @@ class SecLector {
 	}
 
 	EndSong() {
-		this.Song.addEventListener('ended', () => {
+		//this.Song.addEventListener('ended', () => {
 			console.log('End');
 
 			// Hide the pause icon
@@ -281,7 +308,7 @@ class SecLector {
 				// Change range bar
 				this.mainRangeElt.value = 0;
 			}
-		});
+		//});
 	}
 
 

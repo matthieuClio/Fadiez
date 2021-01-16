@@ -42,7 +42,6 @@
 
 	// Music info
 	$dataMusic = $objectHome->data();
-	// $info = $dataMusic->fetch();
 	$counter = 0; // Used for the view
 
 	// Display the homeView page

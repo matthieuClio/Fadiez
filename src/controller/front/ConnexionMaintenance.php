@@ -12,7 +12,7 @@
 			// Object
 
 			// Variable
-		 	$this->psw = 'fadiezcomingsoon';
+		 	$this->psw = 'fadio';
 	    }
 
 	    // Function

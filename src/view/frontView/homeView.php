@@ -11,18 +11,34 @@
 		</header>
 
 		<section class="hero">
-			<div class="hero-container">
-				<h1 class="hero-text">
-					Obtenez de la musique en ilimitée
+			<div class="hero-container text-align-center-fact" id="hero-container-id">
+				<h1 class="hero-title" id="hero-title-id">
+					<span class="hero-text">Obtenez de la musique en ilimitée</span>
+					<span class="hero-text display-none-fact">Test 1</span>
+					<span class="hero-text display-none-fact">Test 2</span>
 				</h1>
-				<a href="inscription" class="light-button-fact hero-button-primary">
-					Gratuit
-				</a>
-				<a href="tarification" class="default-button-fact hero-button-secondary">
-					Tarification
-				</a>
+
+				<div id="button-container-id">
+					<a href="inscription" class="hero-button-primary light-button-fact" id="hero-button-left-id">
+						Gratuit
+					</a>
+					<a href="tarification" class="hero-button-secondary default-button-fact" id="hero-button-right-id">
+						Tarification
+					</a>
+				</div>
 			</div>
-			<img src="public/images/homePage/slider/casque.jpg" alt="casque"/>
+
+			<figure>
+				<img src="public/images/homePage/slider/casque.jpg" alt="casque" class="hero-slide display-block-fact">
+				<img src="public/images/homePage/slider/test.jpg" alt="test" class="hero-slide display-none-fact">
+				<img src="public/images/homePage/slider/casque.jpg" alt="casque" class="hero-slide display-none-fact">
+			</figure>
+
+			<div class="hero-circle-container text-align-center-fact color-quaternary-fact">
+				<i class="fa fa-circle margin-right-fact color-primary-fact cursor-pointer-fact" aria-hidden="true" id="hero-circle-one-id"></i>
+				<i class="fa fa-circle margin-right-fact cursor-pointer-fact" aria-hidden="true" id="hero-circle-two-id"></i>
+				<i class="fa fa-circle cursor-pointer-fact" aria-hidden="true" id="hero-circle-tree-id"></i>
+			</div>
 		</section>
 
 		<main>
@@ -44,7 +60,7 @@
 				<!-- Music name-->
 				<div class="music-title">
 					<i class="fas fa-music"></i>
-					<span class="music-title-text">-MUSIC NAME-</span>
+					<h3 class="music-title-text">Musique</h3>
 					<i class="fas fa-music"></i>
 				</div>
 

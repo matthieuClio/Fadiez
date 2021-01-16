@@ -1,5 +1,13 @@
 "use strict";
 
+// SLIDER HERO
+// ...........
+
+let Slider = new SliderHero();
+Slider.AnimationSlideOne();
+Slider.CircleButtonSlider();
+Slider.SlideAuto();
+
 // SLIDING BLOC
 // ............
 

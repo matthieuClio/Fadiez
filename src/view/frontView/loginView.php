@@ -46,6 +46,10 @@
 						<i class="fa fa-eye-slash eye-icon-crossed-fact" aria-hidden="true" id="eye-icon-invisible"></i>
 					</div>
 
+					<a href="inscription" class="login-link color-primary-fact">
+						Pas de compte ? <span class="login-color-text">Créer un compte</span>
+					</a>
+
 					<div class="login-input-button">
 						<input type="submit" name="submitConnexion" class="light-button-fact" value="Valider"/>
 					</div>

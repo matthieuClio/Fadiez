@@ -62,6 +62,9 @@
 					// Stock the user in a variable $_SESSION
 					$_SESSION['pseudoUser'] = $this->email;
 
+					// Put the statut user in a $_SESSION
+					$_SESSION['statut' ] = $this->loginObj->UserStatut($this->email, $this->connexion);
+
 					// Update the user ip
 					$this->loginObj->IpAddressStorage($this->email, $this->connexion);
 

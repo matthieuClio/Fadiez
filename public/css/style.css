@@ -97,13 +97,44 @@ a:visited {
 	overflow: hidden;
 }
 
+.menu-tab-front-container {
+	margin-top: 20px;
+}
+
+.menu-tab-front {
+	min-width: 300px;
+	list-style: none;
+	border-top: 1px solid #72777c;
+	color: white;
+	font-size: 2em;
+	overflow: hidden;
+}
+
+.menu-user-front {
+	margin: 20px;
+	color: #ffda2a;
+	border: none;
+}
+
+.menu-disconnection-front {
+	margin-top: 40px;
+}
+
+.menu-link-front {
+	display: inline-block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+}
+
 .menu-window-tab {
 	z-index: 5;
 	position: fixed;
 	top: 36px;
 	right: 0;
 	opacity: 0;
-	width: 0;
+	min-width: 150px;
+	height: 0px;
 	background-color: #373737;
 	border-top: 1px solid #bfbcbc;
 	transition: 0.5s;
@@ -119,6 +150,7 @@ a:visited {
 	width: 100%;
 	font-size: 1.3em;
 	cursor: pointer;
+	border-bottom: 1px solid #202020;
 }
 
 .button-icon-container {
@@ -825,6 +857,14 @@ a:visited {
 	width: 100%;
 }
 
+.login-link {
+	font-size: 0.8em;
+}
+
+.login-color-text {
+	color: #ddbe25;
+}
+
 .login-input-button {
 	margin-top: 20px;
 	width: 100%;
@@ -942,6 +982,102 @@ a:visited {
 	margin-top: 40px;
 }
 
+
+/* UPLOAD MUSIC PAGE */
+/* ................. */
+
+.upload-container {
+	min-height: 100vh;
+	background-color: black;
+}
+
+.upload-main-icon {
+	margin-top: 30px;
+	font-size: 3em;
+}
+
+.upload-design-element{
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 70px;
+    border-top: 1px solid white;
+}
+
+.upload-information-errorMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: red;
+}
+
+.upload-information-successMessage {
+	margin-top: 10px;
+	font-size: 1.2em;
+	color: greenyellow;
+}
+
+.upload-information-button {
+	display: inline-block;
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	background-color: greenyellow;
+	color: black;
+	border-radius: 40px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.upload-information-music {
+	display: inline-block;
+	min-width: 70px;
+}
+
+.upload-information-artist {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 70px;
+}
+
+.account-information-file {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 70px;
+}
+
+.upload-information-input {
+	padding: 3px;
+	width: 150px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.upload-information-input-file {
+	width: 150px;
+	background-color: #373737;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+	height: 30px;
+	background-color: #ffda2a;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+::-moz-file-upload-button {
+	height: 30px;
+	background-color: #ffda2a;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
 
 /* ERROR PAGE */
 /* .......... */

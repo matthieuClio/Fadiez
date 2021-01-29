@@ -9,9 +9,22 @@
     </div>
 
     <div>
-        <a href="inscription" class="menu-button">
-            Compte gratuit
-        </a>
+        <?php 
+            if(empty($_SESSION['pseudoUser'])) { 
+        ?>
+                <a href="inscription" class="menu-button">
+                    Compte gratuit
+                </a>
+        <?php 
+            }
+            else if(!empty($_SESSION['pseudoUser'])) { 
+        ?>
+                <a href="compte" class="menu-button">
+                    Compte
+                </a>
+        <?php
+            }
+        ?>
         <i class="fa fa-caret-down caret-icon color-tertiary-fact" aria-hidden="true" id="menu-icon-tab-id"></i>
     </div>
 </nav>
@@ -21,6 +34,40 @@
     <div class="button-icon-container text-align-right-fact">
         <i class="fa fa-times-circle button-icon margin-right-fact" aria-hidden="true" id="menu-close-icon"></i>
     </div>
+    
+    <ul class="menu-tab-front-container">
+        <li class="menu-user-front menu-tab-front text-align-center-fact">
+            <!-- Display the user name -->
+            <?php if(!empty($_SESSION['pseudoUser'])){ echo $_SESSION['pseudoUser'];} ?>
+        </li>
+
+        <li class="menu-tab-front">
+            <a href="accueil" class="menu-link-front color-primary-fact">
+                <i class="fa fa-home margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Accueil
+            </a>
+        </li>
+
+        <li class="menu-tab-front">
+            <a href="upload" class="menu-link-front color-primary-fact">
+                <i class="fa fa-upload margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Publier une musique
+            </a>
+        </li>    
+
+        <li class="menu-tab-front">
+            <a href="compte" class="menu-link-front color-primary-fact">
+                <i class="fa fa-user margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Compte
+            </a>
+        </li>
+
+        <li class="menu-tab-front">
+            <form method="post" action="compte" class="menu-disconnection-front text-align-center-fact">
+                <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
+            </form>
+        </li>
+    </ul>
 </nav>
 
 <!-- Menu tab -->
@@ -34,12 +81,22 @@
             </a>
     <?php    
         }
-        // Display compte link
+        // Display all link for a connected user
         else if(!empty($_SESSION['pseudoUser'])) {
     ?>
+            <a href="upload" class="menu-window-tab-link color-primary-fact text-align-center-fact">
+                <i class="fa fa-upload margin-right-fact" aria-hidden="true"></i>    
+                musique
+            </a>
+
             <a href="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
+                <i class="fa fa-user margin-right-fact" aria-hidden="true"></i>    
                 Compte
             </a>
+ 
+            <form method="post" action="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
+                <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
+            </form>
     <?php
         }
     ?>

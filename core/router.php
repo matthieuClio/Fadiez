@@ -7,13 +7,13 @@
 		$url = explode('/', $_GET['url']);
 	}
 
-	// Maintenance page url 1
+	// Maintenance page (url 1)
 	if ($url === '')
 	{
 		require('../src/controller/front/Maintenance.php');
 	}
 
-	// Maintenance page url 2
+	// Maintenance page (url 2)
 	else if ($url[0] === 'maintenance')
 	{
 		require('../src/controller/front/Maintenance.php');
@@ -24,6 +24,9 @@
 	{
 		require('../src/controller/front/ConnexionMaintenance.php');
 	}
+
+	// Backoffice
+	// ..........
 
 	// Backoffice info account page
 	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'info' && !empty($_SESSION['pseudoUser']))
@@ -49,6 +52,9 @@
 		require('../src/controller/back/BackofficeConnexion.php');
 	}
 
+	// Front
+	// .....
+
 	// Home page
 	else if ($url[0] === 'accueil')
 	{
@@ -59,6 +65,11 @@
 	else if($url[0] === 'tarification') {
 		require('../src/controller/front/Pricing.php');
 	}	
+
+	// Music upload page
+	else if($url[0] === 'upload') {
+		require('../src/controller/front/Upload.php');
+	}
 
 	// Inscription compte page
 	else if($url[0] === 'inscription') {

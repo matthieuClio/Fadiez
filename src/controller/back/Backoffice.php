@@ -100,6 +100,7 @@
 			} // End conditions
 			else {
 				// Already connected
+				echo('Veuillez vous déconnecter pour accéder à cette page');
 			}
 
 	    } // End function logInConnexion

@@ -14,8 +14,8 @@
 			<div class="hero-container text-align-center-fact" id="hero-container-id">
 				<h1 class="hero-title" id="hero-title-id">
 					<span class="hero-text">Obtenez de la musique en ilimitée</span>
-					<span class="hero-text display-none-fact">Test 1</span>
-					<span class="hero-text display-none-fact">Test 2</span>
+					<span class="hero-text display-none-fact">Slide 2</span>
+					<span class="hero-text display-none-fact">Slide 3</span>
 				</h1>
 
 				<div id="button-container-id">
@@ -30,8 +30,8 @@
 
 			<figure>
 				<img src="public/images/homePage/slider/casque.jpg" alt="casque" class="hero-slide display-block-fact">
-				<img src="public/images/homePage/slider/test.jpg" alt="test" class="hero-slide display-none-fact">
-				<img src="public/images/homePage/slider/casque.jpg" alt="casque" class="hero-slide display-none-fact">
+				<img src="public/images/homePage/slider/chanteur.jpg" alt="chanteur" class="hero-slide display-none-fact">
+				<img src="public/images/homePage/slider/casque.jpg" alt="platine" class="hero-slide display-none-fact">
 			</figure>
 
 			<div class="hero-circle-container text-align-center-fact color-quaternary-fact">

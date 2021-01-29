@@ -19,12 +19,12 @@ class MenuTab {
         this.menuElt.addEventListener("click", () => {
             if(!this.menuIsOpen){
 
-                this.menuWindowElt.style.width = "140px";
+                this.menuWindowElt.style.height = "auto";
                 this.menuWindowElt.style.opacity = "1";
                 this.menuIsOpen = true;
             } else {
 
-                this.menuWindowElt.style.width = "0";
+                this.menuWindowElt.style.height = "0px";
                 this.menuWindowElt.style.opacity = "0";
                 this.menuIsOpen = false;
             }

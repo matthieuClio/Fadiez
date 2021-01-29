@@ -166,8 +166,14 @@
 	
 	// Display the accountView page
 	if(!empty($_SESSION['admin'])) {
-		// Load the view
-		require('../src/view/frontView/accountView.php');
+		
+		if(!empty($_SESSION['pseudoUser'])) {
+			// Load the view
+			require('../src/view/frontView/accountView.php');
+		}
+		else if(empty($_SESSION['pseudoUser'])){
+			header('location: connexion');
+		}
 	}
 	else {
 		header('location: maintenance');

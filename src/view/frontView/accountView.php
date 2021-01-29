@@ -15,7 +15,7 @@
                 Compte
             </h1>
 
-            <!-- Icon compte -->
+            <!-- Icon account -->
             <div class="account-main-icon text-align-center-fact">
                 <i class="fa fa-user" aria-hidden="true"></i>
             </div>

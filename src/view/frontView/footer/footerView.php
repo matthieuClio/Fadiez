@@ -60,7 +60,7 @@
         <h2 class="footer-payement">Payement</h2>
 
         <figure class="font-size-secondary-fact">
-            <img src="public/images/homePage/footer/paypal.png" alt="Logo paypal" class="footer-paypal-img">
+            <img src="public/images/footer/paypal.png" alt="Logo paypal" class="footer-paypal-img">
         </figure>
     </section>
 </footer>

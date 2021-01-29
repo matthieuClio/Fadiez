@@ -101,9 +101,10 @@
                         </div>
 
                         <label class="registration-text">
-                            Confirmation <span class="registration-text-mandatory">*</span>
+                            Confirmer le mot de passe <span class="registration-text-mandatory">*</span>
                         </label>
                         <input type="password" name="passwordConfirmation" class="registration-input" placeholder="Confirmer le mot de..." id="password-confirmation" required/>
+                        
                         <div class="registration-eye-icon-container text-align-right-fact">     
                             <i class="fa fa-eye eye-icon-fact" aria-hidden="true" id="eye-icon-visible-confirmation" ></i>
                             <i class="fa fa-eye-slash eye-icon-crossed-fact" aria-hidden="true" id="eye-icon-invisible-confirmation"></i>

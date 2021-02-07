@@ -10,9 +10,9 @@
 			<?php include'menu/menuView.php'; ?>
 		</header>
 
-		<main class="upload-container padding-top-fact color-primary-fact">
+		<main class="upload-container color-primary-fact">
             <h1 class="text-align-center-fact">
-                Upload votre musique
+                Mettez en ligne votre musique
             </h1>
 
             <!-- Icon upload -->
@@ -25,16 +25,16 @@
             </div>
             
             <!-- User data -->
-            <form action="" method="post" class="margin-top-fact text-align-center-fact padding-bottom-fact">
+            <form action="upload" method="post" class="margin-top-fact text-align-center-fact padding-bottom-fact" enctype="multipart/form-data">
                 <section>
                     <h2 class="margin-bottom-fact">Informations requis</h2>
 
                     <!-- Error message -->
                     <?php 
-                    if(!empty($infoMessageDataUser[0])) { ?>
+                    if(!empty($infoMessage[0])) { ?>
                         <div class="upload-information-errorMessage">
                             <?php
-                            echo $infoMessageDataUser[0];
+                            echo $infoMessage[0];
                             ?>
                         </div>
                     <?php 
@@ -42,15 +42,17 @@
 
                     <!-- Success message -->
                     <?php 
-                    if(!empty($infoMessageDataUser[1])) { ?>
+                    if(!empty($infoMessage[1])) { ?>
                         <div class="upload-information-successMessage">
                             <?php
-                            echo $infoMessageDataUser[1];
+                            echo $infoMessage[1];
                             ?>
-
-                            <a href="compte" class="upload-information-button">
-                                Voir l'état de la mise en ligne de votre musique
-                            </a>
+                            
+                            <div> <!-- Use for put the button below the text -->
+                                <a href="compte" class="upload-information-button">
+                                    Voir la musique
+                                </a>
+                            </div>
                         </div>
                     <?php 
                     } ?>
@@ -96,14 +98,14 @@
                         <!-- Data -->
                         <input 
                             type="file" 
-                            name="fileName"
+                            name="upload"
                             required
                             class="upload-information-input-file"
                         >
                     </div>
 
                     <input type="hidden" name="idUser" value="<?php if(!empty($info)) { echo $info['id']; }?>"/>
-                    <input type="submit" name="uploadMusic" value="Envoyer" class="light-button-fact margin-top-fact"/>
+                    <input type="submit" name="submitButton" value="Envoyer" class="light-button-fact margin-top-fact"/>
                 </section>
             </form>
 		</main>

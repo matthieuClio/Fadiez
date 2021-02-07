@@ -11,7 +11,11 @@
 		</header>
 
 		<main class="login-container padding-top-fact color-primary-fact">
-			<h1 class="text-align-center-fact margin-top-fact">Login</h1>
+			
+			<h1 class="text-align-center-fact margin-top-fact">
+				<i class="fa fa-sign-in" aria-hidden="true"></i>
+				Login
+			</h1>
 			<!-- Login form -->
 			<form action="connexion" method="post" class="login-form margin-top-fact">
 				<div class="login-center-container">	

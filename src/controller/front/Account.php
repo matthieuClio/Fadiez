@@ -61,8 +61,6 @@
 			// infoMessage[0] For error
 			// infoMessage[1] For succes
 			$this->infoMessage = array('', '');
-
-			
 		}
 
 	    // Function
@@ -76,10 +74,10 @@
 		public function modificationUserData()
 	    {
 			if(!empty($_POST['modification'])) {
-				$verification = $this->accountObj->EmailExist($this->email, $this->connexion);
+				$verificationEmail = $this->accountObj->EmailExist($this->email, $this->connexion);
 
 				// Email is not already taken
-				if($verification == 0) {
+				if($verificationEmail == 0 || $this->email == $_SESSION['pseudoUser']) {
 					$this->accountObj->ModificationAccountUser($this->idAccount, $this->name, $this->firstName, $this->email, $this->connexion);
 					$this->infoMessageDataUser[1] = "Les modifications ont bien été effectués";
 					

@@ -47,8 +47,8 @@ a:visited {
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 100%;
@@ -87,7 +87,7 @@ a:visited {
 .menu-window {
 	z-index: 5;
 	position: fixed;
-	top: 36px;
+	top: 45px;
 	opacity: 0;
 	width: 0%;
 	height: 100%;
@@ -130,7 +130,7 @@ a:visited {
 .menu-window-tab {
 	z-index: 5;
 	position: fixed;
-	top: 36px;
+	top: 45px;
 	right: 0;
 	opacity: 0;
 	min-width: 150px;
@@ -171,7 +171,7 @@ a:visited {
 .hero {
 	/* display: flex; */
 	position: relative;
-	padding-top: 35px;
+	padding-top: 45px;
 	overflow: hidden;
 }
 
@@ -876,6 +876,7 @@ a:visited {
 /* ....... */
 
 .account-container {
+	padding-top: 60px;
 	min-height: 100vh;
 	background-color: black;
 }
@@ -895,7 +896,7 @@ a:visited {
 
 .account-information-errorMessage {
 	margin-top: 10px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color: red;
 }
 
@@ -917,7 +918,7 @@ a:visited {
 
 .account-information-successMessage {
 	margin-top: 10px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color: greenyellow;
 }
 
@@ -988,6 +989,7 @@ a:visited {
 
 .upload-container {
 	min-height: 100vh;
+	padding-top: 60px;
 	background-color: black;
 }
 
@@ -1005,14 +1007,15 @@ a:visited {
 }
 
 .upload-information-errorMessage {
+	display: block;
 	margin-top: 10px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color: red;
 }
 
 .upload-information-successMessage {
 	margin-top: 10px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color: greenyellow;
 }
 

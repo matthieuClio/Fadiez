@@ -22,6 +22,6 @@
 		<?php include'footer/footerView.php'; ?>
 
 		<!-- Js load -->
-		<?php include'js/pricingPage/jsLoadPricingPage.php'; ?>
+		<?php include'js/errorPage/jsErrorPage.php'; ?>
 	</body>
 </html>

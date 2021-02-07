@@ -58,10 +58,8 @@
 
 			<section class="playlist-container">
 				<!-- Music name-->
-				<div class="music-title">
-					<i class="fas fa-music"></i>
+				<div class="music-title"> 
 					<h3 class="music-title-text">Musique</h3>
-					<i class="fas fa-music"></i>
 				</div>
 
 				<?php

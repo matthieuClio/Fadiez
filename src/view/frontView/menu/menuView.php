@@ -20,6 +20,7 @@
             else if(!empty($_SESSION['pseudoUser'])) { 
         ?>
                 <a href="compte" class="menu-button">
+                    <i class="fa fa-user" aria-hidden="true"></i>  
                     Compte
                 </a>
         <?php
@@ -48,12 +49,16 @@
             </a>
         </li>
 
-        <li class="menu-tab-front">
-            <a href="upload" class="menu-link-front color-primary-fact">
-                <i class="fa fa-upload margin-left-fact margin-right-fact" aria-hidden="true"></i>
-                Publier une musique
-            </a>
-        </li>    
+        <?php 
+        if(!empty($_SESSION['pseudoUser'])) { ?>
+            <li class="menu-tab-front">
+                <a href="upload" class="menu-link-front color-primary-fact">
+                    <i class="fa fa-upload margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                    Publier une musique
+                </a>
+            </li>
+        <?php 
+        } ?>
 
         <li class="menu-tab-front">
             <a href="compte" class="menu-link-front color-primary-fact">
@@ -84,15 +89,6 @@
         // Display all link for a connected user
         else if(!empty($_SESSION['pseudoUser'])) {
     ?>
-            <a href="upload" class="menu-window-tab-link color-primary-fact text-align-center-fact">
-                <i class="fa fa-upload margin-right-fact" aria-hidden="true"></i>    
-                musique
-            </a>
-
-            <a href="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
-                <i class="fa fa-user margin-right-fact" aria-hidden="true"></i>    
-                Compte
-            </a>
  
             <form method="post" action="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
                 <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">

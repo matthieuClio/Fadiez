@@ -10,7 +10,7 @@
 			<?php include'menu/menuView.php'; ?>
 		</header>
 
-		<main class="account-container padding-top-fact color-primary-fact">
+		<main class="account-container color-primary-fact">
             <h1 class="text-align-center-fact">
                 Compte
             </h1>
@@ -48,9 +48,11 @@
                             echo $infoMessageDataUser[1];
                             ?>
 
-                            <a href="compte" class="account-information-button">
-                                Voir les nouvelles informations
-                            </a>
+                            <div>
+                                <a href="compte" class="account-information-button">
+                                    Voir les nouvelles informations
+                                </a>
+                            </div>
                         </div>
                     <?php 
                     } ?>

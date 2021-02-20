@@ -49,7 +49,7 @@
                             ?>
                             
                             <div> <!-- Use for put the button below the text -->
-                                <a href="compte" class="upload-information-button">
+                                <a href="music" class="upload-information-button">
                                     Voir la musique
                                 </a>
                             </div>

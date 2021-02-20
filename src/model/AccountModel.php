@@ -29,6 +29,15 @@
       return $verification[0];
     }
 
+    public function InfoAccountAll($email, $connexion)
+		{
+			// Select all of account
+			$requete = $connexion->prepare('SELECT * FROM compte WHERE email = :email');
+			$requete->execute(array('email' => $email));
+
+      return $requete;
+    }
+
     public function InfoAccount($connexion)
 		{
 			// Select all of account

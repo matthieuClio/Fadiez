@@ -52,26 +52,46 @@
         <?php 
         if(!empty($_SESSION['pseudoUser'])) { ?>
             <li class="menu-tab-front">
+                <a href="compte" class="menu-link-front color-primary-fact">
+                    <i class="fa fa-user margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                    Compte
+                </a>
+            </li>
+
+            <li class="menu-tab-front">
+                <a href="music" class="menu-link-front color-primary-fact">
+                    <i class="fa fa-music margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                    Voir les musiques publiés
+                </a>
+            </li>
+
+            <li class="menu-tab-front">
                 <a href="upload" class="menu-link-front color-primary-fact">
                     <i class="fa fa-upload margin-left-fact margin-right-fact" aria-hidden="true"></i>
                     Publier une musique
                 </a>
             </li>
         <?php 
+        } 
+        if(empty($_SESSION['pseudoUser'])) { ?>
+            <li class="menu-tab-front">
+                <a href="connexion" class="menu-link-front color-primary-fact">
+                    <i class="fa fa-sign-in margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                    Connexion
+                </a>
+            </li>
+        <?php
         } ?>
 
-        <li class="menu-tab-front">
-            <a href="compte" class="menu-link-front color-primary-fact">
-                <i class="fa fa-user margin-left-fact margin-right-fact" aria-hidden="true"></i>
-                Compte
-            </a>
-        </li>
-
-        <li class="menu-tab-front">
-            <form method="post" action="compte" class="menu-disconnection-front text-align-center-fact">
-                <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
-            </form>
-        </li>
+        <?php
+        if(!empty($_SESSION['pseudoUser'])) { ?>
+            <li class="menu-tab-front">
+                <form method="post" action="compte" class="menu-disconnection-front text-align-center-fact">
+                    <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
+                </form>
+            </li>
+        <?php
+        } ?>
     </ul>
 </nav>
 

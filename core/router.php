@@ -71,6 +71,11 @@
 		require('../src/controller/front/Upload.php');
 	}
 
+	// Music page
+	else if($url[0] === 'music') {
+		require('../src/controller/front/Music.php');
+	}
+
 	// Inscription compte page
 	else if($url[0] === 'inscription') {
 		require('../src/controller/front/CreateAccount.php');

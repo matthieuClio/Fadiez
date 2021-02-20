@@ -67,8 +67,8 @@
                 // Both password are the same
                 if($_POST['password'] == $_POST['passwordConfirmation']) {
 
-                    // Verification complexity password (Maj, 12 caracteres, special caracteres)
-                    if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{12,}$#', $this->password)) {
+                    // Verification complexity password (Maj, 8 caracteres, special caracteres)
+                    if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}$#', $this->password)) {
 
                         // We define the unique salt per user
                         $text = substr(str_shuffle('0123456789abcdefghjkmnpqrstuvwxyz'), 0, 20);

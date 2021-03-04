@@ -30,6 +30,14 @@
             return $nb[0];
         }
 
+        public function MusicListId($id, $connexion)
+        {
+            $requete = $connexion->prepare('SELECT * FROM music WHERE id_compte = ? ');
+            $requete->execute(array($id));
+            
+            return $requete;
+        }
+
         public function MusicName($musicName, $connexion)
         {
             // Select Music name of music

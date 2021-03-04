@@ -1086,6 +1086,66 @@ a:visited {
 	outline: none;
 }
 
+/* MUSIC PAGE */
+/* .......... */
+
+.music-container {
+	min-height: 100vh;
+	padding-top: 60px;
+	background-color: black;
+}
+
+.music-main-icon {
+	margin-top: 30px;
+	font-size: 3em;
+}
+
+.music-design-element {
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 70px;
+    border-top: 1px solid white;
+}
+
+.music-bar-title {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	float: left;
+	width: 100%;
+	background-color: #ffda2a;
+	border-bottom: 1px solid white;
+	color: #373737;
+}
+
+.music-information-title-name {
+	float: left;
+	width: 50%;
+}
+
+.music-information-title-stats {
+	float: left;
+	width: 50%;
+}
+
+.music-information-container {
+	float: left;
+	width: 100%;
+	background-color: #373737;
+	border-bottom: 1px solid #72777c;
+}
+
+.music-information-name {
+	float: left;
+	width: 50%;
+}
+
+.music-information-stats {
+	float: left;
+	width: 50%;
+}
+
+
 /* ERROR PAGE */
 /* .......... */
 
@@ -1604,6 +1664,14 @@ a:visited {
 
 .color-quaternary-fact {
 	color: #373737;
+}
+
+.color-valid-fact {
+	color: greenyellow
+}
+
+.color-error-fact {
+	color: red;
 }
 
 

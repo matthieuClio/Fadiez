@@ -10,66 +10,87 @@
 			<?php include'menu/menuView.php'; ?>
 		</header>
 
-		<main class="upload-container color-primary-fact">
+		<main class="music-container color-primary-fact">
             <h1 class="text-align-center-fact">
                 Musique(s) mis en Ligne
             </h1>
 
             <!-- Icon upload -->
-            <div class="upload-main-icon text-align-center-fact">
+            <div class="music-main-icon text-align-center-fact">
                 <i class="fa fa-music" aria-hidden="true"></i>
             </div>
 
             <!-- Design element -->
-            <div class="upload-design-element">
+            <div class="music-design-element">
             </div>
-            
-            <!-- User data -->
-            <form action="upload" method="post" class="margin-top-fact text-align-center-fact padding-bottom-fact" enctype="multipart/form-data">
-                <section>
-                    <h2 class="margin-bottom-fact">En cours de développement...</h2>
 
-                    <!-- Error message -->
-                    <?php 
-                    if(!empty($infoMessage[0])) { ?>
-                        <div class="upload-information-errorMessage">
-                            <?php
-                            echo $infoMessage[0];
-                            ?>
+            <!-- Title table -->
+            <div class="music-bar-title text-align-center-fact font-size-secondary-fact">
+                <div class="music-information-title-name text-align-center-fact">
+                    Nom de la musique
+                </div>
+
+                <div class="music-information-title-stats text-align-center-fact">
+                    Etat
+                </div>
+            </div>
+
+            <?php
+                while($musicData = $dataMusic->fetch()) 
+                {
+                ?>
+                    <!-- Table -->
+                    <div class="music-information-container padding-top-fact padding-bottom-fact">
+                        <div class="music-information-name font-size-secondary-fact text-align-center-fact">
+                            <?php echo $musicData['music_name']; ?>
                         </div>
-                    <?php 
-                    } ?>
 
-                    <!-- Success message -->
-                    <?php 
-                    if(!empty($infoMessage[1])) { ?>
-                        <div class="upload-information-successMessage">
-                            <?php
-                            echo $infoMessage[1];
-                            ?>
-                            
-                            <div> <!-- Use for put the button below the text -->
-                                <a href="music" class="upload-information-button">
-                                    Voir la musique
-                                </a>
+                        <!-- Valid state -->
+                        <?php 
+                        if($musicData['uploaded'] == "valide") 
+                        {
+                        ?>
+                            <div class="music-information-stats font-size-secondary-fact text-align-center-fact">
+                                <span class="color-valid-fact"><?php echo $musicData['uploaded'];?></span>
                             </div>
-                        </div>
-                    <?php 
-                    } ?>
+                        <?php
+                        }
+                        ?>
 
-                    <!-- Title table -->
-                    <div class="backoffice-music-bar-title text-align-center-fact font-size-secondary-fact">
-                        Etat des musiques mis en ligne :
+                         <!-- Treatment state -->
+                         <?php 
+                        if($musicData['uploaded'] == "traitement") 
+                        {
+                        ?>
+                            <div class="music-information-stats font-size-secondary-fact text-align-center-fact">
+                                <span class="color-secondary-fact"><?php echo $musicData['uploaded'];?></span>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
+                         <!-- Refuse state -->
+                         <?php 
+                        if($musicData['uploaded'] == "refuse") 
+                        {
+                        ?>
+                            <div class="music-information-stats font-size-secondary-fact text-align-center-fact">
+                                <span class="color-error-fact"><?php echo $musicData['uploaded'];?></span>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
-
-                </section>
-            </form>
+                <?php
+                $counter++; // Variable create in the controller Music.php
+                } // End while
+            ?>
 		</main>
 
 		<!-- Footer -->
-		<?php include'footer/footerView.php'; ?>
+		<?php include'footer/footerView.php';?>
 
 		<!-- Js load -->
-		<?php include'js/accountPage/jsLoadAccountPage.php'; ?>
+		<?php include'js/musicPage/jsLoadMusicPage.php';?>
 	</body>
 </html>

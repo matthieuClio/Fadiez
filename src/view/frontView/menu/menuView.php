@@ -74,7 +74,7 @@
         <?php 
         } 
         if(empty($_SESSION['pseudoUser'])) { ?>
-            <li class="menu-tab-front">
+            <li class="menu-tab-front menu-tab-front-connexion">
                 <a href="connexion" class="menu-link-front color-primary-fact">
                     <i class="fa fa-sign-in margin-left-fact margin-right-fact" aria-hidden="true"></i>
                     Connexion

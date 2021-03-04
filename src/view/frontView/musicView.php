@@ -57,6 +57,11 @@
                     <?php 
                     } ?>
 
+                    <!-- Title table -->
+                    <div class="backoffice-music-bar-title text-align-center-fact font-size-secondary-fact">
+                        Etat des musiques mis en ligne :
+                    </div>
+
                 </section>
             </form>
 		</main>

@@ -28,6 +28,12 @@
 	// Backoffice
 	// ..........
 
+	// Backoffice music page
+	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'musique' && !empty($_SESSION['pseudoUser']))
+	{
+		require('../src/controller/back/BackofficeMusic.php');
+	}
+
 	// Backoffice info account page
 	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'info' && !empty($_SESSION['pseudoUser']))
 	{

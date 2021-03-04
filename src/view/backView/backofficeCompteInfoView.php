@@ -149,6 +149,6 @@
 		</main>
 
 		<!-- Js load -->
-		<?php include'js/homeBackofficePage/jsLoadHomeBackofficePage.php'; ?>
+		<?php include'js/homeBackofficePage/jsLoadCompteInfoBackofficePage.php'; ?>
 	</body>
 </html>

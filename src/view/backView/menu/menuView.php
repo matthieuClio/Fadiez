@@ -34,6 +34,20 @@
         </li>
 
         <li class="backoffice-menu-tab">
+            <a href="backoffice/musique" class="backoffice-menu-link color-primary-fact">
+                <i class="fa fa-music margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Vaidation des musiques
+            </a>
+        </li>
+
+        <li class="backoffice-menu-tab">
+            <a href="accueil" class="backoffice-menu-link color-primary-fact">
+                <i class="fa fa-reply margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Revenir sur le site
+            </a>
+        </li>
+
+        <li class="backoffice-menu-tab">
             <form method="post" action="backoffice" class="backoffice-menu-disconnection text-align-center-fact">
                 <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
             </form>

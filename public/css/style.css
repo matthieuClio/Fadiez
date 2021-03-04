@@ -110,6 +110,10 @@ a:visited {
 	overflow: hidden;
 }
 
+.menu-tab-front-connexion {
+	border-bottom: 1px solid #72777c;
+}
+
 .menu-user-front {
 	margin: 20px;
 	color: #ffda2a;
@@ -1176,65 +1180,63 @@ a:visited {
 /* LOG BACKOFFICE */
 /* .............. */
 
-.backoffice-connexion-background {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f1f1f1;
+.bakoffice-login-container {
+	min-height: 100vh;
+	background-color: #ddbe25;
 }
 
-.backoffice-connexion-container {	
-	max-width: 400px;
-	height: 100vh;
-	font-size: 2.5em;
-}
-
-.backoffice-connexion-image {
+.bakoffice-login-form {
 	margin: auto;
-	margin-top: 40px;
-	max-width: 200px;
-	max-height: 200px;
-	margin-bottom: 35px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 80%;
+	background-color: #373737;
+	border-radius: 9px;
+	color: white;
+	font-size: 1.8em;
 }
 
-.backoffice-connexion-form {
-	padding-top: 35px;
-	padding-bottom: 50px;
-	font-size: 0.7em;
-	background-color: white;
-	box-shadow: 0 1px 3px rgba(0,0,0,.13);
+.bakoffice-login-center-container {
+	width: 100%;
 }
 
-.backoffice-connexion-paragraph {
-	margin-left: 24px;
-	margin-bottom: 3px;
-	width: 85%;
-	text-align: left;
-	color: #72777c;
+.bakoffice-login-error-message {
+	color: red;
+	font-size: 0.8em;
 }
 
-.backoffice-connexion-input {
-	margin-left: 24px;
-	margin-bottom: 20px;
-	width: 85%;
-	font-size: 2em;
-	background-color: #fbfbfb;
-	border: none;
-	border: 1px solid #dddddd;
-	box-shadow: 0px 2px 5px #d4d4d4;
+.bakoffice-login-text {
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
 }
 
-.backoffice-connexion-container-submit {
+.bakoffice-login-input {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.bakoffice-login-eye-icon-container {
+	width: 100%;
+}
+
+.bakoffice-login-link {
+	font-size: 0.8em;
+}
+
+.bakoffice-login-color-text {
+	color: #ddbe25;
+}
+
+.bakoffice-login-input-button {
 	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 24px;
-	width: 85%;
+	width: 100%;
 	text-align: center;
-}
-
-.backoffice-connexion-error {
-	text-align: center;
-	color: #d50a0a;
 }
 
 
@@ -1305,24 +1307,32 @@ a:visited {
 }
 
 .backoffice-compte-bar-title {
-	display: flex;
-	justify-content: space-around;
+	float: left;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	width: 50%;
 	background-color: #ffda2a;
 	border-bottom: 1px solid white;
 	color: #373737;
 }
 
-.backoffice-compte-bar-data {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+.backoffice-compte-bar-container {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: #373737;
 	border-top: 1px solid white;
 	font-size: 0.8em;
+}
+
+.backoffice-compte-bar-data {
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 50%;
+	min-height: 40px;
+	background-color: #373737;
+	border-top: 1px solid white;
+	font-size: 1.6em;
 }
 
 .backoffice-compte-button {
@@ -1407,6 +1417,52 @@ a:visited {
 	width: 150px;
 	background-color: white;
 	border-radius: 5px;
+}
+
+/* BACKOFFICE MUSIC */
+/* ................ */
+
+.backoffice-music-container {
+	padding-top: 50px;
+	min-height: 100vh;
+	color: white;
+	background-color: black;
+}
+
+.backoffice-music-icon {
+	margin-bottom: 40px;
+	width: 100%;
+	font-size: 3em;
+}
+
+.backoffice-music-bar-title {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ffda2a;
+	border-bottom: 1px solid white;
+	color: #373737;
+}
+
+.backoffice-music-audio-container {
+	background-color: #373737;
+	border-bottom: 1px solid #72777c;
+}
+
+.backoffice-music-radio-accepted {
+	width: 100%;
+}
+
+.backoffice-music-space {
+	padding-top: 61px;
+}
+
+.backoffice-music-validation-container {
+	position: fixed; 
+	bottom: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	background-color: #373737;
 }
 
 
@@ -1549,6 +1605,7 @@ a:visited {
 .color-quaternary-fact {
 	color: #373737;
 }
+
 
 .default-button-fact {
 	padding-left: 15px;

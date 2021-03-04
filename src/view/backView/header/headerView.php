@@ -9,7 +9,7 @@
 <link rel="icon" type="image/jpg" href="public/images/YourIcon/">
 
 <!-- Font-awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/a0924a4db2.js" crossorigin="anonymous"></script>
 
 <!-- Normalize  -->
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">

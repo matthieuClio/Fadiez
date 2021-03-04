@@ -2,7 +2,6 @@
 	require('../core/BddConnexion.php');
 	require('../src/model/MusicModel.php');
 
-
 	class Home {
 
 		// Property
@@ -19,18 +18,11 @@
             $this->connexion = $this->bddObj->Start();
 		}
 
-		// Property
-		// ...
-
-		// Constructor
-		// ...
-
 	    // Function
 		// ...
-
 		public function data()
 	    {
-            $data = $this->musicObj->MusicList( $this->connexion);
+            $data = $this->musicObj->MusicList($this->connexion);
 			return $data;
 		}
 
@@ -52,3 +44,4 @@
 	else {
 		header('location: maintenance');
 	}
+?>

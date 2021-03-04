@@ -10,6 +10,26 @@
             return $requete;
         }
 
+        public function MusicListTreatment($connexion)
+        {
+            $requete = $connexion->prepare('SELECT * FROM music WHERE uploaded = "traitement" ');
+            $requete->execute();
+            
+            return $requete;
+        }
+
+        public function MusicListTreatmentNb($connexion)
+        {
+            $requete = $connexion->prepare('SELECT COUNT(*) FROM music WHERE uploaded = "traitement" ');
+            $requete->execute();
+
+            // Store the array in a variable
+            $nb = $requete->fetch();
+
+            // Returns the result number following the request
+            return $nb[0];
+        }
+
         public function MusicName($musicName, $connexion)
         {
             // Select Music name of music
@@ -28,6 +48,13 @@
             // Request
 			$requete = $connexion->prepare('INSERT INTO music(music_name, artist_name, file_name, uploaded, id_compte) VALUES(?, ?, ?, "traitement", ?)');
 			$requete->execute(array($musicName, $artistName, $fileName, $idUser));
+        }
+
+        public function MusicUpdate($uploadedValue, $id, $connexion)
+        {
+            // Request
+			$requete = $connexion->prepare('UPDATE music SET uploaded = ? WHERE id = ? AND uploaded = "traitement" ');
+			$requete->execute(array($uploadedValue, $id));
         }
     } // End class
 ?>

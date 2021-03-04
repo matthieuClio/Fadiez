@@ -92,7 +92,7 @@
                     <div class="font-size-secondary-fact">
                         <!-- Label -->
                         <label class="account-information-file font-weight-bold-fact text-align-left-fact">
-                            Fichier :
+                            Audio :
                         </label>
 
                         <!-- Data -->

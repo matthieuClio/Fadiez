@@ -18,12 +18,6 @@
             $this->connexion = $this->bddObj->Start();
 		}
 
-		// Property
-		// ...
-
-		// Constructor
-		// ...
-
 	    // Function
 		// ...
 

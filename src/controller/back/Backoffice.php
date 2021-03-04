@@ -98,9 +98,10 @@
 					header('location:backoffice');
 				}
 			} // End conditions
-			else {
+			
+			else if($_SESSION['statut'] != $this->statut) {
 				// Already connected
-				echo('Veuillez vous déconnecter pour accéder à cette page');
+				echo('Veuilez vous déconnecter et vous identifier avec un compte administrateur');
 			}
 
 	    } // End function logInConnexion

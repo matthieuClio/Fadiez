@@ -19,46 +19,25 @@
 			<i class="fa fa-user backoffice-compte-icon-compte text-align-center-fact" aria-hidden="true"></i>
 
 			<!-- Title table -->
-			<div class="backoffice-compte-bar-title">
-				<div>
-					Nom
-				</div>
+			<div class="backoffice-compte-bar-title text-align-center-fact font-size-secondary-fact">
+				Email
+			</div>
 
-				<div>
-					Prenom
-				</div>
-
-				<div>
-					Email
-				</div>
-
-				<div>
-					Info
-				</div>
+			<div class="backoffice-compte-bar-title text-align-center-fact font-size-secondary-fact">
+				Info
 			</div>
 
 			<?php while($info = $dataUser->fetch()) { ?>
+				
 				<!-- Data table -->
-				<form action="backoffice/info" method="post" class="backoffice-compte-bar-data">
-					<div>
-						<?php 
-							echo $info['name'];
-						?>
-					</div>
-
-					<div>
-						<?php
-							echo $info['first_name']; 
-						?> 
-					</div>
-
-					<div>
+				<form action="backoffice/info" method="post" class="backoffice-compte-bar-container text-align-center-fact">
+					<div class="backoffice-compte-bar-data">
 						<?php
 							echo $info['email'];
 						?> 
 					</div>
 
-					<div>
+					<div class="backoffice-compte-bar-data">
 						<input type="submit" name="infoAccount" value="Info" class="backoffice-compte-button"/>
 						<input type="hidden" name="idAccount" value="<?php echo $info['id'];?>"/>
 					</div>
@@ -67,6 +46,6 @@
 		</main>
 
 		<!-- Js load -->
-		<?php include'js/homeBackofficePage/jsLoadHomeBackofficePage.php'; ?>
+		<?php include'js/homeBackofficePage/jsLoadCompteBackofficePage.php'; ?>
 	</body>
 </html>

@@ -1145,6 +1145,15 @@ a:visited {
 	width: 50%;
 }
 
+.music-space {
+	height: 25px;
+	background-color: #171717;
+}
+
+.module-paging-button-page {
+
+}
+
 
 /* ERROR PAGE */
 /* .......... */
@@ -1479,6 +1488,7 @@ a:visited {
 	border-radius: 5px;
 }
 
+
 /* BACKOFFICE MUSIC */
 /* ................ */
 
@@ -1674,7 +1684,6 @@ a:visited {
 	color: red;
 }
 
-
 .default-button-fact {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -1759,6 +1768,39 @@ a:visited {
 .cursor-pointer-fact {
 	cursor: pointer;
 }
+
+.clear-both-fact {
+	clear: both;
+}
+
+
+/* MODULE */
+/* ...... */
+/* ...... */
+
+/* Module paging */
+.module-paging {
+	padding-top: 25px;	
+	padding-bottom: 25px;	
+	background-color: #373737;
+	border-top: 1px solid #72777c;
+	border-bottom: 1px solid #72777c;
+}
+
+.module-paging-button {
+	width: 50px;
+	height: 50px;
+	background-color: #ffda2a;
+	font-size: 1.5em;
+}
+
+.module-paging-button-page {
+	width: 200px;
+	height: 50px;
+	background-color: #ffda2a;
+	font-size: 1.5em;
+}
+
 /* ........................................ */
 
 

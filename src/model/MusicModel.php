@@ -30,11 +30,14 @@
             return $nb[0];
         }
 
-        public function MusicListId($id, $connexion)
+        public function MusicListId($id, $limiteOne, $limiteTwo, $connexion)
         {
-            $requete = $connexion->prepare('SELECT * FROM music WHERE id_compte = ? ');
+            $comma =',';
+            $limit = strval($limiteOne.$comma.$limiteTwo); // "Number 1, Number2"
+
+            $requete = $connexion->prepare('SELECT * FROM music WHERE id_compte = ? ORDER BY id DESC LIMIT '.$limit);
             $requete->execute(array($id));
-            
+
             return $requete;
         }
 

@@ -57,7 +57,7 @@
                         }
                         ?>
 
-                         <!-- Treatment state -->
+                        <!-- Treatment state -->
                          <?php 
                         if($musicData['uploaded'] == "traitement") 
                         {
@@ -69,7 +69,7 @@
                         }
                         ?>
 
-                         <!-- Refuse state -->
+                        <!-- Refuse state -->
                          <?php 
                         if($musicData['uploaded'] == "refuse") 
                         {
@@ -85,6 +85,32 @@
                 $counter++; // Variable create in the controller Music.php
                 } // End while
             ?>
+            
+            <!-- Space --> 
+            <div class="music-space clear-both-fact">
+            </div>
+
+            <!-- Paging --> 
+            <form action="music" method="post" class="module-paging text-align-center-fact">
+                <input type="submit" class="module-paging-button" value="<"/>
+                <input type="submit" class="module-paging-button margin-left-fact" value="<?php echo $counter;?>"/>
+                <input type="submit" class="module-paging-button margin-left-fact" value=">"/>
+
+                <select name="pets" class="module-paging-button-page margin-top-fact">
+                    <option value="">-- Choose an option--</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="parrot">Parrot</option>
+                    <option value="spider">Spider</option>
+                    <option value="goldfish">Goldfish</option>
+                </select>
+                <input type="submit" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+            </form>
+
+            <!-- Space -->
+            <div class="music-space">
+            </div>
 		</main>
 
 		<!-- Footer -->

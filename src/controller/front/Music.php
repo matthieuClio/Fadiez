@@ -13,6 +13,8 @@
         private $connexion;
 		private $requete;
 		private $infoCompte;
+		private $limiteOne;
+		private $limiteTwo;
 
 		// Constructor
 		// ...
@@ -22,6 +24,8 @@
 			$this->accountObj = new Account();
 			$this->musicObj = new Music();
             $this->connexion = $this->bddObj->Start();
+			$this->limiteOne = 0;
+			$this->limiteTwo = 10;
 		}
 
 	    // Function
@@ -31,9 +35,7 @@
 			$this->requete = $this->accountObj->InfoAccountAll($_SESSION['pseudoUser'], $this->connexion);
 			$this->infoCompte = $this->requete->fetch();
 
-			?><script>console.log('<?php echo $this->infoCompte['id'];?>');</script> <?php
-
-            $data = $this->musicObj->MusicListId($this->infoCompte['id'], $this->connexion);
+            $data = $this->musicObj->MusicListId($this->infoCompte['id'], $this->limiteOne, $this->limiteTwo, $this->connexion);
 			return $data;
 		}
 

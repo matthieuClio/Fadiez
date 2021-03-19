@@ -92,20 +92,35 @@
 
             <!-- Paging --> 
             <form action="music" method="post" class="module-paging text-align-center-fact">
-                <input type="submit" class="module-paging-button" value="<"/>
-                <input type="submit" class="module-paging-button margin-left-fact" value="<?php echo $counter;?>"/>
-                <input type="submit" class="module-paging-button margin-left-fact" value=">"/>
+                <!-- Previous button --> 
+                <?php
+                if($currentPage != 1) {
+                    ?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
+                }
+                ?>
 
-                <select name="pets" class="module-paging-button-page margin-top-fact">
-                    <option value="">-- Choose an option--</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
+                <input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
+                
+                <!-- Next button --> 
+                <?php
+                if($currentPage <= $nbPage) {
+                    ?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
+                }
+                ?>
+
+                <select name="pageSelect" class="module-paging-button-page margin-top-fact">
+                    <option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
+                    <?php
+
+                    while($counterPagination < $nbPage) {
+                        $counterPagination++;
+                        ?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
+                    }
+                    ?>
+                    <script type="text/javascript">console.log('<?php echo $nbPage; ?>');</script>
                 </select>
-                <input type="submit" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+                <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+                <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
             </form>
 
             <!-- Space -->

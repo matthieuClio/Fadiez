@@ -109,7 +109,6 @@
         // Display all link for a connected user
         else if(!empty($_SESSION['pseudoUser'])) {
     ?>
- 
             <form method="post" action="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
                 <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
             </form>

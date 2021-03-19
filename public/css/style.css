@@ -1794,6 +1794,10 @@ a:visited {
 	font-size: 1.5em;
 }
 
+.module-paging-button-current {
+	background-color: #373737;
+}
+
 .module-paging-button-page {
 	width: 200px;
 	height: 50px;

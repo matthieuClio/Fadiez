@@ -30,6 +30,15 @@
             return $nb[0];
         }
 
+        public function MusicListIdAll($id, $connexion)
+        {
+            $requete = $connexion->prepare('SELECT COUNT(*) FROM music WHERE id_compte = ? ORDER BY id DESC');
+            $requete->execute(array($id));
+            $totalNombre = $requete->fetch();
+
+            return $totalNombre[0];
+        }
+
         public function MusicListId($id, $limiteOne, $limiteTwo, $connexion)
         {
             $comma =',';

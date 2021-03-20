@@ -92,21 +92,23 @@
 
             <!-- Paging --> 
             <form action="music" method="post" class="module-paging text-align-center-fact">
-                <!-- Previous button --> 
-                <?php
-                if($currentPage != 1) {
-                    ?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
-                }
-                ?>
+                <div class="module-paging-button-container">
+                    <!-- Previous button --> 
+                    <?php
+                    if($currentPage != 1) {
+                        ?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
+                    }
+                    ?>
 
-                <input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
-                
-                <!-- Next button --> 
-                <?php
-                if($currentPage <= $nbPage) {
-                    ?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
-                }
-                ?>
+                    <input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
+                    
+                    <!-- Next button --> 
+                    <?php
+                    if($currentPage <= $nbPage) {
+                        ?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
+                    }
+                    ?>
+                </div>
 
                 <select name="pageSelect" class="module-paging-button-page margin-top-fact">
                     <option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>

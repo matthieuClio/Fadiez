@@ -1787,6 +1787,10 @@ a:visited {
 	border-bottom: 1px solid #72777c;
 }
 
+.module-paging-button-container {
+	width: 100%;
+}
+
 .module-paging-button {
 	width: 50px;
 	height: 50px;

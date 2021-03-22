@@ -10,13 +10,24 @@
         private $connexion;
 		private $musicObj;
 		private $nbMusic;
-		private $validation;
+		private $submitted;
 		private $counter;
 		private $counterTwo;
 		private $status;
 		private $id;
 		private $tableColumn;
 		private $nbElement;
+
+		// Pagination property
+		private $limiteOne;
+		private $limiteTwo;
+		private $previous;
+		private $current;
+		private $next;
+		private $pageSelect;
+		private $validation;
+		private $currentPage;
+		private $currentPagePost;
 
 		// Constructor
 		// ...
@@ -32,20 +43,71 @@
 			$this->status = [];
 			$this->id = [];
 
+			// Other variable
+			$this->limiteOne = 0;
+			$this->limiteTwo = 10;
+			$this->currentPage = 1;
+
+			// Variable POST
+			if(!empty($_POST['previous'])) 
+			{
+				$this->previous = $_POST['previous'];
+			}
+			if(!empty($_POST['current'])) 
+			{
+				$this->current = $_POST['current'];
+			}
+			if(!empty($_POST['next'])) 
+			{
+				$this->next = $_POST['next'];
+			}
+			if(!empty($_POST['pageSelect'])) 
+			{
+				$this->pageSelect = $_POST['pageSelect'];
+			}
+			if(!empty($_POST['validation'])) 
+			{
+				$this->validation = $_POST['validation'];
+			}
+			if(!empty($_POST['currentPagePost'])) 
+			{
+				$this->currentPagePost = $_POST['currentPagePost'];
+			}
+
 			if(!empty($_POST['nbMusic'])) {
 				$this->nbMusic = $_POST['nbMusic'];
 			}
 
-			if(!empty($_POST['validation'])) {
-				$this->validation = $_POST['validation'];
+			if(!empty($_POST['submitted'])) {
+				$this->submitted = $_POST['submitted'];
 			}
 		}
 
 	    // Function
 		// ...
+		public function pagination()
+	    {
+            if(!empty($_POST['validation'])) 
+			{
+				$this->currentPage = $_POST['pageSelect'];
+				$this->limiteOne = $this->currentPage * 10 -10;
+			}
+			if(!empty($_POST['next'])) 
+			{
+				$this->currentPage = $_POST['currentPagePost']+1;
+				$this->limiteOne = $this->currentPage * 10 -10;
+			}
+			if(!empty($_POST['previous'])) 
+			{
+				$this->currentPage = $_POST['currentPagePost']-1;
+				$this->limiteOne = $this->currentPage * 10 -10;
+			}
+			return $this->currentPage;
+		}
+
 		public function data()
 	    {
-            $data = $this->musicObj->MusicListTreatment($this->connexion);
+            $data = $this->musicObj->MusicListTreatment($this->limiteOne, $this->limiteTwo, $this->connexion);
 			return $data;
 		}
 
@@ -57,7 +119,7 @@
 
 		public function validationMusic()
 	    {
-			if(!empty($_POST['validation'])) {
+			if(!empty($_POST['submitted'])) {
 
 				while($this->counter != $this->nbMusic) {
 
@@ -80,10 +142,8 @@
 					$this->musicObj->MusicUpdate($this->status[$this->counterTwo], $this->id[$this->counterTwo], $this->connexion);
 					$this->counterTwo++;
 				}
-
 			}
-			//$this->nbMusic
-		}
+		} // End function validationMusic
 
 	} // End class BackofficeMusic
 
@@ -94,11 +154,20 @@
 	// Update music status
 	$objectBackofficeMusic->validationMusic();
 
-	// Music info
+	// Nb music
 	$nbMusic = $objectBackofficeMusic->nbMusic();
 
+	// Pagination
+	$currentPage = $objectBackofficeMusic->pagination();
+	$dataMusicPagination = $nbMusic;
+
+	// Music info
 	$dataMusic = $objectBackofficeMusic->data();
-	$counter = 0; // Used for the view
+
+	// Use for the view
+	$counter = 0;
+	$counterPagination = 1;
+	$nbPage = $dataMusicPagination / 10;
 
 	// Display the BackofficeMusicView page
 	if(!empty($_SESSION['admin'])) {

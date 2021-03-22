@@ -1660,6 +1660,10 @@ a:visited {
 	font-size: 1.4em;
 }
 
+.font-size-tertiary-fact {
+	font-size: 1.5em;
+}
+
 .color-primary-fact {
 	color: white;
 }
@@ -1795,7 +1799,6 @@ a:visited {
 	width: 50px;
 	height: 50px;
 	background-color: #ffda2a;
-	font-size: 1.5em;
 }
 
 .module-paging-button-current {
@@ -1806,7 +1809,6 @@ a:visited {
 	width: 200px;
 	height: 50px;
 	background-color: #ffda2a;
-	font-size: 1.5em;
 }
 
 /* ........................................ */

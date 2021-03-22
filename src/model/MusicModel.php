@@ -2,17 +2,32 @@
 
     class Music
     {
-        public function MusicList($connexion)
+        public function MusicListNb($connexion)
         {
-            $requete = $connexion->prepare('SELECT * FROM music');
+            $requete = $connexion->prepare('SELECT COUNT(*) FROM music');
+            $requete->execute();
+            $totalNomber = $requete->fetch();
+
+            return $totalNomber[0];
+        }
+
+        public function MusicList($limiteOne, $limiteTwo, $connexion)
+        {
+            $comma =',';
+            $limit = strval($limiteOne.$comma.$limiteTwo); // "Number 1, Number2"
+
+            $requete = $connexion->prepare('SELECT * FROM music ORDER BY id DESC LIMIT '.$limit);
             $requete->execute();
             
             return $requete;
         }
 
-        public function MusicListTreatment($connexion)
+        public function MusicListTreatment($limiteOne, $limiteTwo, $connexion)
         {
-            $requete = $connexion->prepare('SELECT * FROM music WHERE uploaded = "traitement" ');
+            $comma =',';
+            $limit = strval($limiteOne.$comma.$limiteTwo); // "Number 1, Number2"
+
+            $requete = $connexion->prepare('SELECT * FROM music WHERE uploaded = "traitement" ORDER BY id DESC LIMIT '.$limit);
             $requete->execute();
             
             return $requete;
@@ -34,9 +49,9 @@
         {
             $requete = $connexion->prepare('SELECT COUNT(*) FROM music WHERE id_compte = ? ORDER BY id DESC');
             $requete->execute(array($id));
-            $totalNombre = $requete->fetch();
+            $totalNomber = $requete->fetch();
 
-            return $totalNombre[0];
+            return $totalNomber[0];
         }
 
         public function MusicListId($id, $limiteOne, $limiteTwo, $connexion)

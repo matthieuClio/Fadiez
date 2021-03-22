@@ -38,13 +38,27 @@
       return $requete;
     }
 
-    public function InfoAccount($connexion)
+    public function InfoAccount($limiteOne, $limiteTwo, $connexion)
 		{
+
+      $comma =',';
+      $limit = strval($limiteOne.$comma.$limiteTwo); // "Number 1, Number2"
+
 			// Select all of account
-			$requete = $connexion->prepare('SELECT * FROM compte WHERE statut = "user" ');
+			$requete = $connexion->prepare('SELECT * FROM compte WHERE statut = "user" ORDER BY id DESC LIMIT '.$limit);
 			$requete->execute();
 
       return $requete;
+    }
+
+    public function InfoAccountNb($connexion)
+		{
+			// Select all of account
+			$requete = $connexion->prepare('SELECT COUNT(*) FROM compte WHERE statut = "user"');
+			$requete->execute();
+      $totalNomber = $requete->fetch();
+
+      return $totalNomber[0];
     }
     
     public function InfoAccountUser($idAccount, $connexion)

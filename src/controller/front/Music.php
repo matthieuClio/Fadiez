@@ -13,6 +13,8 @@
         private $connexion;
 		private $requete;
 		private $infoCompte;
+
+		// Pagination property
 		private $limiteOne;
 		private $limiteTwo;
 		private $previous;
@@ -38,26 +40,30 @@
 			$this->currentPage = 1;
 
 			// Variable POST
-			if(!empty($_POST['previous'])) {
+			if(!empty($_POST['previous'])) 
+			{
 				$this->previous = $_POST['previous'];
 			}
-			if(!empty($_POST['current'])) {
+			if(!empty($_POST['current'])) 
+			{
 				$this->current = $_POST['current'];
 			}
-			if(!empty($_POST['next'])) {
+			if(!empty($_POST['next'])) 
+			{
 				$this->next = $_POST['next'];
-				?><script type="text/javascript">console.log('<?php echo $_POST['next'] ?>');</script><?php
 			}
-			if(!empty($_POST['pageSelect'])) {
+			if(!empty($_POST['pageSelect'])) 
+			{
 				$this->pageSelect = $_POST['pageSelect'];
 			}
-			if(!empty($_POST['validation'])) {
+			if(!empty($_POST['validation'])) 
+			{
 				$this->validation = $_POST['validation'];
 			}
-			if(!empty($_POST['currentPagePost'])) {
+			if(!empty($_POST['currentPagePost'])) 
+			{
 				$this->currentPagePost = $_POST['currentPagePost'];
 			}
-			
 		}
 
 	    // Function
@@ -70,19 +76,21 @@
 
 		public function pagination()
 	    {
-            if(!empty($_POST['validation'])) {
+            if(!empty($_POST['validation'])) 
+			{
 				$this->currentPage = $_POST['pageSelect'];
 				$this->limiteOne = $this->currentPage * 10 -10;
 			}
-			if(!empty($_POST['next'])) {
+			if(!empty($_POST['next'])) 
+			{
 				$this->currentPage = $_POST['currentPagePost']+1;
 				$this->limiteOne = $this->currentPage * 10 -10;
 			}
-			if(!empty($_POST['previous'])) {
+			if(!empty($_POST['previous'])) 
+			{
 				$this->currentPage = $_POST['currentPagePost']-1;
 				$this->limiteOne = $this->currentPage * 10 -10;
 			}
-			
 			return $this->currentPage;
 		}
 
@@ -112,7 +120,7 @@
 	$dataMusicPagination = $objectMusicPublished->paginationData();
 
 	// Music info
-	$dataMusic = $objectMusicPublished->data();
+	$data = $objectMusicPublished->data();
 
 	// Use for the view
 	$counter = 0;
@@ -120,10 +128,12 @@
 	$nbPage = $dataMusicPagination / 10;
 
 	// Display the musicView page
-	if(!empty($_SESSION['admin'])) {
+	if(!empty($_SESSION['admin']))
+	{
 		// Load the view
 		require('../src/view/frontView/musicView.php');
 	}
-	else {
+	else 
+	{
 		header('location: maintenance');
 	}

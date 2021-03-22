@@ -36,7 +36,7 @@
             </div>
 
             <?php
-                while($musicData = $dataMusic->fetch()) 
+                while($musicData = $data->fetch())
                 {
                 ?>
                     <!-- Table -->
@@ -47,7 +47,7 @@
 
                         <!-- Valid state -->
                         <?php 
-                        if($musicData['uploaded'] == "valide") 
+                        if($musicData['uploaded'] == "valide")
                         {
                         ?>
                             <div class="music-information-stats font-size-secondary-fact text-align-center-fact">
@@ -90,8 +90,8 @@
             <div class="music-space clear-both-fact">
             </div>
 
-            <!-- Paging --> 
-            <form action="music" method="post" class="module-paging text-align-center-fact">
+            <!-- Paging module --> 
+            <form action="music" method="post" class="module-paging text-align-center-fact font-size-tertiary-fact">
                 <div class="module-paging-button-container">
                     <!-- Previous button --> 
                     <?php
@@ -119,7 +119,6 @@
                         ?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
                     }
                     ?>
-                    <script type="text/javascript">console.log('<?php echo $nbPage; ?>');</script>
                 </select>
                 <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
                 <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>

@@ -43,6 +43,48 @@
 					</div>
 				</form>
 			<?php } ?>
+
+			<!-- Space --> 
+            <div class="music-space margin-top-fact clear-both-fact">
+            </div>
+
+			<!-- Paging module --> 
+			<form action="music" method="post" class="module-paging text-align-center-fact font-size-tertiary-fact">
+                <div class="module-paging-button-container">
+                    <!-- Previous button --> 
+                    <?php
+                    if($currentPage != 1) {
+                        ?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
+                    }
+                    ?>
+
+                    <input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
+                    
+                    <!-- Next button --> 
+                    <?php
+                    if($currentPage <= $nbPage) {
+                        ?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
+                    }
+                    ?>
+                </div>
+
+                <select name="pageSelect" class="module-paging-button-page margin-top-fact">
+                    <option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
+                    <?php
+
+                    while($counterPagination < $nbPage) {
+                        $counterPagination++;
+                        ?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
+                    }
+                    ?>
+                </select>
+                <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+                <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+            </form>
+
+			<!-- Space --> 
+            <div class="music-space">
+            </div>
 		</main>
 
 		<!-- Js load -->

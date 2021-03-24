@@ -28,6 +28,13 @@
 	// Backoffice
 	// ..........
 
+
+	// Backoffice slider page
+	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'slider' && !empty($_SESSION['pseudoUser']))
+	{
+		require('../src/controller/back/BackofficeSlider.php');
+	}
+
 	// Backoffice music page
 	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'musique' && !empty($_SESSION['pseudoUser']))
 	{

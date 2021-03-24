@@ -78,6 +78,11 @@ a:visited {
 	cursor: pointer;
 }
 
+.menu-disconnection-button {
+	padding: 5px !important;
+	font-size: 0.75em !important;
+}
+
 .caret-icon {
 	margin-right: 30px;
 	margin-left: 10px;
@@ -1535,6 +1540,61 @@ a:visited {
 	background-color: #373737;
 }
 
+/* BACKOFFICE SLIDER */
+/* ................. */
+
+.backoffice-slider-container {
+	padding-top: 50px;
+	min-height: 100vh;
+	color: white;
+	background-color: black;
+}
+
+.backoffice-slider-icon {
+	margin-bottom: 40px;
+	width: 100%;
+	font-size: 3em;
+}
+
+.backoffice-slider-bar-title {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ffda2a;
+	border-bottom: 1px solid white;
+	color: #373737;
+}
+
+.backoffice-slider-element-container {
+	background-color: #373737;
+	border-bottom: 1px solid #72777c;
+}
+
+.backoffice-slider-image {
+	width: 80%;
+}
+
+.backoffice-slider-input-file {
+	width: 150px;
+	background-color: #373737;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.backoffice-slider-errorMessage {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	color: red;
+}
+
+.backoffice-slider-successMessage {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	color: greenyellow;
+}
+
 
 /* State (state elements) */
 /* ...................... */
@@ -1775,6 +1835,10 @@ a:visited {
 
 .clear-both-fact {
 	clear: both;
+}
+
+.width-full-fact {
+	width: 100%;
 }
 
 

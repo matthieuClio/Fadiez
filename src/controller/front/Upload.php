@@ -47,17 +47,14 @@
 			if(!empty($_FILES['upload']))
 			{
 				$this->files = $_FILES['upload'];
+				$this->targetFolder = '../public/music/musicValidation';
 				$this->targetFile = $this->targetFolder.'/'.basename($this->files["name"]);
 				$this->maxSize = 20048576; // 20MO
-				$this->targetFolder = '../public/music/musicValidation';
 				$this->type = new finfo(FILEINFO_MIME_TYPE);
 				$this->acceptedType = array(
 					'mp3' => 'audio/mpeg',
 				);
-			}
-			if(!empty($_FILES['upload']))
-			{
-				$this->fileSize = $this->files['tmp_name'];
+				$this->fileSize = filesize($this->files['tmp_name']);
 			}
 
 			$this->uploadAuthorized = true;
@@ -82,7 +79,7 @@
 			&& !empty($_POST['music'])
 			&& !empty($_POST['artist'])
 			&& !empty($_FILES['upload'])
-			) 
+			)
 			{
 				// Verification file size
 				if ($this->fileSize > $this->maxSize)

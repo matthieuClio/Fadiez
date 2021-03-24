@@ -29,9 +29,18 @@
 			</div>
 
 			<figure>
-				<img src="public/images/homePage/slider/casque.jpg" alt="casque" class="hero-slide display-block-fact">
-				<img src="public/images/homePage/slider/chanteur.jpg" alt="chanteur" class="hero-slide display-none-fact">
-				<img src="public/images/homePage/slider/casque.jpg" alt="platine" class="hero-slide display-none-fact">
+				<?php
+				$classCss = 'display-block-fact';
+
+				while($sliderInformations = $dataSlider->fetch()) 
+				{
+				?>
+					<img src="public/images/homePage/slider/<?php echo $sliderInformations['url'];?>" alt="<?php echo $sliderInformations['description'];?>" class="hero-slide <?php echo $classCss;?>">
+				<?php
+					// Hide the other slides
+					$classCss = 'display-none-fact';
+				}
+				?>
 			</figure>
 
 			<div class="hero-circle-container text-align-center-fact color-quaternary-fact">
@@ -63,7 +72,8 @@
 				</div>
 
 				<?php
-				while($musicData = $dataMusic->fetch()) {
+				while($musicData = $dataMusic->fetch()) 
+				{
 				?>
 					<!-- List secondary players -->
 					<div class="player">
@@ -125,7 +135,8 @@
 					<div class="module-paging-button-container">
 						<!-- Previous button --> 
 						<?php
-						if($currentPage != 1) {
+						if($currentPage != 1) 
+						{
 							?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
 						}
 						?>
@@ -134,7 +145,8 @@
 						
 						<!-- Next button --> 
 						<?php
-						if($currentPage <= $nbPage) {
+						if($currentPage <= $nbPage) 
+						{
 							?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
 						}
 						?>
@@ -144,7 +156,8 @@
 						<option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
 						<?php
 
-						while($counterPagination < $nbPage) {
+						while($counterPagination < $nbPage) 
+						{
 							$counterPagination++;
 							?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
 						}

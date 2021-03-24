@@ -1,6 +1,7 @@
 <?php
 	require('../core/BddConnexion.php');
 	require('../src/model/MusicModel.php');
+	require('../src/model/SliderModel.php');
 
 	class Home {
 
@@ -26,6 +27,7 @@
 			// Object
 			$this->bddObj = new BddConnexion();
 			$this->musicObj = new Music();
+			$this->sliderObj = new SliderModel();
             $this->connexion = $this->bddObj->Start();
 
 			// Other variable
@@ -94,6 +96,11 @@
 			return $data;
 		}
 
+		public function slider() {
+			$data = $this->sliderObj->sliderDataAll($this->connexion);
+			return $data;
+		}
+
 	} // End class Home
 
 
@@ -106,6 +113,9 @@
 
 	// Music info
 	$dataMusic = $objectHome->data();
+
+	// Slider info
+	$dataSlider = $objectHome->slider();
 
 	// Use for the view
 	$counter = 0;

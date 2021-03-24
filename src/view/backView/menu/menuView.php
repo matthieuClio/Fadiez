@@ -6,6 +6,12 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </a>
     </div>
+
+    <div class="margin-right-fact">
+        <form method="post" action="backoffice" class="text-align-center-fact" >
+            <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact margin-right-fact menu-disconnection-button">
+        </form>
+    </div>
 </nav>
 
 <nav class="menu-window" id="menu-window-id">
@@ -41,16 +47,17 @@
         </li>
 
         <li class="backoffice-menu-tab">
-            <a href="accueil" class="backoffice-menu-link color-primary-fact">
-                <i class="fa fa-reply margin-left-fact margin-right-fact" aria-hidden="true"></i>
-                Revenir sur le site
+            <a href="backoffice/slider" class="backoffice-menu-link color-primary-fact">
+                <i class="fa fa-picture-o margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Slider
             </a>
         </li>
 
         <li class="backoffice-menu-tab">
-            <form method="post" action="backoffice" class="backoffice-menu-disconnection text-align-center-fact">
-                <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">
-            </form>
+            <a href="accueil" class="backoffice-menu-link color-primary-fact">
+                <i class="fa fa-reply margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Revenir sur le site
+            </a>
         </li>
     </ul>
 </nav>

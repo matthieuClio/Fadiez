@@ -25,7 +25,8 @@
 
 			<form action="backoffice/musique" method="post">
 				<?php
-					while($musicData = $dataMusic->fetch()) {
+					while($musicData = $dataMusic->fetch()) 
+					{
 					?>
 						<!-- Audio -->
 						<figure class="backoffice-music-audio-container text-align-center-fact padding-top-fact padding-bottom-fact">

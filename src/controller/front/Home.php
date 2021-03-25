@@ -2,13 +2,17 @@
 	require('../core/BddConnexion.php');
 	require('../src/model/MusicModel.php');
 	require('../src/model/SliderModel.php');
+	require('../src/model/AccountModel.php');
 
 	class Home {
 
 		// Property
         // ...
         private $bddObj;
+        private $musicObj;
+        private $accountObj;
         private $connexion;
+        private $pseudoUser;
 
 		// Pagination property
 		private $limiteOne;
@@ -28,6 +32,7 @@
 			$this->bddObj = new BddConnexion();
 			$this->musicObj = new Music();
 			$this->sliderObj = new SliderModel();
+			$this->accountObj = new Account();
             $this->connexion = $this->bddObj->Start();
 
 			// Other variable
@@ -60,6 +65,11 @@
 			{
 				$this->currentPagePost = $_POST['currentPagePost'];
 			}
+			// Variable SESSION
+			if(!empty($_SESSION['pseudoUser'])) 
+			{
+				$this->pseudoUser = $_SESSION['pseudoUser'];
+			}
 		}
 
 	    // Function
@@ -90,15 +100,22 @@
 			return $paginationData;
 		}
 
-		public function data()
+		public function dataMusic()
 	    {
             $data = $this->musicObj->MusicList($this->limiteOne, $this->limiteTwo, $this->connexion);
 			return $data;
 		}
 
-		public function slider() {
+		public function slider() 
+		{
 			$data = $this->sliderObj->sliderDataAll($this->connexion);
 			return $data;
+		}
+
+		public function dataAccount() {
+			$data = $this->accountObj->InfoAccountAll($this->pseudoUser, $this->connexion);
+			$data = $data->fetch();
+			return $data['premium'];
 		}
 
 	} // End class Home
@@ -112,10 +129,16 @@
 	$dataMusicPagination = $objectHome->paginationData();
 
 	// Music info
-	$dataMusic = $objectHome->data();
+	$dataMusic = $objectHome->dataMusic();
 
 	// Slider info
 	$dataSlider = $objectHome->slider();
+
+	// Account info
+	if(!empty($_SESSION['pseudoUser']))
+	{
+		$dataAccount = $objectHome->dataAccount();
+	}
 
 	// Use for the view
 	$counter = 0;

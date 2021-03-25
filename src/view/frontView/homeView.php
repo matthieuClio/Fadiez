@@ -111,10 +111,19 @@
 
 						<!-- Favorite icon -->
 						<i class="far fa-star player-favorite"></i>
-
-						<!-- Download icon -->
-						<i class="fas fa-download player-download"></i>
-
+						
+						<?php
+							if(!empty($_SESSION['pseudoUser']) && $dataAccount == 'oui') 
+							{
+								?>
+									<!-- Download icon -->
+									<a href="public/music/<?php echo $musicData['file_name'];?>" download="<?php echo $musicData['file_name'];?>">
+										<i class="fas fa-download player-download"></i>
+									</a>
+								<?php
+							}
+						?>
+			
 						<!-- File musique name -->
 						<input type="hidden" value="public/music/<?php echo $musicData['file_name'];?>" class="music-file-name">
 

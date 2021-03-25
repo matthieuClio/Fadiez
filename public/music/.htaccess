@@ -1,0 +1,6 @@
+Deny from all
+
+<FilesMatch ".(ogg|mp3)$">
+Order Allow,Deny
+allow from all
+</FilesMatch>

@@ -4,7 +4,6 @@
 // ...........
 
 let Slider = new SliderHero();
-Slider.AnimationSlideOne();
 Slider.CircleButtonSlider();
 Slider.SlideAuto();
 

@@ -238,8 +238,14 @@ a:visited {
 }
 
 /* Playlist */
+.container-background{
+	background-color: #0c0c0c;
+}
+
 .playlist-container {
 	padding-bottom: 50px;
+	margin: auto;
+	max-width: 650px;
 	background-color: #171717;
 	text-align: center;
 	color: white;
@@ -248,6 +254,7 @@ a:visited {
 
 /* - Main player-  */
 .main-player-container {
+	z-index: 1;
 	position: fixed;
 	bottom: 0;
     left: 0;
@@ -370,6 +377,7 @@ a:visited {
 .main-player-timer {
 	display: none;
 	margin-left: 22px;
+	width: 50px;
 	color: white;
 }
 
@@ -516,6 +524,7 @@ a:visited {
 .player-timer {
 	display: none;
 	margin-left: 22px;
+	width: 50px;
 	color: white;
 }
 
@@ -1961,6 +1970,49 @@ a:visited {
 /* ............... */
 
 @media screen and (min-width: 1280px) {
+	/* MENU */
+	/* .... */
+	
+	
+
+	/* HOME PAGE */
+	/* ......... */
+
+	.hero-title {
+		height: 50px;
+		margin-bottom: 100px;
+	}
+
+	.hero-text {
+		font-size: 2.5em;
+	}
+
+	.hero-image-container {
+		max-height: 95vh;
+	}
+
+	.hero-circle-container {
+		height: 40px;
+		font-size: 2em;
+	}
+
+	.hero-button-primary {
+		margin-right: 10px;
+		font-size: 2.5em;
+	}
+
+	.hero-button-secondary {
+		margin-right: 10px;
+		font-size: 2.5em;
+	}
+
+	.home-information-text {
+		margin: auto;
+		margin-top: 20px;
+		width: 50%;
+		font-size: 1.3em;
+	}
+
 	/* Main player */
 	.main-player-song-name {
 		display: inline-block;

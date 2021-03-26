@@ -22,12 +22,6 @@ class SliderHero {
 
     // Animation play one time
     // .......................
-    AnimationSlideOne() {
-        setTimeout(() => {
-            this.heroTextContainerElt.style.opacity = "1";
-            this.heroButtonRightElt.style.marginLeft = "10px";
-        }, 0);
-    }
 
     SlideAuto() {
         // Start the auto change

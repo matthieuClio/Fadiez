@@ -28,7 +28,7 @@
 				</div>
 			</div>
 
-			<figure>
+			<figure class="hero-image-container">
 				<?php
 				$classCss = 'display-block-fact';
 
@@ -62,194 +62,201 @@
 					Mauris mauris lectus,
 					ultrices a condimentum vel, 
 					aliquet ac nisi.
+					<br><br>
+					Lorem ipsum dolor sit amet, 
+					consectetur adipiscing elit. 
+					Cras tortor magna, porta eget efficitur vel, 
+					pharetra nec turpis. 
+					Mauris mauris lectus,
+					ultrices a condimentum vel, 
+					aliquet ac nisi.
 				</p>
 			</article>
-
-			<section class="playlist-container">
-				<!-- Music name-->
-				<div class="music-title"> 
-					<h3 class="music-title-text">Musique</h3>
-				</div>
-
-				<?php
-				while($musicData = $dataMusic->fetch()) 
-				{
-				?>
-					<!-- List secondary players -->
-					<div class="player">
-						<!-- Image -->
-						<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="player-image"/>
-
-						<!-- Play icon -->
-						<i class="fas fa-play player-play-icon" title="Jouer"></i>
-
-						<!-- Pause icon -->
-						<i class="fas fa-pause player-pause-icon" title="Pause"></i>
-
-						<!-- Song name -->
-						<p class="player-song-name"><?php echo $musicData['music_name'];?></p>
-
-						<!-- Mute icon -->
-						<i class="fas fa-volume-up player-mute-icon" title="Mettre en sourdine"></i>
-
-						<!-- Unmute icon -->
-						<i class="fas fa-volume-mute player-unmute-icon" title="Réactiver le son"></i>
-
-						<!-- Timer -->
-						<div class="player-timer">
-							<span class="player-timer-minute">
-								00
-							</span>
-								:
-							<span class="player-timer-second">
-								00
-							</span>
-						</div>
-
-						<!-- Range bar -->
-						<input type="range" class="player-seek-bar" value="0" min="0" max="100">
-
-						<!-- Favorite icon -->
-						<i class="far fa-star player-favorite"></i>
-						
-						<?php
-							if(!empty($_SESSION['pseudoUser']) && $dataAccount == 'oui') 
-							{
-								?>
-									<!-- Download icon -->
-									<a href="public/music/<?php echo $musicData['file_name'];?>" download="<?php echo $musicData['file_name'];?>">
-										<i class="fas fa-download player-download"></i>
-									</a>
-								<?php
-							}
-						?>
 			
-						<!-- File musique name -->
-						<input type="hidden" value="public/music/<?php echo $musicData['file_name'];?>" class="music-file-name">
-
-						<!-- Id player -->
-						<input type="hidden" value="<?php echo $counter;?>" class="player-value">
+			<div class="container-background">
+				<section class="playlist-container">
+					<!-- Music name-->
+					<div class="music-title"> 
+						<h3 class="music-title-text">Musique</h3>
 					</div>
+
 					<?php
-					$counter++; // Variable create in the controller Home.php
-				} // End while
-				?>
+					while($musicData = $dataMusic->fetch()) 
+					{
+					?>
+						<!-- List secondary players -->
+						<div class="player">
+							<!-- Image -->
+							<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="player-image"/>
 
-				<!-- Space --> 
-				<div class="music-space margin-top-fact">
-            	</div>
+							<!-- Play icon -->
+							<i class="fas fa-play player-play-icon" title="Jouer"></i>
 
-				<!-- Paging module-->
-				<form action="accueil" method="post" class="module-paging text-align-center-fact ">
-					<div class="module-paging-button-container">
-						<!-- Previous button --> 
-						<?php
-						if($currentPage != 1) 
-						{
-							?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
-						}
-						?>
+							<!-- Pause icon -->
+							<i class="fas fa-pause player-pause-icon" title="Pause"></i>
 
-						<input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
-						
-						<!-- Next button --> 
-						<?php
-						if($currentPage <= $nbPage) 
-						{
-							?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
-						}
-						?>
-					</div>
+							<!-- Song name -->
+							<p class="player-song-name"><?php echo $musicData['music_name'];?></p>
 
-					<select name="pageSelect" class="module-paging-button-page margin-top-fact">
-						<option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
-						<?php
-
-						while($counterPagination < $nbPage) 
-						{
-							$counterPagination++;
-							?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
-						}
-						?>
-					</select>
-					<input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
-					<input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
-				</form>
-
-				<!-- Sliding block -->
-				<div class="main-player-container">
-					<div class="sliding-block">
-						<span class="display-player">
-							Afficher le lecteur
-							<i class="fa fa-arrow-up" aria-hidden="true"></i>
-						</span>
-
-						<span class="hide-player">
-							<i class="fa fa-arrow-down" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<!-- Main players -->
-					<div class="main-player">
-						<!-- Image -->
-						<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="main-player-image"/>
-
-						<!-- Step-backward container -->
-						<div class="player-backward-container">
-							<!-- Step-backward icon -->
-							<i class="fa fa-step-backward player-backward-icon" aria-hidden="true" title="Musique précédante"></i>
-						</div>
-
-						<!-- Player icon -->
-						<i class="fas fa-play main-player-play-icon font-size-secondary-fact" title="Jouer"></i>
-
-						<!-- Pause icon -->
-						<i class="fas fa-pause main-player-pause-icon font-size-secondary-fact" title="Pause"></i>
-
-						<!-- Step-forward container -->
-						<div class="player-forward-container">
-							<!-- Step-forward icon -->
-							<i class="fa fa-step-forward player-forward-icon" aria-hidden="true" title="Musique suivante"></i>
-						</div>
-
-						<!-- Song name -->
-						<span class="main-player-song-name">---</span>
-
-						<!-- Mute/unmute containter -->
-						<div class="main-player-mute-container">
 							<!-- Mute icon -->
-							<i class="fas fa-volume-up main-player-mute-icon" title="Mettre en sourdine"></i>
-						
+							<i class="fas fa-volume-up player-mute-icon" title="Mettre en sourdine"></i>
+
 							<!-- Unmute icon -->
-							<i class="fas fa-volume-mute main-player-unmute-icon" title="Réactiver le son"></i>
+							<i class="fas fa-volume-mute player-unmute-icon" title="Réactiver le son"></i>
+
+							<!-- Timer -->
+							<div class="player-timer">
+								<span class="player-timer-minute">
+									00
+								</span>
+									:
+								<span class="player-timer-second">
+									00
+								</span>
+							</div>
+
+							<!-- Range bar -->
+							<input type="range" class="player-seek-bar" value="0" min="0" max="100">
+
+							<!-- Favorite icon -->
+							<i class="far fa-star player-favorite"></i>
+							
+							<?php
+								if(!empty($_SESSION['pseudoUser']) && $dataAccount == 'oui') 
+								{
+									?>
+										<!-- Download icon -->
+										<a href="public/music/<?php echo $musicData['file_name'];?>" download="<?php echo $musicData['file_name'];?>">
+											<i class="fas fa-download player-download"></i>
+										</a>
+									<?php
+								}
+							?>
+				
+							<!-- File musique name -->
+							<input type="hidden" value="public/music/<?php echo $musicData['file_name'];?>" class="music-file-name">
+
+							<!-- Id player -->
+							<input type="hidden" value="<?php echo $counter;?>" class="player-value">
+						</div>
+						<?php
+						$counter++; // Variable create in the controller Home.php
+					} // End while
+					?>
+
+					<!-- Space --> 
+					<div class="music-space margin-top-fact">
+					</div>
+
+					<!-- Paging module-->
+					<form action="accueil" method="post" class="module-paging text-align-center-fact ">
+						<div class="module-paging-button-container">
+							<!-- Previous button --> 
+							<?php
+							if($currentPage != 1) 
+							{
+								?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
+							}
+							?>
+
+							<input type="button" name="current" class="module-paging-button module-paging-button-current margin-left-fact color-primary-fact" value="<?php echo $currentPage;?>"/>
+							
+							<!-- Next button --> 
+							<?php
+							if($currentPage <= $nbPage) 
+							{
+								?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
+							}
+							?>
 						</div>
 
-						<!-- Timer -->
-						<div class="main-player-timer">
-							<span class="main-player-timer-minute">
-								00
+						<select name="pageSelect" class="module-paging-button-page margin-top-fact">
+							<option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
+							<?php
+
+							while($counterPagination < $nbPage) 
+							{
+								$counterPagination++;
+								?><option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option><?php
+							}
+							?>
+						</select>
+						<input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+						<input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+					</form>
+
+					<!-- Sliding block -->
+					<div class="main-player-container">
+						<div class="sliding-block">
+							<span class="display-player">
+								Afficher le lecteur
+								<i class="fa fa-arrow-up" aria-hidden="true"></i>
 							</span>
-								:
-							<span class="main-player-timer-second">
-								00
+
+							<span class="hide-player">
+								<i class="fa fa-arrow-down" aria-hidden="true"></i>
 							</span>
 						</div>
 
-						<!-- Range bar -->
-						<input type="range" class="main-player-seek-bar" id="range" value="0" min="0">
+						<!-- Main players -->
+						<div class="main-player">
+							<!-- Image -->
+							<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="main-player-image"/>
 
-						<!-- Favorite icon -->
-						<i class="far fa-star main-player-favorite"></i>
+							<!-- Step-backward container -->
+							<div class="player-backward-container">
+								<!-- Step-backward icon -->
+								<i class="fa fa-step-backward player-backward-icon" aria-hidden="true" title="Musique précédante"></i>
+							</div>
 
-						<!-- Download icon -->
-						<i class="fas fa-download main-player-download"></i>
+							<!-- Player icon -->
+							<i class="fas fa-play main-player-play-icon font-size-secondary-fact" title="Jouer"></i>
 
-						<!-- File musique name -->
-						<!-- <input type="hidden" value="musique.mp3" id="musicFileName"> -->
-					</div> <!-- End main player -->
-				</div> <!-- End main player container -->
-			</section>
-		</main>
+							<!-- Pause icon -->
+							<i class="fas fa-pause main-player-pause-icon font-size-secondary-fact" title="Pause"></i>
+
+							<!-- Step-forward container -->
+							<div class="player-forward-container">
+								<!-- Step-forward icon -->
+								<i class="fa fa-step-forward player-forward-icon" aria-hidden="true" title="Musique suivante"></i>
+							</div>
+
+							<!-- Song name -->
+							<span class="main-player-song-name">---</span>
+
+							<!-- Mute/unmute containter -->
+							<div class="main-player-mute-container">
+								<!-- Mute icon -->
+								<i class="fas fa-volume-up main-player-mute-icon" title="Mettre en sourdine"></i>
+							
+								<!-- Unmute icon -->
+								<i class="fas fa-volume-mute main-player-unmute-icon" title="Réactiver le son"></i>
+							</div>
+
+							<!-- Timer -->
+							<div class="main-player-timer">
+								<span class="main-player-timer-minute">
+									00
+								</span>
+									:
+								<span class="main-player-timer-second">
+									00
+								</span>
+							</div>
+
+							<!-- Range bar -->
+							<input type="range" class="main-player-seek-bar" id="range" value="0" min="0">
+
+							<!-- Favorite icon -->
+							<i class="far fa-star main-player-favorite"></i>
+
+							<!-- Download icon -->
+							<i class="fas fa-download main-player-download"></i>
+
+						</div> <!-- End main player -->
+					</div> <!-- End main player container -->
+				</section>
+			</div>		</main>
 
 		<!-- Footer -->
 		<?php include'footer/footerView.php'; ?>

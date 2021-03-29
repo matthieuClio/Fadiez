@@ -52,7 +52,7 @@
 
 		<main>
 			<article class="home-information padding-top-fact padding-bottom-fact">
-				<h2> Titre </h2>
+				<h2> Présentation </h2>
 
 				<p class="home-information-text text-align-left-fact margin-top-fact">
 					Lorem ipsum dolor sit amet, 
@@ -71,6 +71,11 @@
 					ultrices a condimentum vel, 
 					aliquet ac nisi.
 				</p>
+
+				<a href="tarification" class="home-link-premium light-button-fact">
+					<i class="fas fa-gem"></i>
+					Passer prenium
+				</a>
 			</article>
 			
 			<div class="container-background">
@@ -81,13 +86,13 @@
 					</div>
 
 					<?php
-					while($musicData = $dataMusic->fetch()) 
+					while($musicData = $dataMusic->fetch())
 					{
 					?>
 						<!-- List secondary players -->
 						<div class="player">
 							<!-- Image -->
-							<img src="public/images/homePage/slider/casque.jpg" alt="image de la musique" class="player-image"/>
+							<img src="public/images/music/<?php echo $musicData['image_name'] ?>" alt="image de la musique" class="player-image"/>
 
 							<!-- Play icon -->
 							<i class="fas fa-play player-play-icon" title="Jouer"></i>
@@ -126,7 +131,7 @@
 								{
 									?>
 										<!-- Download icon -->
-										<a href="public/music/<?php echo $musicData['file_name'];?>" download="<?php echo $musicData['file_name'];?>">
+										<a href="public/music/<?php echo $musicData['file_name'];?>" class="margin-left-fact" download="<?php echo $musicData['file_name'];?>">
 											<i class="fas fa-download player-download"></i>
 										</a>
 									<?php
@@ -145,12 +150,12 @@
 					?>
 
 					<!-- Space --> 
-					<div class="music-space margin-top-fact">
+					<div class="music-space">
 					</div>
 
 					<!-- Paging module-->
 					<form action="accueil" method="post" class="module-paging text-align-center-fact ">
-						<div class="module-paging-button-container">
+						<div class="module-paging-button-container cursor-pointer-fact">
 							<!-- Previous button --> 
 							<?php
 							if($currentPage != 1) 
@@ -165,12 +170,12 @@
 							<?php
 							if($currentPage <= $nbPage) 
 							{
-								?><input type="submit" name="next" class="module-paging-button margin-left-fact" value=">"/> <?php
+								?><input type="submit" name="next" class="module-paging-button margin-left-fact cursor-pointer-fact" value=">"/> <?php
 							}
 							?>
 						</div>
 
-						<select name="pageSelect" class="module-paging-button-page margin-top-fact">
+						<select name="pageSelect" class="module-paging-button-page margin-top-fact cursor-pointer-fact">
 							<option value="<?php echo $counterPagination;?>"><?php echo $counterPagination; ?></option>
 							<?php
 
@@ -181,8 +186,11 @@
 							}
 							?>
 						</select>
-						<input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
-						<input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+
+						<div class="width-max-fact">
+							<input type="submit" name="validation" class="module-paging-button-page margin-top-fact cursor-pointer-fact" value="Aller à la page"/>
+							<input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+						</div>
 					</form>
 
 					<!-- Sliding block -->

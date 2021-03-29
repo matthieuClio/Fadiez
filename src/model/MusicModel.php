@@ -16,7 +16,7 @@
             $comma =',';
             $limit = strval($limiteOne.$comma.$limiteTwo); // "Number 1, Number2"
 
-            $requete = $connexion->prepare('SELECT * FROM music ORDER BY id DESC LIMIT '.$limit);
+            $requete = $connexion->prepare('SELECT * FROM music WHERE uploaded = "valide" ORDER BY id DESC LIMIT '.$limit);
             $requete->execute();
             
             return $requete;
@@ -78,11 +78,11 @@
             return $verification[0];
         }
 
-        public function MusicAdd($musicName, $artistName, $fileName, $idUser, $connexion)
+        public function MusicAdd($musicName, $artistName, $fileName, $fileImage, $idUser, $connexion)
         {
             // Request
-			$requete = $connexion->prepare('INSERT INTO music(music_name, artist_name, file_name, uploaded, id_compte) VALUES(?, ?, ?, "traitement", ?)');
-			$requete->execute(array($musicName, $artistName, $fileName, $idUser));
+			$requete = $connexion->prepare('INSERT INTO music(music_name, artist_name, file_name, image_name, uploaded, id_compte) VALUES(?, ?, ?, ?, "traitement", ?)');
+			$requete->execute(array($musicName, $artistName, $fileName, $fileImage, $idUser));
         }
 
         public function MusicUpdate($uploadedValue, $id, $connexion)

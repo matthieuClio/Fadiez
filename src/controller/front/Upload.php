@@ -13,11 +13,18 @@
 		private $music;
 		private $artist;
 		private $files;
+		private $filesImage;
 		private $fileSize;
+		private $fileSizeImage;
 		private $maxSize;
 		private $targetFolder;
+		private $targetFolderImage;
+		private $targetFile;
+		private $targetFileImage;
 		private $type;
+		private $typeImage;
 		private $acceptedType;
+		private $acceptedTypeImage;
 		private $infoMessage;
 		private $uploadAuthorized;
 		private $accountRequest;
@@ -44,7 +51,7 @@
 			{
 				$this->artist = $_POST['artist'];
 			}
-			if(!empty($_FILES['upload']))
+			if(!empty($_FILES['upload']['name']))
 			{
 				$this->files = $_FILES['upload'];
 				$this->targetFolder = '../public/music/musicValidation';
@@ -55,6 +62,19 @@
 					'mp3' => 'audio/mpeg',
 				);
 				$this->fileSize = filesize($this->files['tmp_name']);
+			}
+			if(!empty($_FILES['image']['name']))
+			{
+				$this->filesImage = $_FILES['image'];
+				$this->targetFolderImage = '../public/images/music/musicValidationImage';
+				$this->targetFileImage = $this->targetFolderImage.'/'.basename($this->filesImage["name"]);
+				$this->typeImage = new finfo(FILEINFO_MIME_TYPE);
+				$this->acceptedTypeImage = array(
+					'png' => 'image/png',
+					'jpeg' => 'image/jpeg',
+					'jpg' => 'image/jpeg',
+				);
+				$this->fileSizeImage = filesize($this->files['tmp_name']);
 			}
 
 			$this->uploadAuthorized = true;
@@ -78,17 +98,27 @@
 			if(!empty($_POST['submitButton'])
 			&& !empty($_POST['music'])
 			&& !empty($_POST['artist'])
-			&& !empty($_FILES['upload'])
+			&& !empty($_FILES['upload']['name'])
+			&& !empty($_FILES['image']['name'])
 			)
 			{
 				// Verification file size
+				// Mp3
 				if ($this->fileSize > $this->maxSize)
 				{
-					$this->infoMessage[0] = 'La taille du fichier est trop importante';
+					$this->infoMessage[0] = 'La taille du fichier mp3 est trop importante';
+					$this->uploadAuthorized = false;
+				}
+
+				// Image
+				if ($this->fileSizeImage > $this->maxSize)
+				{
+					$this->infoMessage[0] = 'La taille du fichier image est trop importante';
 					$this->uploadAuthorized = false;
 				}
 
 				// Verification file name already taken
+				// Mp3
 				if($this->musicUse != 0)
 				{
 					// Not other error message
@@ -99,20 +129,28 @@
 				}
 
 				// Verification file existence
+				// Mp3
 				if(file_exists($this->targetFolder.'/'.$this->files['name']))
 				{
 					// Not other error message
 					if(empty($this->infoMessage[0])) {
-						$this->infoMessage[0] = 'Un fichier possédant le même nom existe déjà';
+						$this->infoMessage[0] = 'Un fichier (mp3) possédant le même nom existe déjà';
 					}
 					$this->uploadAuthorized = false;
 				}
-				else
-				{
-					?> <script type="text/javascript">console.log('not already exist');</script><?php
-				}
 
+				// Image
+				if(file_exists($this->targetFolderImage.'/'.$this->filesImage['name']))
+				{
+					// Not other error message
+					if(empty($this->infoMessage[0])) {
+						$this->infoMessage[0] = 'Un fichier (image) possédant le même nom existe déjà';
+					}
+					$this->uploadAuthorized = false;
+				}
+				
 				// Verification type file
+				// Mp3
 				if(false === $ext = array_search(
 					$this->type->file($this->files['tmp_name']),
 	
@@ -129,28 +167,44 @@
 					$this->uploadAuthorized = false;
 				}
 
+				// Image
+				if(false === $ext = array_search(
+					$this->typeImage->file($this->filesImage['tmp_name']),
+	
+					// File accpeted
+					$this->acceptedTypeImage,
+					true
+				))
+				{
+					// Not other error message
+					if(empty($this->infoMessage[0])) {
+						$this->infoMessage[0] = 'Le format du fichier est incorrecte (seul les fichiers png, jpeg et jpg sont autorisés).';
+					}
+					
+					$this->uploadAuthorized = false;
+				}
+
 				// Upload
 				if($this->uploadAuthorized)
 				{
-					// Insert into database
-					$this->musicObj->MusicAdd($this->music, $this->artist, $this->files['name'], $this->dataUser['id'], $this->connexion);
-					
-					// Upload the file
-					if(move_uploaded_file($this->files["tmp_name"], $this->targetFile))
+					// Upload the file mp3 and the file img
+					if(move_uploaded_file($this->files["tmp_name"], $this->targetFile) 
+					&& move_uploaded_file($this->filesImage["tmp_name"], $this->targetFileImage)
+					)
 					{
-						$this->dataUser = $this->accountObj->InfoAccountAll($_SESSION['pseudoUser'], $this->connexion);
-						$this->infoMessage[1] = 'Le fichier à été correctement chargé';
+						// Insert into database
+						$this->musicObj->MusicAdd($this->music, $this->artist, $this->files['name'], $this->filesImage['name'], $this->dataUser['id'], $this->connexion);
+						$this->infoMessage[1] = 'Les fichiers ont été correctement chargés';
 					}
 					else
 					{
-						$this->infoMessage[0] = 'Le fichier séléctionné ne peut pas être mis en ligne.';
+						$this->infoMessage[0] = 'Les fichiers séléctionnés ne peut pas être mis en ligne.';
 					}
 				}
 			} // End main if condition
 
 			return $this->infoMessage;
 		}
-
 	} // End class Home
 
 

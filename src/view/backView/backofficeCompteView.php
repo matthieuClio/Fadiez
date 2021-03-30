@@ -78,8 +78,11 @@
                     }
                     ?>
                 </select>
-                <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
-                <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+
+				<div class="width-max-fact">
+					<input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+					<input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+				</div>
             </form>
 
 			<!-- Space --> 

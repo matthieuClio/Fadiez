@@ -18,11 +18,26 @@ class Menu {
     openCloseMenu() {
         // Menu Button event
         this.menuElt.addEventListener("click", () => {
-            if(!this.menuIsOpen){
+            if(!this.menuIsOpen)
+            {
+                if(document.body)
+                {
+                    var larg = (document.body.clientWidth);
 
-                this.menuWindowElt.style.width = "100%";
-                this.menuWindowElt.style.opacity = "1";
-                this.menuIsOpen = true;
+                    if(larg >= 500) 
+                    {
+                        this.menuWindowElt.style.width = "320px";
+                        this.menuWindowElt.style.opacity = "1";
+                        this.menuIsOpen = true;
+                    }
+                    else if(larg < 500) 
+                    {
+                        this.menuWindowElt.style.width = "100%";
+                        this.menuWindowElt.style.opacity = "1";
+                        this.menuIsOpen = true;
+                    }
+                }
+
             } else {
 
                 this.menuWindowElt.style.width = "0";

@@ -4,7 +4,7 @@
     {
         public function MusicListNb($connexion)
         {
-            $requete = $connexion->prepare('SELECT COUNT(*) FROM music');
+            $requete = $connexion->prepare('SELECT COUNT(*) FROM music WHERE uploaded = "valide" ');
             $requete->execute();
             $totalNomber = $requete->fetch();
 

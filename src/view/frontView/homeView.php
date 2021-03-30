@@ -10,6 +10,20 @@
 			<?php include'menu/menuView.php'; ?>
 		</header>
 
+		<!-- Notification -->
+		<?php
+		if(!empty($_SESSION['notification']))
+		{
+			?>
+				<div class="module-notification text-align-center-fact font-size-secondary-fact" id="module-notification-id">
+					<span class="module-notification-text" id="module-notification-text-id">Connexion résussie</span>
+				</div>
+			<?php
+			// Erase the $_SESSION notifacation
+			unset($_SESSION['notification']);
+		}
+		?>
+
 		<section class="hero">
 			<div class="hero-container text-align-center-fact" id="hero-container-id">
 				<h1 class="hero-title" id="hero-title-id">
@@ -82,7 +96,7 @@
 				<section class="playlist-container">
 					<!-- Music name-->
 					<div class="music-title"> 
-						<h3 class="music-title-text">Musique</h3>
+						<h3 class="music-title-text">Playlist</h3>
 					</div>
 
 					<?php
@@ -160,7 +174,7 @@
 							<?php
 							if($currentPage != 1) 
 							{
-								?><input type="submit" name="previous" class="module-paging-button" value="<"/> <?php
+								?><input type="submit" name="previous" class="module-paging-button cursor-pointer-fact" value="<"/> <?php
 							}
 							?>
 
@@ -168,9 +182,9 @@
 							
 							<!-- Next button --> 
 							<?php
-							if($currentPage <= $nbPage) 
+							if($currentPage < $nbPage)
 							{
-								?><input type="submit" name="next" class="module-paging-button margin-left-fact cursor-pointer-fact" value=">"/> <?php
+								?><input type="submit" name="next" class="module-paging-button margin-left-fact cursor-pointer-fact" value=">"/><?php
 							}
 							?>
 						</div>

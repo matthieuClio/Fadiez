@@ -208,7 +208,6 @@ a:visited {
 
 .hero-button-secondary {
 	margin-left: 50px;
-	transition: 1s;
 }
 
 .hero-slide {
@@ -1875,6 +1874,29 @@ a:visited {
 	width: 200px;
 	height: 50px;
 	background-color: #ffda2a;
+}
+
+/* Notification */
+.module-notification {
+	z-index: 4; 
+	position:fixed;
+	display: inline-block;
+	left: 50%; 
+	top: 50px;
+	margin-left: -150px;
+	padding-top: 25px;
+	width: 0;
+	height: 40px;
+	background-color: greenyellow; 
+	border-radius: 10px;
+	overflow: hidden;
+	transition: 1s;
+}
+
+.module-notification-text {
+	display: inline-block;
+	color: greenyellow;
+	transition: 1s;
 }
 
 /* ........................................ */

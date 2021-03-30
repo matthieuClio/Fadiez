@@ -63,15 +63,19 @@
 					$_SESSION['pseudoUser'] = $this->email;
 
 					// Put the statut user in a $_SESSION
-					$_SESSION['statut' ] = $this->loginObj->UserStatut($this->email, $this->connexion);
+					$_SESSION['statut'] = $this->loginObj->UserStatut($this->email, $this->connexion);
+
+					// Notification value in a $_SESSION
+					$_SESSION['notification'] = 1;
 
 					// Update the user ip
 					$this->loginObj->IpAddressStorage($this->email, $this->connexion);
 
+					// Reset error message
 					$_SESSION['error'] = "";
 
 					// Redirect on the account page
-					header('location:compte');
+					header('location:accueil');
 				} // End verification
 
 				// Login information is false
@@ -82,7 +86,7 @@
 			else if(!empty($_SESSION['pseudoUser'])) {
 				// Already connected
 				// Redirect on the account page
-				header('location:compte');
+				header('location:accueil');
 			}
 	    } // End function logInConnexion
 

@@ -74,11 +74,13 @@
 				$this->currentPagePost = $_POST['currentPagePost'];
 			}
 
-			if(!empty($_POST['nbMusic'])) {
+			if(!empty($_POST['nbMusic'])) 
+			{
 				$this->nbMusic = $_POST['nbMusic'];
 			}
 
-			if(!empty($_POST['submitted'])) {
+			if(!empty($_POST['submitted'])) 
+			{
 				$this->submitted = $_POST['submitted'];
 			}
 		}
@@ -119,11 +121,14 @@
 
 		public function validationMusic()
 	    {
-			if(!empty($_POST['submitted'])) {
+			if(!empty($_POST['submitted'])) 
+			{
 
-				while($this->counter != $this->nbMusic) {
+				while($this->counter != $this->nbMusic) 
+				{
 
-					if(!empty($_POST[$this->counter])) {
+					if(!empty($_POST[$this->counter])) 
+					{
 						
 						// Stock status value and id
 						$this->status[$this->tableColumn] = $_POST[$this->counter];
@@ -133,12 +138,15 @@
 					$this->counter++;
 				}
 
+				// Get all imageName for validate music
+
+
 				// Nb element
 				$this->nbElement = count($this->id);
 
 				// Data modification in the dataBase
-				while($this->counterTwo != $this->nbElement) {
-
+				while($this->counterTwo != $this->nbElement) 
+				{
 					$this->musicObj->MusicUpdate($this->status[$this->counterTwo], $this->id[$this->counterTwo], $this->connexion);
 					$this->counterTwo++;
 				}

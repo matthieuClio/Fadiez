@@ -44,10 +44,10 @@ class PricingFree {
 }
 
 // PricingFree object
-var PricingFreeObject = new PricingFree();
+var pricingFreeObject = new PricingFree();
 
 // Open the free pricing info
-PricingFreeObject.PricingInfoFree();
+pricingFreeObject.PricingInfoFree();
 
 // Open the premium pricing info
-PricingFreeObject.PricingInfoPremium();
+pricingFreeObject.PricingInfoPremium();

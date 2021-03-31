@@ -20,12 +20,12 @@ class Notification {
 
             //  Display text
             setTimeout(() => {
-                this.moduleNotificationTextElt.style.color = "green";
+                this.moduleNotificationTextElt.style.color = "black";
             }, 300);
 
             //  Hide text
             setTimeout(() => {
-                this.moduleNotificationTextElt.style.color = "greenyellow";
+                this.moduleNotificationTextElt.style.color = "#ffda2a";
             }, 4000);
 
             // Hide notification

@@ -1887,7 +1887,7 @@ a:visited {
 	padding-top: 25px;
 	width: 0;
 	height: 40px;
-	background-color: greenyellow; 
+	background-color: #ffda2a; 
 	border-radius: 10px;
 	overflow: hidden;
 	transition: 1s;
@@ -1895,7 +1895,7 @@ a:visited {
 
 .module-notification-text {
 	display: inline-block;
-	color: greenyellow;
+	color: #ffda2a;
 	transition: 1s;
 }
 

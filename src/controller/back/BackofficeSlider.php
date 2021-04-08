@@ -11,6 +11,7 @@
 		private $sliderObj;
 		private $infoMessage;
 		private $description;
+		private $title;
 		private $idSlider;
 
 		// Files
@@ -31,6 +32,18 @@
 			$this->connexion = $this->bddObj->Start();
 
 			// POST - FILES variables
+			if(!empty($_POST['title1']))
+			{
+				$this->title = $_POST['title1'];
+			}
+			if(!empty($_POST['title2']))
+			{
+				$this->title = $_POST['title2'];
+			}
+			if(!empty($_POST['title3']))
+			{
+				$this->title = $_POST['title3'];
+			}
 			if(!empty($_POST['description1']))
 			{
 				$this->description = $_POST['description1'];
@@ -81,10 +94,13 @@
 		public function modification()
 		{
 			if(!empty($_POST['description1'])
+			&& !empty($_POST['title1'])
 			&& !empty($_FILES['upload'])
 			|| !empty($_POST['description2'])
+			&& !empty($_POST['title2'])
 			&& !empty($_FILES['upload'])
 			|| !empty($_POST['description3'])
+			&& !empty($_POST['title3'])
 			&& !empty($_FILES['upload'])
 			)
 			{
@@ -116,7 +132,7 @@
 				if($this->uploadAuthorized)
 				{
 					// Update into database
-					$this->sliderObj->sliderUpload($this->files['name'], $this->description, $this->idSlider, $this->connexion);
+					$this->sliderObj->sliderUpload($this->files['name'], $this->description, $this->title, $this->idSlider, $this->connexion);
 					
 					// Upload the file
 					if(move_uploaded_file($this->files["tmp_name"], $this->targetFile))

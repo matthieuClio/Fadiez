@@ -9,11 +9,11 @@
             return $requete;
 		}
 
-		public function sliderUpload($files, $description, $idSlider, $connexion)
+		public function sliderUpload($files, $description, $title, $idSlider, $connexion)
 		{
 			// Request
-			$requete = $connexion->prepare('UPDATE slider SET url = :files, description = :description WHERE id = :idSlider');
-			$requete->execute(array('files' => $files, 'description' => $description, 'idSlider' => $idSlider));
+			$requete = $connexion->prepare('UPDATE slider SET url = :files, description = :description, title = :title WHERE id = :idSlider');
+			$requete->execute(array('files' => $files, 'description' => $description, 'title' => $title, 'idSlider' => $idSlider));
 		}
     }
 ?>

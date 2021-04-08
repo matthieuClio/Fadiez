@@ -21,8 +21,9 @@
 
                 <!-- Error message -->
                 <?php 
-                    if(!empty($infoMessage[0])) { ?>
-                        <div class="backoffice-slider-errorMessage">
+                    if(!empty($infoMessage[0])) 
+                    { ?>
+                        <div class="backoffice-slider-errorMessage text-align-center-fact">
                             <?php
                             echo $infoMessage[0];
                             ?>
@@ -32,8 +33,9 @@
 
                     <!-- Success message -->
                     <?php 
-                    if(!empty($infoMessage[1])) { ?>
-                        <div class="backoffice-slider-successMessage">
+                    if(!empty($infoMessage[1])) 
+                    { ?>
+                        <div class="backoffice-slider-successMessage text-align-center-fact">
                             <?php
                             echo $infoMessage[1];
                             ?>
@@ -68,11 +70,20 @@
                             required
                             class="backoffice-slider-input-file margin-top-fact"
                             >
+                            <div>
+                                (Eviter les majuscale, espace et caractère spéciaux)
+                            </div>
+
+                            <!-- Slide title -->
+                            <div class="width-full-fact margin-top-fact">
+                                Titre de la slide :
+                            </div>
+                            <input type="text" name="title<?php echo $counter;?>" class="margin-top-fact" required>
+
+                            <!-- Description -->
                             <div class="width-full-fact margin-top-fact">
                                 Description de l'image :
                             </div>
-
-                            <!-- Description -->
                             <input type="text" name="description<?php echo $counter;?>" class="margin-top-fact" required>
 
                             <div class="width-full-fact margin-top-fact">

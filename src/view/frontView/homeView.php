@@ -13,15 +13,26 @@
 		<section class="hero">
 			<div class="hero-container text-align-center-fact" id="hero-container-id">
 				<h1 class="hero-title" id="hero-title-id">
-					<span class="hero-text">Obtenez de la musique en ilimitée</span>
-					<span class="hero-text display-none-fact">Slide 2</span>
-					<span class="hero-text display-none-fact">Slide 3</span>
+					<?php
+					$classCssHeroText = 'display-block-fact';
+
+					while($sliderTextInformation = $dataTextSlider->fetch())  
+					{
+						?>
+						<span class="hero-text <?php echo $classCssHeroText;?>"><?php echo $sliderTextInformation['title'];?></span>
+						<?php
+
+						// Hide the other slides
+						$classCssHeroText = 'display-none-fact';
+					}
+					?>
 				</h1>
 
 				<div id="button-container-id">
 					<a href="inscription" class="hero-button-primary light-button-fact" id="hero-button-left-id">
 						Gratuit
 					</a>
+
 					<a href="tarification" class="hero-button-secondary default-button-fact" id="hero-button-right-id">
 						Tarification
 					</a>

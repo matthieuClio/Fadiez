@@ -133,6 +133,7 @@
 
 	// Slider info
 	$dataSlider = $objectHome->slider();
+	$dataTextSlider = $objectHome->slider();
 
 	// Account info
 	if(!empty($_SESSION['pseudoUser']))

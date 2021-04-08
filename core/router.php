@@ -28,7 +28,6 @@
 	// Backoffice
 	// ..........
 
-
 	// Backoffice slider page
 	else if ($url[0] === 'backoffice' && !empty($url[1]) && $url[1] === 'slider' && !empty($_SESSION['pseudoUser']))
 	{

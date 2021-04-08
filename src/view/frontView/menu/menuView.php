@@ -83,6 +83,14 @@
         <?php
         } ?>
 
+        <!-- Display in all case -->
+        <li class="menu-tab-front">
+            <a href="tarification" class="menu-link-front color-primary-fact">
+                <i class="fa fa-diamond margin-left-fact margin-right-fact" aria-hidden="true"></i>
+                Passer premium
+            </a>
+        </li>
+
         <?php
         if(!empty($_SESSION['pseudoUser'])) { ?>
             <li class="menu-tab-front">
@@ -99,7 +107,8 @@
 <nav class="menu-window-tab" id="menu-window-tab-id">
     <?php
         // Display connexion link
-        if(empty($_SESSION['pseudoUser'])) { 
+        if(empty($_SESSION['pseudoUser'])) 
+        { 
     ?>
             <a href="connexion" class="menu-window-tab-link color-primary-fact text-align-center-fact">
                 Connexion
@@ -107,7 +116,8 @@
     <?php    
         }
         // Display all link for a connected user
-        else if(!empty($_SESSION['pseudoUser'])) {
+        else if(!empty($_SESSION['pseudoUser'])) 
+        {
     ?>
             <form method="post" action="compte" class="menu-window-tab-link color-primary-fact text-align-center-fact">
                 <input type="submit" name="disconnection" value="Déconnexion" class="light-button-fact">

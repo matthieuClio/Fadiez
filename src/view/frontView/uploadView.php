@@ -89,7 +89,22 @@
                         >
                     </div>
 
-                    <div class="font-size-secondary-fact">
+                    <div class="font-size-secondary-fact margin-top-fact">
+                        <!-- Label -->
+                        <label class="account-information-file font-weight-bold-fact text-align-left-fact">
+                            Image :
+                        </label>
+
+                        <!-- Data -->
+                        <input 
+                            type="file" 
+                            name="image"
+                            required
+                            class="upload-information-input-file"
+                        >
+                    </div>
+
+                    <div class="font-size-secondary-fact margin-top-fact">
                         <!-- Label -->
                         <label class="account-information-file font-weight-bold-fact text-align-left-fact">
                             Audio :

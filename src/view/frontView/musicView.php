@@ -90,7 +90,7 @@
             <div class="music-space clear-both-fact">
             </div>
 
-            <!-- Paging module --> 
+            <!-- Paging module -->
             <form action="music" method="post" class="module-paging text-align-center-fact font-size-tertiary-fact">
                 <div class="module-paging-button-container">
                     <!-- Previous button --> 
@@ -120,8 +120,11 @@
                     }
                     ?>
                 </select>
-                <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
-                <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+
+                <div class="width-max-fact">
+                    <input type="submit" name="validation" class="module-paging-button-page margin-top-fact" value="Aller à la page"/>
+                    <input type="hidden" name="currentPagePost" value="<?php echo $currentPage;?>"/>
+                </div>
             </form>
 
             <!-- Space -->

@@ -56,7 +56,7 @@
         </p>
     </section>
 
-    <section class="footer-payement-container">
+    <section class="footer-payement-container clear-both-fact">
         <h2 class="footer-payement">Payement</h2>
 
         <figure class="font-size-secondary-fact">

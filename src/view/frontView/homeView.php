@@ -33,7 +33,9 @@
 					while($sliderTextInformation = $dataTextSlider->fetch())  
 					{
 						?>
-						<span class="hero-text <?php echo $classCssHeroText;?>"><?php echo $sliderTextInformation['title'];?></span>
+							<span class="hero-text <?php echo $classCssHeroText;?>">
+								<?php echo $sliderTextInformation['title'];?>
+							</span>
 						<?php
 
 						// Hide the other slides
@@ -77,7 +79,7 @@
 
 		<main>
 			<article class="home-information padding-top-fact padding-bottom-fact">
-				<h2> Présentation </h2>
+				<h2> Ecouter, télécharger, publier </h2>
 
 				<p class="home-information-text text-align-left-fact margin-top-fact">
 					Lorem ipsum dolor sit amet, 
@@ -117,7 +119,7 @@
 						<!-- List secondary players -->
 						<div class="player">
 							<!-- Image -->
-							<img src="public/images/music/<?php echo $musicData['image_name'] ?>" alt="image de la musique" class="player-image"/>
+							<img src="public/images/music/<?php echo $musicData['image_name']; ?>" alt="image de la musique" class="player-image"/>
 
 							<!-- Play icon -->
 							<i class="fas fa-play player-play-icon" title="Jouer"></i>

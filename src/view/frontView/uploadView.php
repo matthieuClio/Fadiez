@@ -60,7 +60,7 @@
                     <div class="margin-top-fact font-size-secondary-fact">
                         <!-- Label -->
                         <label class="upload-information-music font-weight-bold-fact text-align-left-fact">
-                            Musique :
+                            Nom de la musique :
                         </label>
 
                         <!-- Data -->
@@ -92,7 +92,7 @@
                     <div class="font-size-secondary-fact margin-top-fact">
                         <!-- Label -->
                         <label class="account-information-file font-weight-bold-fact text-align-left-fact">
-                            Image :
+                            Image (icône) :
                         </label>
 
                         <!-- Data -->

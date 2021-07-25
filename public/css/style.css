@@ -594,14 +594,15 @@ a:visited {
 }
 
 .pricing-info-free-button {
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-bottom: 20px;
 	text-align: right;
 }
 
 .pricing-info-free-button-icon {
 	margin-right: 20px;
-	font-size: 2em;
+	font-size: 3em;
+	cursor: pointer;
 }
 
 .pricing-info-free-title {
@@ -640,14 +641,14 @@ a:visited {
 }
 
 .pricing-info-premium-button {
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-bottom: 20px;
 	text-align: right;
 }
 
 .pricing-info-premium-button-icon {
-	margin-right: 20px;
-	font-size: 2em;
+	font-size: 3em;
+	cursor: pointer;
 }
 
 .pricing-info-premium-title {
@@ -1051,19 +1052,19 @@ a:visited {
 
 .upload-information-music {
 	display: inline-block;
-	min-width: 70px;
+	min-width: 200px;
 }
 
 .upload-information-artist {
 	display: inline-block;
 	margin-top: 10px;
-	min-width: 70px;
+	min-width: 200px;
 }
 
 .account-information-file {
 	display: inline-block;
 	margin-top: 10px;
-	min-width: 70px;
+	min-width: 200px;
 }
 
 .upload-information-input {

@@ -166,6 +166,7 @@
 	
     // Slider info
 	$dataSlider = $objectSlider->data();
+	$dataSlider->fetch();
 
 	// Use in front
 	$counter = 1;

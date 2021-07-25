@@ -12,7 +12,7 @@
 
 		<main>
             <section class="pricing-info-free-container" id="pricing-free-container">
-                <div class="pricing-info-free-button">
+                <div class="pricing-info-free-button margin-right-fact">
                     <i class="fa fa-times-circle pricing-info-free-button-icon" aria-hidden="true" id="pricing-free-close-icon"></i>
                 </div>
 
@@ -23,21 +23,19 @@
                 <i class="fas fa-walking pricing-info-free-icon"></i>
                 
                 <p class="pricing-info-free-text">
-                    Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit. 
-                    Cras tortor magna, porta eget efficitur vel,
-                    pharetra nec turpis. 
+                    Ecouter gratuitemment de la musique en illimité.
+                     
                     Mauris mauris lectus, 
                     ultrices a condimentum vel, aliquet ac nisi.
                 </p>
 
-                <div class="pricing-info-free-paypal light-button-fact">
-                    Button Paypal
-                </div>
+                <a href="inscription" class="pricing-info-free-paypal light-button-fact">
+                    Inscription
+                </a>
             </section>
 
             <section class="pricing-info-premium-container" id="pricing-premium-container">
-                <div class="pricing-info-premium-button">
+                <div class="pricing-info-premium-button margin-right-fact">
                     <i class="fa fa-times-circle pricing-info-premium-button-icon" aria-hidden="true" id="pricing-premium-close-icon"></i>
                 </div>
 
